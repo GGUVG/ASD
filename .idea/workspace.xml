@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Work\SoftWare\apache-maven-3.6.1\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\Work\SoftWare\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1btIP4Fe05Wt8qykEBCL8SuD9Kf" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/exJAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/exJAR" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.dao.house.forSale" />
+      <recent name="com.demo.asd.dao.test" />
+      <recent name="com.demo.asd.dao.staff" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.support.model.po.house.forSale" />
+      <recent name="com.demo.asd.model.house.forSale" />
+      <recent name="com.demo.asd.service.bizs" />
+      <recent name="com.demo.asd.crossConfig" />
+      <recent name="com.demo.asd.api.main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\forSale" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-utils\src\main\java\com\demo\asd" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\target\classes\com\demo\asd\dao" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ApplicationStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="ASDapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.asd.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.asd.api.ApplicationStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApplicationStart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="" />
+      <created>1589444935645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589444935645</updated>
+      <workItem from="1589444938459" duration="4016000" />
+      <workItem from="1589503824209" duration="19554000" />
+      <workItem from="1589602155476" duration="4022000" />
+      <workItem from="1589762353155" duration="25559000" />
+      <workItem from="1589849352381" duration="16013000" />
+      <workItem from="1589936048334" duration="5232000" />
+      <workItem from="1589941918140" duration="20142000" />
+      <workItem from="1589966803019" duration="556000" />
+      <workItem from="1590021903983" duration="15871000" />
+      <workItem from="1590050436766" duration="3558000" />
+      <workItem from="1590108630670" duration="20131000" />
+      <workItem from="1590367863412" duration="17052000" />
+      <workItem from="1590408454851" duration="14000" />
+      <workItem from="1590408727341" duration="19000" />
+      <workItem from="1590453861674" duration="5332000" />
+      <workItem from="1590483206131" duration="1610000" />
+      <workItem from="1590485405148" duration="35000" />
+      <workItem from="1590485573174" duration="605000" />
+      <workItem from="1590558081318" duration="1017000" />
+      <workItem from="1590569614165" duration="888000" />
+      <workItem from="1590626475028" duration="941000" />
+      <workItem from="1590634782889" duration="1312000" />
+      <workItem from="1590716362271" duration="6626000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
