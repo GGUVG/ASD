@@ -5,7 +5,7 @@ import lombok.Setter;
 
 public class StaffRequest {
     //员工ID
-    public Integer staffId;
+    public Long staffId;
 
     //员工名
     public String staffUsername;
@@ -17,13 +17,13 @@ public class StaffRequest {
     public Integer staffLevel;
 
     //员工所在分行号
-    public Integer staffBranchId;
+    public Long staffBranchId;
 
     //员工职位
     public String staffJob;
 
     //签到临时流水号
-    public Integer todaySerialId;
+    public Long todaySerialId;
 
     //员工头像
     public String staffImg;
@@ -31,11 +31,11 @@ public class StaffRequest {
     //1启用,0注销
     public Integer status;
 
-    public Integer getStaffId() {
+    public Long getStaffId() {
         return staffId;
     }
 
-    public void setStaffId(Integer staffId) {
+    public void setStaffId(Long staffId) {
         this.staffId = staffId;
     }
 
@@ -63,11 +63,11 @@ public class StaffRequest {
         this.staffLevel = staffLevel;
     }
 
-    public Integer getStaffBranchId() {
+    public Long getStaffBranchId() {
         return staffBranchId;
     }
 
-    public void setStaffBranchId(Integer staffBranchId) {
+    public void setStaffBranchId(Long staffBranchId) {
         this.staffBranchId = staffBranchId;
     }
 
@@ -79,11 +79,11 @@ public class StaffRequest {
         this.staffJob = staffJob;
     }
 
-    public Integer getTodaySerialId() {
+    public Long getTodaySerialId() {
         return todaySerialId;
     }
 
-    public void setTodaySerialId(Integer todaySerialId) {
+    public void setTodaySerialId(Long todaySerialId) {
         this.todaySerialId = todaySerialId;
     }
 

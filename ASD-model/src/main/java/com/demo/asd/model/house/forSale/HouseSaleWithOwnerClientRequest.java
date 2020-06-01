@@ -3,7 +3,7 @@ package com.demo.asd.model.house.forSale;
 import java.sql.Timestamp;
 
 public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
-    public Long clientidStaffId;//员工ID-客户表
+    public Long clientStaffId;//员工ID-客户表
     public Integer startHousePrice;//用于检索housePrice区间起始
     public Integer endHousePrice;//用于检索housePrice区间结束
     public Integer startHouseSquare;//用于检索houseSquare区间起始
@@ -15,12 +15,12 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     public Timestamp startDealTime;//用于检索dealTime区间起始
     public Timestamp endDealTime;//用于检索dealTime区间起始
 
-    public Long getClientidStaffId() {
-        return clientidStaffId;
+    public Long getClientStaffId() {
+        return clientStaffId;
     }
 
-    public void setClientidStaffId(Long clientidStaffId) {
-        this.clientidStaffId = clientidStaffId;
+    public void setClientStaffId(Long clientidStaffId) {
+        this.clientStaffId = clientidStaffId;
     }
 
     public Integer getStartHousePrice() {
@@ -106,7 +106,7 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     @Override
     public String toString() {
         return "HouseSaleWithOwnerClientRequest{" +
-                "clientidStaffId=" + clientidStaffId +
+                "clientStaffId=" + clientStaffId +
                 ", startHousePrice=" + startHousePrice +
                 ", endHousePrice=" + endHousePrice +
                 ", startHouseSquare=" + startHouseSquare +

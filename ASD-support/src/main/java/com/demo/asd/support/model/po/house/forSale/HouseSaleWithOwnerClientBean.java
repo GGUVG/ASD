@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
 
-    public Long clientidStaffId;//员工ID-客户表
+    public Long clientStaffId;//员工ID-客户表
     public Integer startHousePrice;//用于检索housePrice区间起始
     public Integer endHousePrice;//用于检索housePrice区间结束
     public Integer startHouseSquare;//用于检索houseSquare区间起始
@@ -19,12 +19,12 @@ public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
     public Timestamp startDealTime;//用于检索dealTime区间起始
     public Timestamp endDealTime;//用于检索dealTime区间起始
 
-    public Long getClientidStaffId() {
-        return clientidStaffId;
+    public Long getClientStaffId() {
+        return clientStaffId;
     }
 
-    public void setClientidStaffId(Long clientidStaffId) {
-        this.clientidStaffId = clientidStaffId;
+    public void setClientStaffId(Long clientStaffId) {
+        this.clientStaffId = clientStaffId;
     }
 
     public Integer getStartHousePrice() {
@@ -110,7 +110,7 @@ public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
     @Override
     public String toString() {
         return "HouseSaleWithOwnerClientBean{" +
-                "clientidStaffId=" + clientidStaffId +
+                "clientStaffId=" + clientStaffId +
                 ", startHousePrice=" + startHousePrice +
                 ", endHousePrice=" + endHousePrice +
                 ", startHouseSquare=" + startHouseSquare +
@@ -121,21 +121,6 @@ public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
                 ", clientPhone='" + clientPhone + '\'' +
                 ", startDealTime=" + startDealTime +
                 ", endDealTime=" + endDealTime +
-                ", houseId=" + houseId +
-                ", houseName='" + houseName + '\'' +
-                ", houseEstate='" + houseEstate + '\'' +
-                ", houseLocationProvince='" + houseLocationProvince + '\'' +
-                ", houseLocationCity='" + houseLocationCity + '\'' +
-                ", houseLocationDistrict='" + houseLocationDistrict + '\'' +
-                ", houseLocationStreet='" + houseLocationStreet + '\'' +
-                ", housePrice=" + housePrice +
-                ", houseSquare=" + houseSquare +
-                ", houseState=" + houseState +
-                ", houseClientId=" + houseClientId +
-                ", completeTime='" + completeTime + '\'' +
-                ", dealTime=" + dealTime +
-                ", housePurachaserId=" + housePurachaserId +
-                ", status=" + status +
                 '}';
     }
 }

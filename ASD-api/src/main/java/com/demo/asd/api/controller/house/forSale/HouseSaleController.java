@@ -14,7 +14,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @Validated
@@ -26,7 +28,7 @@ public class HouseSaleController {
 
     @PostMapping("/findPageHouseForSale")
     public DataResult<PagingResponse<HouseSaleWithOwnerClientResponse>> findPageHouseForSale(
-            @RequestBody PagingRequest<HouseSaleWithOwnerClientRequest> req) throws IllegalAccessException, InstantiationException {
-        return DataResults.ok(houseBiz.findPageHouseForSale(req));
+            @RequestBody PagingRequest<HouseSaleWithOwnerClientRequest> req, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
+        return DataResults.ok(houseBiz.findPageHouseForSale(req,hReq));
     }
 }

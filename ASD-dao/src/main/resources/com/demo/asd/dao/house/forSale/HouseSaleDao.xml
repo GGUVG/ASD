@@ -22,7 +22,7 @@
         where
         1=1
         and t_hs.STATUS=1
-        and t_cs.CLIENT_STAFF_ID=#{criteria.clientidStaffId}
+        and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
         and t_cs.STATUS=1
         <if test="criteria.houseId != null and criteria.houseId !=0 and criteria.houseId !=''">and t_hs.HOUSE_ID = #{criteria.houseId,jdbcType=BIGINT}</if>
         <if test="criteria.houseName != null">
@@ -74,7 +74,7 @@
         where
         1=1
         and t_hs.STATUS=1
-        and t_cs.CLIENT_STAFF_ID=#{criteria.clientidStaffId}
+        and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
         and t_cs.STATUS=1
         <if test="criteria.houseId != null and criteria.houseId !=0 and criteria.houseId !=''">and t_hs.HOUSE_ID = #{criteria.houseId,jdbcType=BIGINT}</if>
         <if test="criteria.houseName != null">
@@ -132,7 +132,7 @@
         <result column="DEAL_TIME" jdbcType="TIMESTAMP" property="dealTime" />
         <result column="HOUSE_PURCHASER_ID" jdbcType="BIGINT" property="housePurachaserId" />
         <result column="STATUS" jdbcType="INTEGER" property="status" />
-        <result column="CLIENT_STAFF_ID" jdbcType="BIGINT" property="clientidStaffId" />
+        <result column="CLIENT_STAFF_ID" jdbcType="BIGINT" property="clientStaffId" />
         <result column="CLIENT_NAME" jdbcType="VARCHAR" property="clientName" />
         <result column="CLIENT_SEX" jdbcType="VARCHAR" property="clientSex" />
         <result column="Client_ADDRESS" jdbcType="VARCHAR" property="clientAddress" />

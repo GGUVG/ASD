@@ -1,7 +1,6 @@
 package com.demo.asd.service.bizs.staff;
 
-
-import net.sf.json.*;
+import com.alibaba.fastjson.*;
 import com.demo.asd.beanUtils.BeanUtils;
 import com.demo.asd.model.staff.StaffRequest;
 import com.demo.asd.model.staff.StaffResponse;
@@ -42,8 +41,8 @@ public class StaffBiz implements Serializable {
      * 设置用户登录cookie
      */
     public void setLoginCookie(StaffResponse staffResp,HttpServletResponse hResp,HttpServletRequest hReq) throws UnsupportedEncodingException {
-        JSONObject jsonObject = JSONObject.fromObject(staffResp);
-        Cookie backStaffCookie=new Cookie("backStaffCookie", URLEncoder.encode(jsonObject.toString(), "UTF-8"));
+        String jsonString = JSONObject.toJSONString(staffResp);
+        Cookie backStaffCookie=new Cookie("backStaffCookie", URLEncoder.encode(jsonString, "UTF-8"));
         backStaffCookie.setPath("/");
         hResp.addCookie(backStaffCookie);
     }
