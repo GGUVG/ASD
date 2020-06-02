@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/staff/StaffRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/staff/StaffRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/staff/StaffResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/staff/StaffResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/staff/StaffRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/staff/StaffRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/staff/StaffResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/staff/StaffResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/staff/StaffBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/staff/StaffBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/staff/StaffBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/staff/StaffBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/staff/StaffBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/staff/StaffBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/staff/StaffCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/staff/StaffCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/staff/StaffBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/staff/StaffBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/staff/StaffCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/staff/StaffCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +148,7 @@
       <workItem from="1590716362271" duration="7273000" />
       <workItem from="1590972320222" duration="10637000" />
       <workItem from="1590986475768" duration="11197000" />
+      <workItem from="1591058593941" duration="599000" />
     </task>
     <servers />
   </component>
