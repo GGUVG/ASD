@@ -1,6 +1,7 @@
 package com.demo.asd.model.house.forSale;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     public Long clientStaffId;//员工ID-客户表
@@ -10,10 +11,12 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     public Integer endHouseSquare;//用于检索houseSquare区间结束
     public String clientName;//客户名-客户表
     public String clientSex;//客户性别-客户表
-    public String clientAddress;//客户地址-客户表
     public String clientPhone;//客户电话-客户表
-    public Timestamp startDealTime;//用于检索dealTime区间起始
-    public Timestamp endDealTime;//用于检索dealTime区间起始
+    public LocalDateTime startDealTime;//用于检索dealTime区间起始
+    public LocalDateTime endDealTime;//用于检索dealTime区间起始
+    public String wClientName;//买方客户名-客户表
+    public String wClientSex;//买方客户性别-客户表
+    public String wClientPhone;//买方客户电话-客户表
 
     public Long getClientStaffId() {
         return clientStaffId;
@@ -71,13 +74,6 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
         this.clientSex = clientSex;
     }
 
-    public String getClientAddress() {
-        return clientAddress;
-    }
-
-    public void setClientAddress(String clientAddress) {
-        this.clientAddress = clientAddress;
-    }
 
     public String getClientPhone() {
         return clientPhone;
@@ -87,20 +83,44 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
         this.clientPhone = clientPhone;
     }
 
-    public Timestamp getStartDealTime() {
+    public LocalDateTime getStartDealTime() {
         return startDealTime;
     }
 
-    public void setStartDealTime(Timestamp startDealTime) {
+    public void setStartDealTime(LocalDateTime startDealTime) {
         this.startDealTime = startDealTime;
     }
 
-    public Timestamp getEndDealTime() {
+    public LocalDateTime getEndDealTime() {
         return endDealTime;
     }
 
-    public void setEndDealTime(Timestamp endDealTime) {
+    public void setEndDealTime(LocalDateTime endDealTime) {
         this.endDealTime = endDealTime;
+    }
+
+    public String getwClientName() {
+        return wClientName;
+    }
+
+    public void setwClientName(String wClientName) {
+        this.wClientName = wClientName;
+    }
+
+    public String getwClientSex() {
+        return wClientSex;
+    }
+
+    public void setwClientSex(String wClientSex) {
+        this.wClientSex = wClientSex;
+    }
+
+    public String getwClientPhone() {
+        return wClientPhone;
+    }
+
+    public void setwClientPhone(String wClientPhone) {
+        this.wClientPhone = wClientPhone;
     }
 
     @Override
@@ -113,10 +133,12 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
                 ", endHouseSquare=" + endHouseSquare +
                 ", clientName='" + clientName + '\'' +
                 ", clientSex='" + clientSex + '\'' +
-                ", clientAddress='" + clientAddress + '\'' +
                 ", clientPhone='" + clientPhone + '\'' +
                 ", startDealTime=" + startDealTime +
                 ", endDealTime=" + endDealTime +
+                ", wClientName='" + wClientName + '\'' +
+                ", wClientSex='" + wClientSex + '\'' +
+                ", wClientPhone='" + wClientPhone + '\'' +
                 ", houseId=" + houseId +
                 ", houseName='" + houseName + '\'' +
                 ", houseEstate='" + houseEstate + '\'' +
@@ -131,7 +153,6 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
                 ", completeTime='" + completeTime + '\'' +
                 ", dealTime=" + dealTime +
                 ", housePurachaserId=" + housePurachaserId +
-                ", status=" + status +
                 '}';
     }
 }

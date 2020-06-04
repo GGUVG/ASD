@@ -3,6 +3,7 @@ package com.demo.asd.support.model.po.house.forSale;
 import com.demo.asd.base.entity.BaseCriteria;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 /**
  * 售卖房源
@@ -22,7 +23,7 @@ public class HouseSaleCriteria extends BaseCriteria {
     public Integer houseState;//状态0待售，1已售，-1异常
     public Long houseClientId;//(原)业主ID
     public String completeTime;//建成时间
-    public Timestamp dealTime;//交易时间
+    public LocalDateTime dealTime;//交易时间
     public Long housePurachaserId;//(买方)新业主ID
     public Integer status;//1启用0停用
 
@@ -122,11 +123,11 @@ public class HouseSaleCriteria extends BaseCriteria {
         this.completeTime = completeTime;
     }
 
-    public Timestamp getDealTime() {
+    public LocalDateTime getDealTime() {
         return dealTime;
     }
 
-    public void setDealTime(Timestamp dealTime) {
+    public void setDealTime(LocalDateTime dealTime) {
         this.dealTime = dealTime;
     }
 

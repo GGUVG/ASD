@@ -4,6 +4,7 @@ package com.demo.asd.support.model.po.house.forSale;
  */
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
 
@@ -16,8 +17,12 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
     public String clientSex;//客户性别-客户表
     public String clientAddress;//客户地址-客户表
     public String clientPhone;//客户电话-客户表
-    public Timestamp startDealTime;//用于检索dealTime区间起始
-    public Timestamp endDealTime;//用于检索dealTime区间起始
+    public LocalDateTime startDealTime;//用于检索dealTime区间起始
+    public LocalDateTime endDealTime;//用于检索dealTime区间起始
+    public String wClientName;//买方客户名-客户表
+    public String wClientSex;//买方客户性别-客户表
+    public String wClientAddress;//买方客户地址-客户表
+    public String wClientPhone;//买方客户电话-客户表
 
     public Long getClientStaffId() {
         return clientStaffId;
@@ -91,25 +96,57 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
         this.clientPhone = clientPhone;
     }
 
-    public Timestamp getStartDealTime() {
+    public LocalDateTime getStartDealTime() {
         return startDealTime;
     }
 
-    public void setStartDealTime(Timestamp startDealTime) {
+    public void setStartDealTime(LocalDateTime startDealTime) {
         this.startDealTime = startDealTime;
     }
 
-    public Timestamp getEndDealTime() {
+    public LocalDateTime getEndDealTime() {
         return endDealTime;
     }
 
-    public void setEndDealTime(Timestamp endDealTime) {
+    public void setEndDealTime(LocalDateTime endDealTime) {
         this.endDealTime = endDealTime;
+    }
+
+    public String getwClientName() {
+        return wClientName;
+    }
+
+    public void setwClientName(String wClientName) {
+        this.wClientName = wClientName;
+    }
+
+    public String getwClientSex() {
+        return wClientSex;
+    }
+
+    public void setwClientSex(String wClientSex) {
+        this.wClientSex = wClientSex;
+    }
+
+    public String getwClientAddress() {
+        return wClientAddress;
+    }
+
+    public void setwClientAddress(String wClientAddress) {
+        this.wClientAddress = wClientAddress;
+    }
+
+    public String getwClientPhone() {
+        return wClientPhone;
+    }
+
+    public void setwClientPhone(String wClientPhone) {
+        this.wClientPhone = wClientPhone;
     }
 
     @Override
     public String toString() {
-        return "HouseSaleWithOwnerClientCriteria{" +
+        return "HouseSaleWithOwnerClientRequest{" +
                 "clientStaffId=" + clientStaffId +
                 ", startHousePrice=" + startHousePrice +
                 ", endHousePrice=" + endHousePrice +
@@ -121,6 +158,24 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
                 ", clientPhone='" + clientPhone + '\'' +
                 ", startDealTime=" + startDealTime +
                 ", endDealTime=" + endDealTime +
+                ", wClientName='" + wClientName + '\'' +
+                ", wClientSex='" + wClientSex + '\'' +
+                ", wClientAddress='" + wClientAddress + '\'' +
+                ", wClientPhone='" + wClientPhone + '\'' +
+                ", houseId=" + houseId +
+                ", houseName='" + houseName + '\'' +
+                ", houseEstate='" + houseEstate + '\'' +
+                ", houseLocationProvince='" + houseLocationProvince + '\'' +
+                ", houseLocationCity='" + houseLocationCity + '\'' +
+                ", houseLocationDistrict='" + houseLocationDistrict + '\'' +
+                ", houseLocationStreet='" + houseLocationStreet + '\'' +
+                ", housePrice=" + housePrice +
+                ", houseSquare=" + houseSquare +
+                ", houseState=" + houseState +
+                ", houseClientId=" + houseClientId +
+                ", completeTime='" + completeTime + '\'' +
+                ", dealTime=" + dealTime +
+                ", housePurachaserId=" + housePurachaserId +
                 '}';
     }
 }
