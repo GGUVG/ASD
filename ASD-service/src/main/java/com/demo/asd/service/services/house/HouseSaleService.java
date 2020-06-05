@@ -2,7 +2,9 @@ package com.demo.asd.service.services.house;
 
 import com.demo.asd.base.hierarchies.BaseService;
 import com.demo.asd.base.hierarchies.CrudDao;
+import com.demo.asd.beanUtils.BeanUtils;
 import com.demo.asd.dao.house.forSale.HouseSaleDao;
+import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.pagination.Pagination;
 import com.demo.asd.support.model.po.house.forSale.*;
 import org.apache.ibatis.annotations.Param;
@@ -29,6 +31,11 @@ public class HouseSaleService extends BaseService<Long, HouseSaleWithOwnerClient
         return houseSaleDao.CountfindPageHouseForSale(criteria);
     }
 
+    public List<HouseSaleWithOwnerClientBean> findHouseForSale(HouseSaleWithOwnerClientRequest request)
+    {
+        HouseSaleWithOwnerClientCriteria criteria =  BeanUtils.copy(request, HouseSaleWithOwnerClientCriteria.class);
+        return houseSaleDao.findHouseForSale(criteria);
+    }
 
     @Override
     protected CrudDao<Long, HouseSaleWithOwnerClientBean, HouseSaleWithOwnerClientCriteria> getCrudDao() {

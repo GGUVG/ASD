@@ -1,8 +1,8 @@
 package com.demo.asd.beanUtils;
 
+import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.cglib.beans.BeanCopier;
 import org.springframework.cglib.core.Converter;
-import org.springframework.util.CollectionUtils;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
