@@ -23,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
@@ -42,7 +43,6 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
 
     public PagingResponse<HouseSaleWithOwnerClientResponse> findPageHouseForSale(PagingRequest<HouseSaleWithOwnerClientRequest> pag, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
         HouseSaleWithOwnerClientCriteria criteria=BeanUtils.copy(pag.getCriteria(), this.criteriaClass);
-        /**
         Cookie[] cookies=hReq.getCookies();
         for(Cookie cookie:cookies)
         {
@@ -54,8 +54,7 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
             StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
             criteria.setClientStaffId(staffCriteria.getStaffId());
             }
-        }**/
-        criteria.setClientStaffId((long) 1);
+        }
         Pagination pagination =BeanUtils.copy(pag.getPagination(), Pagination.class);
         List<HouseSaleWithOwnerClientBean> beans=houseSaleService.findPageHouseForSale(criteria,pagination);
         long count=houseSaleService.CountfindPageHouseForSale(criteria);
@@ -65,7 +64,6 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
 
     public String exportFindPageHouseForSale(HttpServletResponse hRep,HttpServletRequest hReq, HouseSaleWithOwnerClientRequest condition) throws UnsupportedEncodingException
     {
-        /**
         Cookie[] cookies=hReq.getCookies();
         for(Cookie cookie:cookies)
         {
@@ -77,10 +75,24 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
                 StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
                 condition.setClientStaffId(staffCriteria.getStaffId());
             }
-        }**/
-        condition.setClientStaffId((long) 1);
+        }
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         List<HouseSaleWithOwnerClientBean> beans=houseSaleService.findHouseForSale(condition);
         List<HouseSaleWithOwnerClientReportBean> reportBeans=BeanUtils.copyList(beans, HouseSaleWithOwnerClientReportBean.class);
+        /**
+         * 原本的beans的时间类型dealTime为LocalDateTime,直接copyList到reportBeans的dealTime会copy为null
+         * 需要转类型并判断null,null会报空指针异常
+         */
+        for(int i=0;i<beans.size();i++)
+        {
+            HouseSaleWithOwnerClientBean hB=beans.get(i);
+            LocalDateTime time1= hB.getDealTime();
+            if(time1 !=null)
+            {
+                HouseSaleWithOwnerClientReportBean hRB =reportBeans.get(i);
+                hRB.setDealTime(df.format(time1));
+            }
+        }
         Map<String, List<? extends BaseRowModel>> map = new HashMap<>();
         map.put("HouseSaleWithClient", reportBeans);
         String fileName = new String(("买卖房源消息" + new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())).getBytes(), "UTF-8");

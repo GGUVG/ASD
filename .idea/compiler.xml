@@ -9,11 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ASDproperties" />
         <module name="ASDsupport" />
-        <module name="ASDservice" />
+        <module name="ASDapi" />
         <module name="ASDdao" />
         <module name="ASDmodel" />
         <module name="ASDutils" />
-        <module name="ASDapi" />
+        <module name="ASDservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
