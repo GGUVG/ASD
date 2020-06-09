@@ -12,7 +12,7 @@ public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
     public String houseName;
 
     @ExcelProperty(value = "房源小区名", index = 2)
-    public String houseEstate;
+    public String estateName;
 
     @ExcelProperty(value = "省", index = 3)
     public String houseLocationProvince;
@@ -84,12 +84,12 @@ public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
         this.houseName = houseName;
     }
 
-    public String getHouseEstate() {
-        return houseEstate;
+    public String getEstateName() {
+        return estateName;
     }
 
-    public void setHouseEstate(String houseEstate) {
-        this.houseEstate = houseEstate;
+    public void setEstateName(String estateName) {
+        this.estateName = estateName;
     }
 
     public String getHouseLocationProvince() {
@@ -241,7 +241,7 @@ public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
         return "HouseSaleWithOwnerClientReportBean{" +
                 "houseId=" + houseId +
                 ", houseName='" + houseName + '\'' +
-                ", houseEstate='" + houseEstate + '\'' +
+                ", estateName='" + estateName + '\'' +
                 ", houseLocationProvince='" + houseLocationProvince + '\'' +
                 ", houseLocationCity='" + houseLocationCity + '\'' +
                 ", houseLocationDistrict='" + houseLocationDistrict + '\'' +

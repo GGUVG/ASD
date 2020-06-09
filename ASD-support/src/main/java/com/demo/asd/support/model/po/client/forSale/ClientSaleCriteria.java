@@ -1,6 +1,8 @@
 package com.demo.asd.support.model.po.client.forSale;
 
-public class ClientSaleCriteria {
+import com.demo.asd.base.entity.BaseCriteria;
+
+public class ClientSaleCriteria extends BaseCriteria {
     public long clientId;
     public String clientName;
     public String clientSex;

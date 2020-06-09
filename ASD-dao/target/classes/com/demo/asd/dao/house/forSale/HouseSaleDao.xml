@@ -13,7 +13,7 @@
     </sql>
     <!-- 查询该员工所属房源 -->
     <select id="findPageHouseForSale" resultMap="ResultMap1" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria">
-        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE,t_hs.HOUSE_LOCATION_PROVINCE,
+        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,
         t_hs.HOUSE_LOCATION_CITY,t_hs.HOUSE_LOCATION_DISTRICT,t_hs.HOUSE_LOCATION_STREET,t_hs.HOUSE_PRICE,
         t_hs.HOUSE_SQUARE,t_hs.HOUSE_STATE,t_hs.HOUSE_CLIENT_ID,t_hs.COMPLETE_TIME,t_hs.DEAL_TIME,
         t_cs.CLIENT_STAFF_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_PHONE,t_cs.CLIENT_SEX,
@@ -23,6 +23,9 @@
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
         on t_hs.HOUSE_PURCHASER_ID=t_wb.CLIENT_ID
+        JOIN
+        t_house_estate t_he
+        on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
         where
         1=1
         and t_hs.STATUS=1
@@ -33,9 +36,9 @@
             <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
             and t_hs.HOUSE_NAME like #{houseName}
         </if>
-        <if test="criteria.houseEstate != null">
-            <bind name="houseEstate" value="'%' + criteria.houseEstate + '%'"/>
-            and t_hs.HOUSE_ESTATE like #{houseEstate}
+        <if test="criteria.estateName != null">
+            <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
+            and t_he.ESTATE_NAME like #{estateName}
         </if>
         <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
         <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
@@ -74,6 +77,7 @@
             <bind name="wClientPhone" value="'%' + criteria.wClientPhone + '%'"/>
             and t_wb.CLIENT_PHONE like #{wClientPhone}
         </if>
+        ORDER BY t_hs.DEAL_TIME desc
         limit #{pagination.offset}, #{pagination.limit}
     </select>
 
@@ -84,6 +88,9 @@
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
         on t_hs.HOUSE_PURCHASER_ID=t_wb.CLIENT_ID
+        JOIN
+        t_house_estate t_he
+        on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
         where
         1=1
         and t_hs.STATUS=1
@@ -94,9 +101,9 @@
             <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
             and t_hs.HOUSE_NAME like #{houseName}
         </if>
-        <if test="criteria.houseEstate != null">
-            <bind name="houseEstate" value="'%' + criteria.houseEstate + '%'"/>
-            and t_hs.HOUSE_ESTATE like #{houseEstate}
+        <if test="criteria.estateName != null">
+            <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
+            and t_he.ESTATE_NAME like #{estateName}
         </if>
         <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
         <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
@@ -139,7 +146,7 @@
 
     <!-- 查询该员工所属房源不分页 -->
     <select id="findHouseForSale" resultMap="ResultMap1" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria">
-        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE,t_hs.HOUSE_LOCATION_PROVINCE,
+        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,
         t_hs.HOUSE_LOCATION_CITY,t_hs.HOUSE_LOCATION_DISTRICT,t_hs.HOUSE_LOCATION_STREET,t_hs.HOUSE_PRICE,
         t_hs.HOUSE_SQUARE,t_hs.HOUSE_STATE,t_hs.HOUSE_CLIENT_ID,t_hs.COMPLETE_TIME,t_hs.DEAL_TIME,
         t_cs.CLIENT_STAFF_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_PHONE,t_cs.CLIENT_SEX,
@@ -149,6 +156,9 @@
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
         on t_hs.HOUSE_PURCHASER_ID=t_wb.CLIENT_ID
+        JOIN
+        t_house_estate t_he
+        on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
         where
         1=1
         and t_hs.STATUS=1
@@ -159,9 +169,9 @@
             <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
             and t_hs.HOUSE_NAME like #{houseName}
         </if>
-        <if test="criteria.houseEstate != null">
-            <bind name="houseEstate" value="'%' + criteria.houseEstate + '%'"/>
-            and t_hs.HOUSE_ESTATE like #{houseEstate}
+        <if test="criteria.estateName != null">
+            <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
+            and t_he.ESTATE_NAME like #{estateName}
         </if>
         <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
         <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
@@ -200,12 +210,14 @@
             <bind name="wClientPhone" value="'%' + criteria.wClientPhone + '%'"/>
             and t_wb.CLIENT_PHONE like #{wClientPhone}
         </if>
+        ORDER BY t_hs.DEAL_TIME desc
     </select>
 
     <resultMap id="ResultMap1" type="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientBean">
         <id column="HOUSE_ID" jdbcType="BIGINT" property="houseId" />
         <result column="HOUSE_NAME" jdbcType="VARCHAR" property="houseName" />
-        <result column="HOUSE_ESTATE" jdbcType="VARCHAR" property="houseEstate" />
+        <result column="HOUSE_ESTATE_ID" jdbcType="VARCHAR" property="houseEstateId" />
+        <result column="ESTATE_NAME" jdbcType="VARCHAR" property="estateName" />
         <result column="HOUSE_LOCATION_PROVINCE" jdbcType="VARCHAR" property="houseLocationProvince" />
         <result column="HOUSE_LOCATION_CITY" jdbcType="VARCHAR" property="houseLocationCity" />
         <result column="HOUSE_LOCATION_DISTRICT" jdbcType="VARCHAR" property="houseLocationDistrict" />

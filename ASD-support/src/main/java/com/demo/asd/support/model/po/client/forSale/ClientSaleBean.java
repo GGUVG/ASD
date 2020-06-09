@@ -1,6 +1,8 @@
 package com.demo.asd.support.model.po.client.forSale;
 
-public class ClientSaleBean {
+import com.demo.asd.base.entity.BaseBean;
+
+public class ClientSaleBean extends BaseBean {
     public long clientId;
     public String clientName;
     public String clientSex;

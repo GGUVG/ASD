@@ -13,7 +13,7 @@ public class HouseSaleRequest extends BaseRequest {
 
     public Long houseId;//房源ID
     public String houseName;//房源门牌号
-    public String houseEstate;//房源小区名
+    public Long houseEstateId;//房源小区名
     public String houseLocationProvince;//房源位置省
     public String houseLocationCity;//房源位置市
     public String houseLocationDistrict;//房源位置区
@@ -26,6 +26,69 @@ public class HouseSaleRequest extends BaseRequest {
     public LocalDateTime dealTime;//交易时间
     public Long housePurachaserId;//(买方)新业主ID
     public Integer status;//1启用0停用
+    public Integer houseType;//房屋类型
+    public String floorImg;//户型图
+    public String innerImgAttr1;//室内图1
+    public String innerImgAttr2;//室内图2
+    public String innerImgAttr3;//室内图3
+    public String innerImgAttr4;//室内图4
+    public String innerImgAttr5;//室内图5
+
+    public Integer getHouseType() {
+        return houseType;
+    }
+
+    public void setHouseType(Integer houseType) {
+        this.houseType = houseType;
+    }
+
+    public String getFloorImg() {
+        return floorImg;
+    }
+
+    public void setFloorImg(String floorImg) {
+        this.floorImg = floorImg;
+    }
+
+    public String getInnerImgAttr1() {
+        return innerImgAttr1;
+    }
+
+    public void setInnerImgAttr1(String innerImgAttr1) {
+        this.innerImgAttr1 = innerImgAttr1;
+    }
+
+    public String getInnerImgAttr2() {
+        return innerImgAttr2;
+    }
+
+    public void setInnerImgAttr2(String innerImgAttr2) {
+        this.innerImgAttr2 = innerImgAttr2;
+    }
+
+    public String getInnerImgAttr3() {
+        return innerImgAttr3;
+    }
+
+    public void setInnerImgAttr3(String innerImgAttr3) {
+        this.innerImgAttr3 = innerImgAttr3;
+    }
+
+    public String getInnerImgAttr4() {
+        return innerImgAttr4;
+    }
+
+    public void setInnerImgAttr4(String innerImgAttr4) {
+        this.innerImgAttr4 = innerImgAttr4;
+    }
+
+    public String getInnerImgAttr5() {
+        return innerImgAttr5;
+    }
+
+    public void setInnerImgAttr5(String innerImgAttr5) {
+        this.innerImgAttr5 = innerImgAttr5;
+    }
 
     public Long getHouseId() {
         return houseId;
@@ -43,12 +106,12 @@ public class HouseSaleRequest extends BaseRequest {
         this.houseName = houseName;
     }
 
-    public String getHouseEstate() {
-        return houseEstate;
+    public Long getHouseEstateId() {
+        return houseEstateId;
     }
 
-    public void setHouseEstate(String houseEstate) {
-        this.houseEstate = houseEstate;
+    public void setHouseEstateId(Long houseEstateId) {
+        this.houseEstateId = houseEstateId;
     }
 
     public String getHouseLocationProvince() {
@@ -152,7 +215,7 @@ public class HouseSaleRequest extends BaseRequest {
         return "HouseSaleRequest{" +
                 "houseId=" + houseId +
                 ", houseName='" + houseName + '\'' +
-                ", houseEstate='" + houseEstate + '\'' +
+                ", houseEstateId='" + houseEstateId + '\'' +
                 ", houseLocationProvince='" + houseLocationProvince + '\'' +
                 ", houseLocationCity='" + houseLocationCity + '\'' +
                 ", houseLocationDistrict='" + houseLocationDistrict + '\'' +

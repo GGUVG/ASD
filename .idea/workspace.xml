@@ -4,11 +4,20 @@
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/house/forSale/HouseSaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/house/forSale/HouseSaleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-utils/src/main/java/com/demo/asd/crossUtils/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-utils/src/main/java/com/demo/asd/crossUtils/FilterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-utils/target/classes/com/demo/asd/crossUtils/FilterConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-utils/target/classes/com/demo/asd/crossUtils/FilterConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/forSale/HouseSaleWithOwnerClientResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientReportBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/forSale/HouseSaleWithOwnerClientReportBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,30 +88,30 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.demo.asd.dao.house.forSale" />
       <recent name="com.demo.asd.dao.test" />
       <recent name="com.demo.asd.dao.staff" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.dao.house.forRent" />
+      <recent name="com.demo.asd.excel" />
+      <recent name="com.demo.asd.service.bizs.sys" />
+      <recent name="com.demo.asd.support.model.po.house.forSale" />
+      <recent name="com.demo.asd.model.house.forSale" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-api\src\main\resources" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\forSale" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-utils\src\main\java\com\demo\asd" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.demo.asd.excel" />
-      <recent name="com.demo.asd.service.bizs.sys" />
-      <recent name="com.demo.asd.support.model.po.house.forSale" />
-      <recent name="com.demo.asd.model.house.forSale" />
-      <recent name="com.demo.asd.service.bizs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
     </key>
   </component>
@@ -176,7 +185,8 @@
       <workItem from="1591058593941" duration="10758000" />
       <workItem from="1591147087723" duration="6335000" />
       <workItem from="1591232135616" duration="14545000" />
-      <workItem from="1591577599623" duration="13782000" />
+      <workItem from="1591577599623" duration="14406000" />
+      <workItem from="1591663778924" duration="7350000" />
     </task>
     <servers />
   </component>

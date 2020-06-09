@@ -13,6 +13,7 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
     public Integer endHousePrice;//用于检索housePrice区间结束
     public Integer startHouseSquare;//用于检索houseSquare区间起始
     public Integer endHouseSquare;//用于检索houseSquare区间结束
+    public String estateName;//小区名-小区表
     public String clientName;//客户名-客户表
     public String clientSex;//客户性别-客户表
     public String clientAddress;//客户地址-客户表
@@ -136,6 +137,14 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
         this.wClientAddress = wClientAddress;
     }
 
+    public String getEstateName() {
+        return estateName;
+    }
+
+    public void setEstateName(String estateName) {
+        this.estateName = estateName;
+    }
+
     public String getwClientPhone() {
         return wClientPhone;
     }
@@ -152,6 +161,7 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
                 ", endHousePrice=" + endHousePrice +
                 ", startHouseSquare=" + startHouseSquare +
                 ", endHouseSquare=" + endHouseSquare +
+                ", estateName=" + estateName +
                 ", clientName='" + clientName + '\'' +
                 ", clientSex='" + clientSex + '\'' +
                 ", clientAddress='" + clientAddress + '\'' +
@@ -164,7 +174,7 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
                 ", wClientPhone='" + wClientPhone + '\'' +
                 ", houseId=" + houseId +
                 ", houseName='" + houseName + '\'' +
-                ", houseEstate='" + houseEstate + '\'' +
+                ", houseEstateId='" + houseEstateId + '\'' +
                 ", houseLocationProvince='" + houseLocationProvince + '\'' +
                 ", houseLocationCity='" + houseLocationCity + '\'' +
                 ", houseLocationDistrict='" + houseLocationDistrict + '\'' +
