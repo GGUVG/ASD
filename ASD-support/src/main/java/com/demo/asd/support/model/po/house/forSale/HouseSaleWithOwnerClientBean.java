@@ -16,6 +16,30 @@ public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
     public String estateName;//小区名-小区表
     public String clientName;//客户名-客户表
     public String clientSex;//客户性别-客户表
+    public String clientPhone;//客户电话-客户表
+    public LocalDateTime startDealTime;//用于检索dealTime区间起始
+    public LocalDateTime endDealTime;//用于检索dealTime区间起始
+    public String wClientName;//买方客户名-客户表
+    public String wClientSex;//买方客户性别-客户表
+    public String wClientPhone;//买方客户电话-客户表
+    public String houseTypeName;//房屋类型名称
+    public String typeCode;//码表里房屋的编码为'HOUSE_TYPE'
+
+    public String getTypeCode() {
+        return typeCode;
+    }
+
+    public void setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public String getHouseTypeName() {
+        return houseTypeName;
+    }
+
+    public void setHouseTypeName(String houseTypeName) {
+        this.houseTypeName = houseTypeName;
+    }
 
     public String getEstateName() {
         return estateName;
@@ -24,13 +48,6 @@ public class HouseSaleWithOwnerClientBean extends HouseSaleBean{
     public void setEstateName(String estateName) {
         this.estateName = estateName;
     }
-
-    public String clientPhone;//客户电话-客户表
-    public LocalDateTime startDealTime;//用于检索dealTime区间起始
-    public LocalDateTime endDealTime;//用于检索dealTime区间起始
-    public String wClientName;//买方客户名-客户表
-    public String wClientSex;//买方客户性别-客户表
-    public String wClientPhone;//买方客户电话-客户表
 
     public Long getClientStaffId() {
         return clientStaffId;

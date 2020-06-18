@@ -32,41 +32,52 @@ public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
     @ExcelProperty(value = "面积/平", index = 8)
     public Integer houseSquare;
 
-    @ExcelProperty(value = "状态", index = 9)
+    @ExcelProperty(value="房屋类型",index = 9)
+    public String houseTypeName;
+
+    @ExcelProperty(value = "状态", index = 10)
     public Integer houseState;
 
-    @ExcelProperty(value = "建成时间", index = 10)
+    @ExcelProperty(value = "建成时间", index = 11)
     public String completeTime;
 
-    @ExcelProperty(value = "交易时间", index = 11)
+    @ExcelProperty(value = "交易时间", index = 12)
     public String dealTime;
 
-    @ExcelProperty(value = "客户所属员工ID", index = 12)
+    @ExcelProperty(value = "客户所属员工ID", index = 13)
     public Long clientStaffId;
 
-    @ExcelProperty(value = "客户ID", index = 13)
+    @ExcelProperty(value = "客户ID", index = 14)
     public Long houseClientId;
 
-    @ExcelProperty(value = "客户名", index = 14)
+    @ExcelProperty(value = "客户名", index = 15)
     public String clientName;
 
-    @ExcelProperty(value = "客户性别", index = 15)
+    @ExcelProperty(value = "客户性别", index = 16)
     public String clientSex;
 
-    @ExcelProperty(value = "客户电话", index = 16)
+    @ExcelProperty(value = "客户电话", index = 17)
     public String clientPhone;
 
-    @ExcelProperty(value = "买方客户ID", index = 17)
+    @ExcelProperty(value = "买方客户ID", index = 18)
     public Long housePurachaserId;
 
-    @ExcelProperty(value = "客户名", index = 18)
+    @ExcelProperty(value = "客户名", index = 19)
     public String wClientName;
 
-    @ExcelProperty(value = "客户性别", index = 19)
+    @ExcelProperty(value = "客户性别", index = 20)
     public String wClientSex;
 
-    @ExcelProperty(value = "客户电话", index = 20)
+    @ExcelProperty(value = "客户电话", index = 21)
     public String wClientPhone;
+
+    public String getHouseTypeName() {
+        return houseTypeName;
+    }
+
+    public void setHouseTypeName(String houseTypeName) {
+        this.houseTypeName = houseTypeName;
+    }
 
     public Long getHouseId() {
         return houseId;
@@ -248,11 +259,12 @@ public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
                 ", houseLocationStreet='" + houseLocationStreet + '\'' +
                 ", housePrice=" + housePrice +
                 ", houseSquare=" + houseSquare +
+                ", houseTypeName='" + houseTypeName + '\'' +
                 ", houseState=" + houseState +
-                ", houseClientId=" + houseClientId +
                 ", completeTime='" + completeTime + '\'' +
                 ", dealTime='" + dealTime + '\'' +
                 ", clientStaffId=" + clientStaffId +
+                ", houseClientId=" + houseClientId +
                 ", clientName='" + clientName + '\'' +
                 ", clientSex='" + clientSex + '\'' +
                 ", clientPhone='" + clientPhone + '\'' +

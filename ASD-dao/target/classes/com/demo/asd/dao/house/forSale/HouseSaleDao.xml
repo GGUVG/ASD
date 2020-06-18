@@ -13,70 +13,25 @@
     </sql>
     <!-- 查询该员工所属房源 -->
     <select id="findPageHouseForSale" resultMap="ResultMap1" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria">
-        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,
-        t_hs.HOUSE_LOCATION_CITY,t_hs.HOUSE_LOCATION_DISTRICT,t_hs.HOUSE_LOCATION_STREET,t_hs.HOUSE_PRICE,
-        t_hs.HOUSE_SQUARE,t_hs.HOUSE_STATE,t_hs.HOUSE_CLIENT_ID,t_hs.COMPLETE_TIME,t_hs.DEAL_TIME,
-        t_cs.CLIENT_STAFF_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_PHONE,t_cs.CLIENT_SEX,
-        t_hs.HOUSE_PURCHASER_ID,t_wb.CLIENT_NAME AS W_CLIENT_NAME,t_wb.CLIENT_PHONE AS W_CLIENT_PHONE,
-        t_wb.CLIENT_SEX AS W_CLIENT_SEX
-        from t_house_sale t_hs INNER JOIN t_client_sale t_cs
+        select
+        <include refid="HouseSaleExColumnList"/>
+        from t_house_sale t_hs
+        INNER JOIN t_client_sale t_cs
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
         on t_hs.HOUSE_PURCHASER_ID=t_wb.CLIENT_ID
         JOIN
         t_house_estate t_he
         on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
+        join t_sys_code_item t_sci
+        on t_hs.HOUSE_TYPE=t_sci.ITEM_CODE
         where
         1=1
         and t_hs.STATUS=1
         and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
         and t_cs.STATUS=1
-        <if test="criteria.houseId != null and criteria.houseId !=0 and criteria.houseId !=''">and t_hs.HOUSE_ID = #{criteria.houseId,jdbcType=BIGINT}</if>
-        <if test="criteria.houseName != null">
-            <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
-            and t_hs.HOUSE_NAME like #{houseName}
-        </if>
-        <if test="criteria.estateName != null">
-            <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
-            and t_he.ESTATE_NAME like #{estateName}
-        </if>
-        <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationDistrict != null">and t_hs.HOUSE_LOCATION_DISTRICT = #{criteria.houseLocationDistrict,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationStreet != null">and t_hs.HOUSE_LOCATION_STREET = #{criteria.houseLocationStreet,jdbcType=VARCHAR}</if>
-        <if test="criteria.startHousePrice != null and criteria.endHousePrice != null and criteria.startHousePrice !=0 and criteria.startHousePrice !='' and criteria.endHousePrice !=0 and criteria.endHousePrice !=''">
-        and t_hs.HOUSE_PRICE between #{criteria.startHousePrice,jdbcType=INTEGER} and #{criteria.endHousePrice,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.startHouseSquare != null and criteria.endHouseSquare != null and criteria.startHouseSquare !=0 and criteria.startHouseSquare !='' and criteria.endHouseSquare !=0 and criteria.endHouseSquare !=''">
-        and t_hs.HOUSE_SQUARE between #{criteria.startHouseSquare,jdbcType=INTEGER} and #{criteria.endHouseSquare,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.houseState != null and criteria.houseState !='' or criteria.houseState==0">
-            and HOUSE_STATE = #{criteria.houseState,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.houseClientId != null and criteria.houseClientId !=0 and criteria.houseClientId !=''">and HOUSE_CLIENT_ID = #{criteria.houseClientId,jdbcType=BIGINT}</if>
-        <if test="criteria.completeTime != null">and COMPLETE_TIME = #{criteria.completeTime,jdbcType=VARCHAR}</if>
-        <if test="criteria.startDealTime != null and criteria.endDealTime != null">
-        and t_hs.DEAL_TIME between #{criteria.startDealTime,jdbcType=TIMESTAMP} and #{criteria.endDealTime,jdbcType=TIMESTAMP}
-        </if>
-        <if test="criteria.housePurachaserId != null and criteria.housePurachaserId !=0 and criteria.housePurachaserId !=''">and HOUSE_PURCHASER_ID = #{criteria.housePurachaserId,jdbcType=INTEGER}</if>
-        <if test="criteria.clientName != null">
-            <bind name="clientName" value="'%' + criteria.clientName + '%'"/>
-            and t_cs.CLIENT_NAME like #{clientName}
-        </if>
-        <if test="criteria.clientSex != null">and t_cs.CLIENT_SEX = #{criteria.clientSex,jdbcType=VARCHAR}</if>
-        <if test="criteria.clientPhone != null">
-            <bind name="clientPhone" value="'%' + criteria.clientPhone + '%'"/>
-            and t_cs.CLIENT_PHONE like #{clientPhone}
-        </if>
-        <if test="criteria.wClientName != null">
-            <bind name="wClientName" value="'%' + criteria.wClientName + '%'"/>
-            and t_wb.CLIENT_NAME like #{wClientName}
-        </if>
-        <if test="criteria.wClientSex != null">and t_wb.CLIENT_SEX = #{criteria.wClientSex,jdbcType=VARCHAR}</if>
-        <if test="criteria.wClientPhone != null">
-            <bind name="wClientPhone" value="'%' + criteria.wClientPhone + '%'"/>
-            and t_wb.CLIENT_PHONE like #{wClientPhone}
-        </if>
+        and t_sci.TYPE_CODE=#{criteria.typeCode}
+        <include refid="WhereClauseColumnEx"/>
         ORDER BY t_hs.DEAL_TIME desc
         limit #{pagination.offset}, #{pagination.limit}
     </select>
@@ -84,74 +39,28 @@
     <!-- 查询该员工所属房源中的房源计数用作分页 -->
     <select id="CountfindPageHouseForSale" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria" resultType="java.lang.Long">
         select COUNT(1)
-        from t_house_sale t_hs INNER JOIN t_client_sale t_cs
+        from t_house_sale t_hs
+        INNER JOIN t_client_sale t_cs
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
         on t_hs.HOUSE_PURCHASER_ID=t_wb.CLIENT_ID
-        JOIN
-        t_house_estate t_he
+        JOIN t_house_estate t_he
         on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
+        join t_sys_code_item t_sci
+        on t_hs.HOUSE_TYPE=t_sci.ITEM_CODE
         where
         1=1
         and t_hs.STATUS=1
         and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
         and t_cs.STATUS=1
-        <if test="criteria.houseId != null and criteria.houseId !=0 and criteria.houseId !=''">and t_hs.HOUSE_ID = #{criteria.houseId,jdbcType=BIGINT}</if>
-        <if test="criteria.houseName != null">
-            <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
-            and t_hs.HOUSE_NAME like #{houseName}
-        </if>
-        <if test="criteria.estateName != null">
-            <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
-            and t_he.ESTATE_NAME like #{estateName}
-        </if>
-        <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationDistrict != null">and t_hs.HOUSE_LOCATION_DISTRICT = #{criteria.houseLocationDistrict,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationStreet != null">and t_hs.HOUSE_LOCATION_STREET = #{criteria.houseLocationStreet,jdbcType=VARCHAR}</if>
-        <if test="criteria.startHousePrice != null and criteria.endHousePrice != null and criteria.startHousePrice !=0 and criteria.startHousePrice !='' and criteria.endHousePrice !=0 and criteria.endHousePrice !=''">
-            and t_hs.HOUSE_PRICE between #{criteria.startHousePrice,jdbcType=INTEGER} and #{criteria.endHousePrice,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.startHouseSquare != null and criteria.endHouseSquare != null and criteria.startHouseSquare !=0 and criteria.startHouseSquare !='' and criteria.endHouseSquare !=0 and criteria.endHouseSquare !=''">
-            and t_hs.HOUSE_SQUARE between #{criteria.startHouseSquare,jdbcType=INTEGER} and #{criteria.endHouseSquare,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.houseState != null and criteria.houseState !='' or criteria.houseState==0">
-            and HOUSE_STATE = #{criteria.houseState,jdbcType=INTEGER}
-        </if>
-        <if test="criteria.houseClientId != null and criteria.houseClientId !=0 and criteria.houseClientId !=''">and HOUSE_CLIENT_ID = #{criteria.houseClientId,jdbcType=BIGINT}</if>
-        <if test="criteria.completeTime != null">and COMPLETE_TIME = #{criteria.completeTime,jdbcType=VARCHAR}</if>
-        <if test="criteria.startDealTime != null and criteria.endDealTime != null">
-            and t_hs.DEAL_TIME between #{criteria.startDealTime,jdbcType=TIMESTAMP} and #{criteria.endDealTime,jdbcType=TIMESTAMP}
-        </if>
-        <if test="criteria.housePurachaserId != null and criteria.housePurachaserId !=0 and criteria.housePurachaserId !=''">and HOUSE_PURCHASER_ID = #{criteria.housePurachaserId,jdbcType=INTEGER}</if>
-        <if test="criteria.clientName != null">
-            <bind name="clientName" value="'%' + criteria.clientName + '%'"/>
-            and t_cs.CLIENT_NAME like #{clientName}
-        </if>
-        <if test="criteria.clientSex != null">and t_cs.CLIENT_SEX = #{criteria.clientSex,jdbcType=VARCHAR}</if>
-        <if test="criteria.clientPhone != null">
-            <bind name="clientPhone" value="'%' + criteria.clientPhone + '%'"/>
-            and t_cs.CLIENT_PHONE like #{clientPhone}
-        </if>
-        <if test="criteria.wClientName != null">
-            <bind name="wClientName" value="'%' + criteria.wClientName + '%'"/>
-            and t_wb.CLIENT_NAME like #{wClientName}
-        </if>
-        <if test="criteria.wClientSex != null">and t_wb.CLIENT_SEX = #{criteria.wClientSex,jdbcType=VARCHAR}</if>
-        <if test="criteria.wClientPhone != null">
-            <bind name="wClientPhone" value="'%' + criteria.wClientPhone + '%'"/>
-            and t_wb.CLIENT_PHONE like #{wClientPhone}
-        </if>
+        and t_sci.TYPE_CODE=#{criteria.typeCode}
+        <include refid="WhereClauseColumnEx"/>
     </select>
 
     <!-- 查询该员工所属房源不分页 -->
     <select id="findHouseForSale" resultMap="ResultMap1" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria">
-        select t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,
-        t_hs.HOUSE_LOCATION_CITY,t_hs.HOUSE_LOCATION_DISTRICT,t_hs.HOUSE_LOCATION_STREET,t_hs.HOUSE_PRICE,
-        t_hs.HOUSE_SQUARE,t_hs.HOUSE_STATE,t_hs.HOUSE_CLIENT_ID,t_hs.COMPLETE_TIME,t_hs.DEAL_TIME,
-        t_cs.CLIENT_STAFF_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_PHONE,t_cs.CLIENT_SEX,
-        t_hs.HOUSE_PURCHASER_ID,t_wb.CLIENT_NAME AS W_CLIENT_NAME,t_wb.CLIENT_PHONE AS W_CLIENT_PHONE,
-        t_wb.CLIENT_SEX AS W_CLIENT_SEX
+        select
+        <include refid="HouseSaleExColumnList"/>
         from t_house_sale t_hs INNER JOIN t_client_sale t_cs
         on t_hs.HOUSE_CLIENT_ID = t_cs.CLIENT_ID
         left join t_client_want_buy t_wb
@@ -159,11 +68,28 @@
         JOIN
         t_house_estate t_he
         on t_hs.HOUSE_ESTATE_ID =t_he.ESTATE_ID
+        join t_sys_code_item t_sci
+        on t_hs.HOUSE_TYPE=t_sci.ITEM_CODE
         where
         1=1
         and t_hs.STATUS=1
         and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
         and t_cs.STATUS=1
+        and t_sci.TYPE_CODE=#{criteria.typeCode}
+        <include refid="WhereClauseColumnEx"/>
+        ORDER BY t_hs.DEAL_TIME desc
+    </select>
+
+    <sql id="HouseSaleExColumnList">
+        t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,
+        t_hs.HOUSE_LOCATION_CITY,t_hs.HOUSE_LOCATION_DISTRICT,t_hs.HOUSE_LOCATION_STREET,t_hs.HOUSE_PRICE,
+        t_hs.HOUSE_SQUARE,t_hs.HOUSE_STATE,t_hs.HOUSE_CLIENT_ID,t_hs.COMPLETE_TIME,t_hs.DEAL_TIME,
+        t_cs.CLIENT_STAFF_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_PHONE,t_cs.CLIENT_SEX,t_hs.HOUSE_PURCHASER_ID,
+        t_sci.ITEM_NAME as HOUSE_TYPE_NAME,t_wb.CLIENT_NAME AS W_CLIENT_NAME,
+        t_wb.CLIENT_PHONE AS W_CLIENT_PHONE,t_wb.CLIENT_SEX AS W_CLIENT_SEX
+    </sql>
+
+    <sql id="WhereClauseColumnEx">
         <if test="criteria.houseId != null and criteria.houseId !=0 and criteria.houseId !=''">and t_hs.HOUSE_ID = #{criteria.houseId,jdbcType=BIGINT}</if>
         <if test="criteria.houseName != null">
             <bind name="houseName" value="'%' + criteria.houseName + '%'"/>
@@ -210,8 +136,8 @@
             <bind name="wClientPhone" value="'%' + criteria.wClientPhone + '%'"/>
             and t_wb.CLIENT_PHONE like #{wClientPhone}
         </if>
-        ORDER BY t_hs.DEAL_TIME desc
-    </select>
+        <if test="criteria.houseType != null">and t_hs.HOUSE_TYPE = #{criteria.houseType,jdbcType=INTEGER}</if>
+    </sql>
 
     <resultMap id="ResultMap1" type="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientBean">
         <id column="HOUSE_ID" jdbcType="BIGINT" property="houseId" />
@@ -237,6 +163,7 @@
         <result column="W_CLIENT_NAME" jdbcType="VARCHAR" property="wClientName" />
         <result column="W_CLIENT_SEX" jdbcType="VARCHAR" property="wClientSex" />
         <result column="W_CLIENT_PHONE" jdbcType="VARCHAR" property="wClientPhone" />
+        <result column="HOUSE_TYPE_NAME" jdbcType="VARCHAR" property="houseTypeName" />
     </resultMap>
 
 

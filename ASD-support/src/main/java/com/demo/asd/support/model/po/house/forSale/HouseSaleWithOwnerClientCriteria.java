@@ -24,6 +24,24 @@ public class HouseSaleWithOwnerClientCriteria extends HouseSaleCriteria{
     public String wClientSex;//买方客户性别-客户表
     public String wClientAddress;//买方客户地址-客户表
     public String wClientPhone;//买方客户电话-客户表
+    public String houseTypeName;//房屋类型名称
+    public String typeCode;//码表里房屋的编码为'HOUSE_TYPE'
+
+    public String getTypeCode() {
+        return typeCode;
+    }
+
+    public void setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public String getHouseTypeName() {
+        return houseTypeName;
+    }
+
+    public void setHouseTypeName(String houseTypeName) {
+        this.houseTypeName = houseTypeName;
+    }
 
     public Long getClientStaffId() {
         return clientStaffId;

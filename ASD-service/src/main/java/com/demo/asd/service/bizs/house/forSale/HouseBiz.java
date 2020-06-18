@@ -56,6 +56,7 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
             }
         }
         Pagination pagination =BeanUtils.copy(pag.getPagination(), Pagination.class);
+        criteria.setTypeCode("HOUSE_TYPE");
         List<HouseSaleWithOwnerClientBean> beans=houseSaleService.findPageHouseForSale(criteria,pagination);
         long count=houseSaleService.CountfindPageHouseForSale(criteria);
         PagingResponse<HouseSaleWithOwnerClientResponse> response = PageConverter.convert(pagination, HouseSaleWithOwnerClientResponse.class, count, beans);
@@ -68,7 +69,7 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
         for(Cookie cookie:cookies)
         {
             String checkStr="backStaffCookie";
-            if(checkStr.equals(cookie.getName()))//if(checkStr==cookie.getName())判断会失败,String类型别用==
+            if(checkStr.equals(cookie.getName()))
             {
                 String str1=URLDecoder.decode(cookie.getValue(), "UTF-8");
                 JSONObject jsonObject = JSONObject.parseObject(str1);
@@ -76,13 +77,10 @@ public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseS
                 condition.setClientStaffId(staffCriteria.getStaffId());
             }
         }
+        condition.setTypeCode("HOUSE_TYPE");
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         List<HouseSaleWithOwnerClientBean> beans=houseSaleService.findHouseForSale(condition);
         List<HouseSaleWithOwnerClientReportBean> reportBeans=BeanUtils.copyList(beans, HouseSaleWithOwnerClientReportBean.class);
-        /**
-         * 原本的beans的时间类型dealTime为LocalDateTime,直接copyList到reportBeans的dealTime会copy为null
-         * 需要转类型并判断null,null会报空指针异常
-         */
         for(int i=0;i<beans.size();i++)
         {
             HouseSaleWithOwnerClientBean hB=beans.get(i);

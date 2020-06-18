@@ -10,15 +10,7 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     public Integer startHouseSquare;//用于检索houseSquare区间起始
     public Integer endHouseSquare;//用于检索houseSquare区间结束
     public String estateName;//小区名-小区表
-
-    public String getEstateName() {
-        return estateName;
-    }
-
-    public void setEstateName(String estateName) {
-        this.estateName = estateName;
-    }
-
+    public String houseTypeName;//房屋类型名称
     public String clientName;//客户名-客户表
     public String clientSex;//客户性别-客户表
     public String clientPhone;//客户电话-客户表
@@ -27,7 +19,31 @@ public class HouseSaleWithOwnerClientRequest extends HouseSaleRequest{
     public String wClientName;//买方客户名-客户表
     public String wClientSex;//买方客户性别-客户表
     public String wClientPhone;//买方客户电话-客户表
+    public String typeCode;//码表里房屋的编码为'HOUSE_TYPE'
 
+    public String getTypeCode() {
+        return typeCode;
+    }
+
+    public void setTypeCode(String typeCode) {
+        this.typeCode = typeCode;
+    }
+
+    public String getHouseTypeName() {
+        return houseTypeName;
+    }
+
+    public void setHouseTypeName(String houseTypeName) {
+        this.houseTypeName = houseTypeName;
+    }
+
+    public String getEstateName() {
+        return estateName;
+    }
+
+    public void setEstateName(String estateName) {
+        this.estateName = estateName;
+    }
     public Long getClientStaffId() {
         return clientStaffId;
     }

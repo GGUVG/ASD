@@ -14,7 +14,26 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
-
+/**
+                       .::::.
+                     .::::::::.
+                   :::::::::::
+                 ..:::::::::::'
+              '::::::::::::'
+                .::::::::::
+           '::::::::::::::..
+                ..::::::::::::.
+              ``::::::::::::::::
+               ::::``:::::::::'        .:::.
+              ::::'   ':::::'       .::::::::.
+            .::::'      ::::     .:::::::'::::.
+           .:::'       :::::  .:::::::::' ':::::.
+          .::'        :::::.:::::::::'      ':::::.
+         .::'         ::::::::::::::'         ``::::.
+     ...:::           ::::::::::::'              ``::.
+    ```` ':.          ':::::::::'                  ::::..
+                       '.:::::'                    ':'````..
+**/
 @Validated
 @RestController
 @RequestMapping(value="/v1/house/forSale")
