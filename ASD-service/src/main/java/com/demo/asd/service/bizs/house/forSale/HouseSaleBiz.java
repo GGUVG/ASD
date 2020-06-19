@@ -36,7 +36,7 @@ import java.util.Map;
  * Created by chency on 2020-05-14.
  */
 @Component
-public class HouseBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseSaleWithOwnerClientCriteria, HouseSaleWithOwnerClientRequest, HouseSaleWithOwnerClientResponse> {
+public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, HouseSaleWithOwnerClientCriteria, HouseSaleWithOwnerClientRequest, HouseSaleWithOwnerClientResponse> {
     @Autowired
     public HouseSaleService houseSaleService;
 

@@ -1,15 +1,11 @@
-package com.demo.asd.support.model.po.house.forRent;
+package com.demo.asd.model.house.forRent;
 
-import com.demo.asd.base.entity.BaseBean;
+import com.demo.asd.base.entity.BaseResponse;
 
 import java.time.LocalDateTime;
 
-/**
- * 租赁房源
- * Created by chency on 2020-06-11.
- */
-public class HouseRentBean extends BaseBean {
-
+public class HouseRentResponse extends BaseResponse
+{
     public Long houseId;//房源ID
 
     public String houseName;//房源门牌号
@@ -180,25 +176,4 @@ public class HouseRentBean extends BaseBean {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "HouseRentBean{" +
-                "houseId=" + houseId +
-                ", houseName='" + houseName + '\'' +
-                ", houseEstateId='" + houseEstateId + '\'' +
-                ", houseLocationProvince='" + houseLocationProvince + '\'' +
-                ", houseLocationCity='" + houseLocationCity + '\'' +
-                ", houseLocationDistrict='" + houseLocationDistrict + '\'' +
-                ", houseLocationStreet='" + houseLocationStreet + '\'' +
-                ", housePrice=" + housePrice +
-                ", houseSquare=" + houseSquare +
-                ", houseState=" + houseState +
-                ", houseClientId=" + houseClientId +
-                ", completeTime='" + completeTime + '\'' +
-                ", lastDealTime=" + lastDealTime +
-                ", lastPurchaserId=" + lastPurchaserId +
-                ", lastEnd=" + lastEnd +
-                ", status=" + status +
-                '}';
-    }
 }

@@ -20,6 +20,6 @@ public interface HouseSaleDao extends CrudDao<Long, HouseSaleWithOwnerClientBean
     //分页计数用
     public long CountfindPageHouseForSale(@Param("criteria") HouseSaleWithOwnerClientCriteria criteria);
 
-    //查询当前登录员工下所属房源不分页，用作打印
+    //查询当前登录员工下所属房源不分页
     public List<HouseSaleWithOwnerClientBean> findHouseForSale(@Param("criteria") HouseSaleWithOwnerClientCriteria criteria);
 }

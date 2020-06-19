@@ -6,7 +6,7 @@ import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
 import com.demo.asd.pagination.PagingRequest;
 import com.demo.asd.pagination.PagingResponse;
-import com.demo.asd.service.bizs.house.forSale.HouseBiz;
+import com.demo.asd.service.bizs.house.forSale.HouseSaleBiz;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -39,14 +39,14 @@ import java.io.UnsupportedEncodingException;
 @RequestMapping(value="/v1/house/forSale")
 public class HouseSaleController {
     @Autowired
-    public HouseBiz houseBiz;
+    public HouseSaleBiz houseSaleBiz;
 
     @ApiOperation(tags = "HouseSaleWithOwnerClient", value = "findPageHouseForSale", httpMethod = "POST",
             notes = "分页查询买卖房源信息")
     @PostMapping("/findPageHouseForSale")
     public DataResult<PagingResponse<HouseSaleWithOwnerClientResponse>> findPageHouseForSale(
             @RequestBody PagingRequest<HouseSaleWithOwnerClientRequest> req, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
-        return DataResults.ok(houseBiz.findPageHouseForSale(req,hReq));
+        return DataResults.ok(houseSaleBiz.findPageHouseForSale(req,hReq));
     }
 
     /**
@@ -57,7 +57,7 @@ public class HouseSaleController {
     @PostMapping("/exportFindHouseForSale")
     public void exportFindHouseForSale(HttpServletResponse hRep, HttpServletRequest hReq,@RequestBody HouseSaleWithOwnerClientRequest condition) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException
     {
-        houseBiz.exportFindPageHouseForSale(hRep,hReq,condition);
+        houseSaleBiz.exportFindPageHouseForSale(hRep,hReq,condition);
     }
 
 

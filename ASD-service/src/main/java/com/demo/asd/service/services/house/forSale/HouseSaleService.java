@@ -1,4 +1,4 @@
-package com.demo.asd.service.services.house;
+package com.demo.asd.service.services.house.forSale;
 
 import com.demo.asd.base.hierarchies.BaseService;
 import com.demo.asd.base.hierarchies.CrudDao;
