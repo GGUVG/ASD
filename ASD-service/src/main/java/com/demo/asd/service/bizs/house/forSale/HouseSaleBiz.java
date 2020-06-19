@@ -12,7 +12,7 @@ import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
 
 import com.demo.asd.pagination.*;
-import com.demo.asd.service.services.house.HouseSaleService;
+import com.demo.asd.service.services.house.forSale.HouseSaleService;
 import com.demo.asd.support.model.po.house.forSale.*;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
 /**
  * 调用asd-service模块/houseSaleService
  * 有关售房业务逻辑处理
