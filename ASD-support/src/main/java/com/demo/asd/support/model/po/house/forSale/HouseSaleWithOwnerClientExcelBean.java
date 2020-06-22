@@ -3,7 +3,7 @@ package com.demo.asd.support.model.po.house.forSale;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
 
-public class HouseSaleWithOwnerClientReportBean extends BaseRowModel {
+public class HouseSaleWithOwnerClientExcelBean extends BaseRowModel {
 
     @ExcelProperty(value = "房源ID", index = 0)
     public Long houseId;

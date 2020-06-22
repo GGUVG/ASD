@@ -10,10 +10,12 @@ import com.demo.asd.beanUtils.BeanUtils;
 import com.demo.asd.excel.EasyExcelUtils;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
-
+import org.springframework.transaction.annotation.Transactional;
+import com.demo.asd.model.house.report.HouseSourceApproveRequest;
 import com.demo.asd.pagination.*;
 import com.demo.asd.service.services.house.forSale.HouseSaleService;
 import com.demo.asd.support.model.po.house.forSale.*;
+import com.demo.asd.support.model.po.house.report.HouseSourceApproveBean;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -79,14 +81,14 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         condition.setTypeCode("HOUSE_TYPE");
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         List<HouseSaleWithOwnerClientBean> beans=houseSaleService.findHouseForSale(condition);
-        List<HouseSaleWithOwnerClientReportBean> reportBeans=BeanUtils.copyList(beans, HouseSaleWithOwnerClientReportBean.class);
+        List<HouseSaleWithOwnerClientExcelBean> reportBeans=BeanUtils.copyList(beans, HouseSaleWithOwnerClientExcelBean.class);
         for(int i=0;i<beans.size();i++)
         {
             HouseSaleWithOwnerClientBean hB=beans.get(i);
             LocalDateTime time1= hB.getDealTime();
             if(time1 !=null)
             {
-                HouseSaleWithOwnerClientReportBean hRB =reportBeans.get(i);
+                HouseSaleWithOwnerClientExcelBean hRB =reportBeans.get(i);
                 hRB.setDealTime(df.format(time1));
             }
         }
@@ -95,6 +97,14 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         String fileName = new String(("买卖房源消息" + new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())).getBytes(), "UTF-8");
         EasyExcelUtils.createExcelStreamMutilByEaysExcel(hRep,fileName, map, ExcelTypeEnum.XLSX);
         return fileName;
+    }
+
+    @Transactional
+    public Integer reportNewSource(HouseSourceApproveRequest request)
+    {
+        HouseSourceApproveBean bean=BeanUtils.copy(request,HouseSourceApproveBean.class);
+        bean.setStaffId((long) 1);
+        return(houseSaleService.reportNewSource(bean));
     }
 
     @Override

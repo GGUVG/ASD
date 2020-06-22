@@ -5,7 +5,7 @@ import com.alibaba.excel.metadata.BaseRowModel;
 
 import java.time.LocalDateTime;
 
-public class HouseRentExReportBean extends BaseRowModel {
+public class HouseRentExExcelBean extends BaseRowModel {
 
     @ExcelProperty(value = "房源ID", index = 0)
     public Long houseId;

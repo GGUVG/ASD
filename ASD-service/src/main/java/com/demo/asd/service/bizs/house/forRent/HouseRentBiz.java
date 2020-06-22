@@ -17,7 +17,7 @@ import com.demo.asd.pagination.PagingResponse;
 import com.demo.asd.service.services.house.forRent.HouseRentService;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExBean;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExCriteria;
-import com.demo.asd.support.model.po.house.forRent.HouseRentExReportBean;
+import com.demo.asd.support.model.po.house.forRent.HouseRentExExcelBean;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -83,7 +83,7 @@ public class HouseRentBiz extends BaseBiz<Long, HouseRentExBean, HouseRentExCrit
         condition.setTypeCode("HOUSE_TYPE");
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         List<HouseRentExBean> beans=houseRentService.findHouseForRentRequest(condition);
-        List<HouseRentExReportBean> reportBeans=BeanUtils.copyList(beans, HouseRentExReportBean.class);
+        List<HouseRentExExcelBean> reportBeans=BeanUtils.copyList(beans, HouseRentExExcelBean.class);
         for(int i=0;i<beans.size();i++)
         {
             HouseRentExBean rentExBean=beans.get(i);
@@ -91,7 +91,7 @@ public class HouseRentBiz extends BaseBiz<Long, HouseRentExBean, HouseRentExCrit
             LocalDateTime lastEnd1=rentExBean.getLastEnd();
             if(lastDealTime1 !=null && lastEnd1 !=null)//不存在交易时间或租赁到期时间其中之一为空的情况
             {
-                HouseRentExReportBean exReportBean =reportBeans.get(i);
+                HouseRentExExcelBean exReportBean =reportBeans.get(i);
                 exReportBean.setLastDealTime(df.format(lastDealTime1));
                 exReportBean.setLastEnd(df.format(lastEnd1));
             }

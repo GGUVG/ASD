@@ -4,6 +4,7 @@ import com.demo.asd.dataResult.DataResult;
 import com.demo.asd.dataResult.DataResults;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
+import com.demo.asd.model.house.report.HouseSourceApproveRequest;
 import com.demo.asd.pagination.PagingRequest;
 import com.demo.asd.pagination.PagingResponse;
 import com.demo.asd.service.bizs.house.forSale.HouseSaleBiz;
@@ -60,5 +61,11 @@ public class HouseSaleController {
         houseSaleBiz.exportFindPageHouseForSale(hRep,hReq,condition);
     }
 
-
+    @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
+            notes = "报备新房源信息")
+    @PostMapping("/reportNewSource")
+    public DataResult<Integer> reportNewSource(
+            @RequestBody HouseSourceApproveRequest request, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
+        return DataResults.ok(houseSaleBiz.reportNewSource(request));
+    }
 }

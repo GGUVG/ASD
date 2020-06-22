@@ -103,10 +103,10 @@
             <bind name="estateName" value="'%' + criteria.estateName + '%'"/>
             and t_he.ESTATE_NAME like #{estateName}
         </if>
-        <if test="criteria.houseLocationProvince != null">and t_hs.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationCity != null">and t_hs.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationDistrict != null">and t_hs.HOUSE_LOCATION_DISTRICT = #{criteria.houseLocationDistrict,jdbcType=VARCHAR}</if>
-        <if test="criteria.houseLocationStreet != null">and t_hs.HOUSE_LOCATION_STREET = #{criteria.houseLocationStreet,jdbcType=VARCHAR}</if>
+        <if test="criteria.houseLocationProvince != null">and t_hr.HOUSE_LOCATION_PROVINCE = #{criteria.houseLocationProvince,jdbcType=VARCHAR}</if>
+        <if test="criteria.houseLocationCity != null">and t_hr.HOUSE_LOCATION_CITY = #{criteria.houseLocationCity,jdbcType=VARCHAR}</if>
+        <if test="criteria.houseLocationDistrict != null">and t_hr.HOUSE_LOCATION_DISTRICT = #{criteria.houseLocationDistrict,jdbcType=VARCHAR}</if>
+        <if test="criteria.houseLocationStreet != null">and t_hr.HOUSE_LOCATION_STREET = #{criteria.houseLocationStreet,jdbcType=VARCHAR}</if>
         <if test="criteria.startHousePrice != null and criteria.endHousePrice != null and criteria.startHousePrice !=0 and criteria.startHousePrice !='' and criteria.endHousePrice !=0 and criteria.endHousePrice !=''">
             and t_hr.HOUSE_PRICE between #{criteria.startHousePrice,jdbcType=INTEGER} and #{criteria.endHousePrice,jdbcType=INTEGER}
         </if>
@@ -120,6 +120,9 @@
         <if test="criteria.completeTime != null">and COMPLETE_TIME = #{criteria.completeTime,jdbcType=VARCHAR}</if>
         <if test="criteria.startLastDeal != null and criteria.endLastDeal != null">
             and t_hr.LAST_DEAL_TIME between #{criteria.startLastDeal,jdbcType=TIMESTAMP} and #{criteria.endLastDeal,jdbcType=TIMESTAMP}
+        </if>
+        <if test="criteria.startLastEnd != null and criteria.endLastEnd != null">
+            and t_hr.LAST_END between #{criteria.startLastEnd,jdbcType=TIMESTAMP} and #{criteria.endLastEnd,jdbcType=TIMESTAMP}
         </if>
         <if test="criteria.lastPurchaserId != null and criteria.lastPurchaserId !=0 and criteria.lastPurchaserId !=''">and LAST_PURCHASER_ID = #{criteria.lastPurchaserId,jdbcType=BIGINT}</if>
         <if test="criteria.clientName != null">
