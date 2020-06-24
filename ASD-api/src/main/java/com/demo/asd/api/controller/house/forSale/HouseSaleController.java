@@ -12,8 +12,11 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 /**
                        .::::.
@@ -65,7 +68,15 @@ public class HouseSaleController {
             notes = "报备新房源信息")
     @PostMapping("/reportNewSource")
     public DataResult<Integer> reportNewSource(
-            @RequestBody HouseSourceApproveRequest request, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
-        return DataResults.ok(houseSaleBiz.reportNewSource(request));
+            @RequestBody HouseSourceApproveRequest request, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, IOException {
+        return DataResults.ok(houseSaleBiz.reportNewSource(request,hReq));
+    }
+
+    @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
+            notes = "上传新房源文件")
+    @PostMapping("/uploadHouseSaleFile")
+    public void uploadHouseSaleFile(@RequestParam("newFile") MultipartFile newFile) throws IOException
+    {
+        houseSaleBiz.uploadHouseSaleFile(newFile);
     }
 }

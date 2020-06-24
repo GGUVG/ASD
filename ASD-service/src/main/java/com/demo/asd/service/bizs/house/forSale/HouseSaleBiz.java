@@ -19,9 +19,13 @@ import com.demo.asd.support.model.po.house.report.HouseSourceApproveBean;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
@@ -100,11 +104,43 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
     }
 
     @Transactional
-    public Integer reportNewSource(HouseSourceApproveRequest request)
-    {
+    public Integer reportNewSource(HouseSourceApproveRequest request, HttpServletRequest hReq) throws IOException {
         HouseSourceApproveBean bean=BeanUtils.copy(request,HouseSourceApproveBean.class);
-        bean.setStaffId((long) 1);
+        Cookie[] cookies=hReq.getCookies();
+        for(Cookie cookie:cookies)
+        {
+            String checkStr="backStaffCookie";
+            if(checkStr.equals(cookie.getName()))
+            {
+                String str1=URLDecoder.decode(cookie.getValue(), "UTF-8");
+                JSONObject jsonObject = JSONObject.parseObject(str1);
+                StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
+                bean.setStaffId(staffCriteria.getStaffId());
+                bean.setHangTypeTxt("出售");
+            }
+        }
+
         return(houseSaleService.reportNewSource(bean));
+    }
+
+    public String uploadHouseSaleFile(MultipartFile multipartFile) throws IOException {
+        String path = "E:\\Work\\SoftWare\\IntelliJ IDEA 2019.2.3\\WorkSpace\\ASD\\ASD-upload";
+        String filename = multipartFile.getOriginalFilename();
+        int unixSep = filename.lastIndexOf('/');
+        int winSep = filename.lastIndexOf('\\');
+        int pos = (winSep > unixSep ? winSep : unixSep);
+        if (pos != -1)
+        {
+            filename = filename.substring(pos + 1);
+        }
+        String realpath = path + filename;
+        File filepath = new File(path, filename);
+        if (!filepath.getParentFile().exists())
+        {
+            filepath.getParentFile().mkdirs();
+        }
+        multipartFile.transferTo(new File(path + File.separator + filename));
+        return "success";
     }
 
     @Override

@@ -13,6 +13,7 @@ public class HouseSourceApproveRequest extends BaseRequest
     public Long Id;
     public Long staffId;
     public Integer houseType;
+    public String hangTypeTxt;
     public Long estateId;
     public String houseName;
     public String houseLocationProvince;
@@ -30,6 +31,14 @@ public class HouseSourceApproveRequest extends BaseRequest
     public String mandateImg5;
     public LocalDateTime permitTime;
     public Integer permitState;
+
+    public String getHangTypeTxt() {
+        return hangTypeTxt;
+    }
+
+    public void setHangTypeTxt(String hangTypeTxt) {
+        this.hangTypeTxt = hangTypeTxt;
+    }
 
     public Long getId() {
         return Id;

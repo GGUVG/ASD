@@ -47,6 +47,7 @@ public class HouseRentBiz extends BaseBiz<Long, HouseRentExBean, HouseRentExCrit
     public PagingResponse<HouseRentExResponse> findPageHouseForRent(PagingRequest<HouseRentExRequest> pag, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
         HouseRentExCriteria criteria=BeanUtils.copy(pag.getCriteria(), this.criteriaClass);
         Cookie[] cookies=hReq.getCookies();
+        /**
         for(Cookie cookie:cookies)
         {
             String checkStr="backStaffCookie";
@@ -58,6 +59,8 @@ public class HouseRentBiz extends BaseBiz<Long, HouseRentExBean, HouseRentExCrit
             criteria.setClientStaffId(staffCriteria.getStaffId());
             }
         }
+         **/
+        criteria.setClientStaffId((long) 1);
         Pagination pagination =BeanUtils.copy(pag.getPagination(), Pagination.class);
         criteria.setTypeCode("HOUSE_TYPE");
         List<HouseRentExBean> beans=houseRentService.findPageHouseForRent(criteria,pagination);
