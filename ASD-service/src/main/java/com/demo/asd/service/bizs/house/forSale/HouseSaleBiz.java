@@ -129,9 +129,11 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
      * @return
      * @throws IOException
      */
-    public String uploadHouseSaleFile(MultipartFile multipartFile) throws IOException
+    public String uploadHouseSaleFile(MultipartFile multipartFile,String houseLocationProvince) throws IOException
     {
-        String path = "E:\\Work\\SoftWare\\IntelliJ IDEA 2019.2.3\\WorkSpace\\ASD\\ASD-upload\\house\\forSale\\";
+        int lastIndexOf = houseLocationProvince.lastIndexOf("/");
+        String addPath = houseLocationProvince.substring(lastIndexOf + 1, houseLocationProvince.length());
+        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/"+ addPath;
         String filename = multipartFile.getOriginalFilename();
         int unixSep = filename.lastIndexOf('/');
         int winSep = filename.lastIndexOf('\\');
