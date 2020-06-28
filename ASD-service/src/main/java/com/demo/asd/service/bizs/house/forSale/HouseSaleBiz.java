@@ -123,8 +123,15 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         return(houseSaleService.reportNewSource(bean));
     }
 
-    public String uploadHouseSaleFile(MultipartFile multipartFile) throws IOException {
-        String path = "E:\\Work\\SoftWare\\IntelliJ IDEA 2019.2.3\\WorkSpace\\ASD\\ASD-upload";
+    /**
+     * 上传文件
+     * @param multipartFile
+     * @return
+     * @throws IOException
+     */
+    public String uploadHouseSaleFile(MultipartFile multipartFile) throws IOException
+    {
+        String path = "E:\\Work\\SoftWare\\IntelliJ IDEA 2019.2.3\\WorkSpace\\ASD\\ASD-upload\\house\\forSale\\";
         String filename = multipartFile.getOriginalFilename();
         int unixSep = filename.lastIndexOf('/');
         int winSep = filename.lastIndexOf('\\');
@@ -141,6 +148,31 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         }
         multipartFile.transferTo(new File(path + File.separator + filename));
         return "success";
+    }
+
+    /**
+     * 删除上传文件目录的指定文件
+     * @param filePath
+     * @return
+     * @throws IOException
+     */
+    public String delHouseSaleFile(String filePath) throws IOException
+    {
+        String resultInfo = null;
+        int lastIndexOf = filePath.lastIndexOf("/");
+        String img_path = filePath.substring(lastIndexOf + 1, filePath.length());
+        img_path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + img_path;
+        File file = new File(img_path);
+        if (file.exists()) {//文件是否存在
+            if (file.delete()) {//存在就删了，返回1
+                resultInfo =  "1";
+            } else {
+                resultInfo =  "0";
+            }
+        } else {
+            resultInfo = "文件不存在！";
+        }
+        return resultInfo;
     }
 
     @Override

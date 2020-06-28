@@ -2,38 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forRent/HouseRentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forRent/HouseRentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSourceApproveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSourceApproveRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSourceApproveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSourceApproveResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSourceApproveRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSourceApproveRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSourceApproveResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSourceApproveResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/house/forSale/HouseSaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/house/forSale/HouseSaleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/house/forSale/HouseSaleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/house/forSale/HouseSaleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSourceApproveBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSourceApproveBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSourceApproveCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSourceApproveCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSourceApproveBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSourceApproveBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSourceApproveCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSourceApproveCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="176" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -220,7 +203,9 @@
       <workItem from="1592873853461" duration="22078000" />
       <workItem from="1592906982974" duration="156000" />
       <workItem from="1592959359363" duration="1383000" />
-      <workItem from="1592961531984" duration="50000" />
+      <workItem from="1592961531984" duration="229000" />
+      <workItem from="1592987162608" duration="169000" />
+      <workItem from="1593305403348" duration="8712000" />
     </task>
     <servers />
   </component>
@@ -246,5 +231,10 @@
         <watch expression="map" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ASD$ApplicationStart.ic" NAME="ApplicationStart Coverage Results" MODIFIED="1593314475045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.demo.asd.api.*</FILTER>
+    </SUITE>
   </component>
 </project>

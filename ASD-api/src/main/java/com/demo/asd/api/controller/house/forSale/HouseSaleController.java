@@ -8,6 +8,7 @@ import com.demo.asd.model.house.report.HouseSourceApproveRequest;
 import com.demo.asd.pagination.PagingRequest;
 import com.demo.asd.pagination.PagingResponse;
 import com.demo.asd.service.bizs.house.forSale.HouseSaleBiz;
+import com.demo.asd.support.model.po.sys.UploadFile;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -75,8 +76,16 @@ public class HouseSaleController {
     @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
             notes = "上传新房源文件")
     @PostMapping("/uploadHouseSaleFile")
-    public void uploadHouseSaleFile(@RequestParam("newFile") MultipartFile newFile) throws IOException
+    public void uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile) throws IOException
     {
         houseSaleBiz.uploadHouseSaleFile(newFile);
+    }
+
+    @ApiOperation(tags = "delHouseSaleFile", value = "reportNewSource", httpMethod = "POST",
+            notes = "删除上传的新房源文件")
+    @PostMapping("/delHouseSaleFile")
+    public void delHouseSaleFile(@RequestBody UploadFile uploadFile) throws IOException
+    {
+        houseSaleBiz.delHouseSaleFile(uploadFile.getFileName());
     }
 }
