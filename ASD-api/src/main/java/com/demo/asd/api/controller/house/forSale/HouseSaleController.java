@@ -76,9 +76,13 @@ public class HouseSaleController {
     @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
             notes = "上传新房源文件")
     @PostMapping("/uploadHouseSaleFile")
-    public String uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile,@RequestParam("houseLocationProvince")String houseLocationProvince) throws IOException
+    public String uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile,
+    @RequestParam("houseLocationProvince")String houseLocationProvince,
+    @RequestParam("houseLocationCity")String houseLocationCity,
+    @RequestParam("houseLocationDistrict")String houseLocationDistrict,
+    @RequestParam("houseLocationStreet")String houseLocationStreet) throws IOException
     {
-        return houseSaleBiz.uploadHouseSaleFile(newFile,houseLocationProvince);
+        return houseSaleBiz.uploadHouseSaleFile(newFile,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet);
     }
 
     @ApiOperation(tags = "delHouseSaleFile", value = "reportNewSource", httpMethod = "POST",

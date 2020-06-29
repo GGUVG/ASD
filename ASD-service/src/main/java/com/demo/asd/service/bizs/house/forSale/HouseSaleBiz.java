@@ -129,31 +129,31 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
      * @return
      * @throws IOException
      */
-    public String uploadHouseSaleFile(MultipartFile multipartFile,String houseLocationProvince) throws IOException
+    public String uploadHouseSaleFile(MultipartFile multipartFile,String houseLocationProvince,
+    String houseLocationCity,String houseLocationDistrict,String houseLocationStreet) throws IOException
     {
         int lastIndexOf = houseLocationProvince.lastIndexOf("/");
-        String addPath = houseLocationProvince.substring(lastIndexOf + 1, houseLocationProvince.length());
-        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/"+ addPath;
+        String addPathProvince = houseLocationProvince.substring(lastIndexOf + 1, houseLocationProvince.length());
+        String addPathCity = houseLocationCity.substring(lastIndexOf + 1, houseLocationCity.length());
+        String addPathDistrict = houseLocationDistrict.substring(lastIndexOf + 1, houseLocationDistrict.length());
+        String addPathStreet = houseLocationStreet.substring(lastIndexOf + 1, houseLocationStreet.length());
+        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/"+ addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet;
         String filename = multipartFile.getOriginalFilename();
         int unixSep = filename.lastIndexOf('/');
         int winSep = filename.lastIndexOf('\\');
         int pos = (winSep > unixSep ? winSep : unixSep);
         if (pos != -1)
-        {
-            filename = filename.substring(pos + 1);
-        }
-        String realpath = path + filename;
+        {filename = filename.substring(pos + 1);}
         File filepath = new File(path, filename);
         if (!filepath.getParentFile().exists())
-        {
-            filepath.getParentFile().mkdirs();
-        }
+        {filepath.getParentFile().mkdirs();}
         multipartFile.transferTo(new File(path + File.separator + filename));
         return "success";
     }
 
     /**
      * 删除上传文件目录的指定文件
+     * 暂时废弃,交由前端fileList[]解决
      * @param filePath
      * @return
      * @throws IOException
@@ -162,9 +162,9 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
     {
         String resultInfo = null;
         int lastIndexOf = filePath.lastIndexOf("/");
-        String img_path = filePath.substring(lastIndexOf + 1, filePath.length());
-        img_path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + img_path;
-        File file = new File(img_path);
+        String file_path = filePath.substring(lastIndexOf + 1, filePath.length());
+        file_path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + file_path;
+        File file = new File(file_path);
         if (file.exists()) {//文件是否存在
             if (file.delete()) {//存在就删了，返回1
                 resultInfo =  "1";

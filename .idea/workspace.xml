@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" afterDir="false" />
@@ -206,7 +205,9 @@
       <workItem from="1592961531984" duration="229000" />
       <workItem from="1592987162608" duration="169000" />
       <workItem from="1593305403348" duration="16254000" />
-      <workItem from="1593333035835" duration="1193000" />
+      <workItem from="1593333035835" duration="3984000" />
+      <workItem from="1593350265728" duration="1498000" />
+      <workItem from="1593391922981" duration="1236000" />
     </task>
     <servers />
   </component>
