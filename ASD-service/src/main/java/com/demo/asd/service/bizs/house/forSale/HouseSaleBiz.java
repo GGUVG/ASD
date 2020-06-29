@@ -10,6 +10,7 @@ import com.demo.asd.beanUtils.BeanUtils;
 import com.demo.asd.excel.EasyExcelUtils;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
 import com.demo.asd.model.house.report.HouseSourceApproveRequest;
 import com.demo.asd.pagination.*;
@@ -130,7 +131,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
      * @throws IOException
      */
     public String uploadHouseSaleFile(MultipartFile multipartFile,String houseLocationProvince,
-    String houseLocationCity,String houseLocationDistrict,String houseLocationStreet) throws IOException
+    String houseLocationCity,String houseLocationDistrict,String houseLocationStreet,Long staffId,String staffUsername) throws IOException
     {
         int lastIndexOf = houseLocationProvince.lastIndexOf("/");
         String addPathProvince = houseLocationProvince.substring(lastIndexOf + 1, houseLocationProvince.length());
@@ -139,11 +140,13 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         String addPathStreet = houseLocationStreet.substring(lastIndexOf + 1, houseLocationStreet.length());
         String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/"+ addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet;
         String filename = multipartFile.getOriginalFilename();
+        String fileExtension = StringUtils.substringAfter(multipartFile.getOriginalFilename() , ".");//文件原始扩展名
         int unixSep = filename.lastIndexOf('/');
         int winSep = filename.lastIndexOf('\\');
         int pos = (winSep > unixSep ? winSep : unixSep);
         if (pos != -1)
         {filename = filename.substring(pos + 1);}
+        filename=filename.replace(filename, staffId+staffUsername+"."+fileExtension);
         File filepath = new File(path, filename);
         if (!filepath.getParentFile().exists())
         {filepath.getParentFile().mkdirs();}

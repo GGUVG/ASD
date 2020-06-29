@@ -80,9 +80,11 @@ public class HouseSaleController {
     @RequestParam("houseLocationProvince")String houseLocationProvince,
     @RequestParam("houseLocationCity")String houseLocationCity,
     @RequestParam("houseLocationDistrict")String houseLocationDistrict,
-    @RequestParam("houseLocationStreet")String houseLocationStreet) throws IOException
+    @RequestParam("houseLocationStreet")String houseLocationStreet,
+    @RequestParam("staffId")Long staffId,
+    @RequestParam("staffUserName")String staffUserName) throws IOException
     {
-        return houseSaleBiz.uploadHouseSaleFile(newFile,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet);
+        return houseSaleBiz.uploadHouseSaleFile(newFile,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
     }
 
     @ApiOperation(tags = "delHouseSaleFile", value = "reportNewSource", httpMethod = "POST",

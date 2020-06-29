@@ -24,13 +24,17 @@ public class HouseSourceApproveRequest extends BaseRequest
     public Integer houseSquare;
     public String completeTime;
     public Long houseClientId;
-    public String mandateImg1;
-    public String mandateImg2;
-    public String mandateImg3;
-    public String mandateImg4;
-    public String mandateImg5;
+    public String mandate;
     public LocalDateTime permitTime;
     public Integer permitState;
+
+    public String getMandate() {
+        return mandate;
+    }
+
+    public void setMandate(String mandate) {
+        this.mandate = mandate;
+    }
 
     public String getHangTypeTxt() {
         return hangTypeTxt;
@@ -142,46 +146,6 @@ public class HouseSourceApproveRequest extends BaseRequest
 
     public void setHouseClientId(Long houseClientId) {
         this.houseClientId = houseClientId;
-    }
-
-    public String getMandateImg1() {
-        return mandateImg1;
-    }
-
-    public void setMandateImg1(String mandateImg1) {
-        this.mandateImg1 = mandateImg1;
-    }
-
-    public String getMandateImg2() {
-        return mandateImg2;
-    }
-
-    public void setMandateImg2(String mandateImg2) {
-        this.mandateImg2 = mandateImg2;
-    }
-
-    public String getMandateImg3() {
-        return mandateImg3;
-    }
-
-    public void setMandateImg3(String mandateImg3) {
-        this.mandateImg3 = mandateImg3;
-    }
-
-    public String getMandateImg4() {
-        return mandateImg4;
-    }
-
-    public void setMandateImg4(String mandateImg4) {
-        this.mandateImg4 = mandateImg4;
-    }
-
-    public String getMandateImg5() {
-        return mandateImg5;
-    }
-
-    public void setMandateImg5(String mandateImg5) {
-        this.mandateImg5 = mandateImg5;
     }
 
     public LocalDateTime getPermitTime() {

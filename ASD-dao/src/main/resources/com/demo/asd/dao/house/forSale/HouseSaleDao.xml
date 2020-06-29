@@ -97,11 +97,7 @@
             <if test="bean.houseSquare != null">HOUSE_SQUARE,</if>
             <if test="bean.completeTime != null">COMPLETE_TIME,</if>
             <if test="bean.houseClientId != null">HOUSE_CLIENT_ID,</if>
-            <if test="bean.mandateImg1 != null">MANDATE_IMG1,</if>
-            <if test="bean.mandateImg2 != null">MANDATE_IMG2,</if>
-            <if test="bean.mandateImg3 != null">MANDATE_IMG3,</if>
-            <if test="bean.mandateImg4 != null">MANDATE_IMG4,</if>
-            <if test="bean.mandateImg5 != null">MANDATE_IMG5,</if>
+            <if test="bean.mandate != null">MANDATE,</if>
             <if test="bean.permitTime != null">PERMIT_TIME,</if>
             <if test="bean.permitState != null">PERMIT_STATE,</if>
         </trim>
@@ -119,11 +115,7 @@
             <if test="bean.houseSquare != null">#{bean.houseSquare,jdbcType=INTEGER},</if>
             <if test="bean.completeTime != null">#{bean.completeTime,jdbcType=VARCHAR},</if>
             <if test="bean.houseClientId != null">#{bean.houseClientId,jdbcType=BIGINT},</if>
-            <if test="bean.mandateImg1 != null">#{bean.mandateImg1,jdbcType=VARCHAR},</if>
-            <if test="bean.mandateImg2 != null">#{bean.mandateImg2,jdbcType=VARCHAR},</if>
-            <if test="bean.mandateImg3 != null">#{bean.mandateImg3,jdbcType=VARCHAR},</if>
-            <if test="bean.mandateImg4 != null">#{bean.mandateImg4,jdbcType=VARCHAR},</if>
-            <if test="bean.mandateImg5 != null">#{bean.mandateImg5,jdbcType=VARCHAR},</if>
+            <if test="bean.mandate != null">#{bean.mandate,jdbcType=VARCHAR},</if>
             <if test="bean.permitTime != null">#{bean.permitTime,jdbcType=TIMESTAMP},</if>
             <if test="bean.permitState != null">#{bean.permitState,jdbcType=INTEGER},</if>
         </trim>
