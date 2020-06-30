@@ -81,7 +81,7 @@
     </select>
 
     <!-- 报备新房源信息-->
-    <insert id="reportNewSource" parameterType="com.demo.asd.support.model.po.house.report.HouseSourceApproveBean" useGeneratedKeys="true">
+    <insert id="reportNewSource" parameterType="com.demo.asd.support.model.po.house.report.HouseSaleSourceApproveBean" useGeneratedKeys="true">
         insert into t_house_approve
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="bean.staffId != null">STAFF_ID,</if>

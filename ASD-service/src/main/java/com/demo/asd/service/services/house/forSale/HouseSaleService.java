@@ -7,14 +7,11 @@ import com.demo.asd.dao.house.forSale.HouseSaleDao;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.pagination.Pagination;
 import com.demo.asd.support.model.po.house.forSale.*;
-import com.demo.asd.support.model.po.house.report.HouseSourceApproveBean;
+import com.demo.asd.support.model.po.house.report.HouseSaleSourceApproveBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -41,7 +38,7 @@ public class HouseSaleService extends BaseService<Long, HouseSaleWithOwnerClient
         return houseSaleDao.findHouseForSale(criteria);
     }
 
-    public Integer reportNewSource(HouseSourceApproveBean bean)
+    public Integer reportNewSource(HouseSaleSourceApproveBean bean)
     {
         return houseSaleDao.reportNewSource(bean);
     }

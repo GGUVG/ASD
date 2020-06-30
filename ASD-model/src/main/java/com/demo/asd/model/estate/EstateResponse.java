@@ -1,14 +1,11 @@
-package com.demo.asd.support.model.po.estate;
+package com.demo.asd.model.estate;
 
-/**小区实体类
- * create at 2020/06/09
- * by chenCy
- */
-import com.demo.asd.base.entity.BaseBean;
+import com.demo.asd.base.entity.BaseResponse;
 
 import java.math.BigDecimal;
 
-public class EstateBean extends BaseBean {
+public class EstateResponse extends BaseResponse
+{
     public Long estateId;//小区ID
     public String estateName;//小区名
     public String estateProvince;//位置省

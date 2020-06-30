@@ -1,12 +1,10 @@
-package com.demo.asd.model.house.report;
+package com.demo.asd.support.model.po.house.report;
 
-import com.demo.asd.base.entity.BaseResponse;
+import com.demo.asd.base.entity.BaseBean;
+
 import java.time.LocalDateTime;
-/**
- * 报备新房源
- * create by chenCy at 2020/06/22
- */
-public class HouseSourceApproveResponse extends BaseResponse
+
+public class HouseRentSourceApproveBean extends BaseBean
 {
     public Long Id;
     public Long staffId;
@@ -25,14 +23,6 @@ public class HouseSourceApproveResponse extends BaseResponse
     public String mandate;
     public LocalDateTime permitTime;
     public Integer permitState;
-
-    public String getMandate() {
-        return mandate;
-    }
-
-    public void setMandate(String mandate) {
-        this.mandate = mandate;
-    }
 
     public String getHangTypeTxt() {
         return hangTypeTxt;

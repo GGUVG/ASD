@@ -4,7 +4,7 @@ import com.demo.asd.base.entity.BaseBean;
 
 import java.time.LocalDateTime;
 
-public class HouseSourceApproveBean extends BaseBean
+public class HouseSaleSourceApproveBean extends BaseBean
 {
     public Long Id;
     public Long staffId;

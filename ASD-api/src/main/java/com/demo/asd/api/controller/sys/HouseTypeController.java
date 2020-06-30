@@ -21,7 +21,7 @@ public class HouseTypeController {
     public HouseTypeBiz houseTypeBiz;
 
     /**
-     * 买卖房源信息导出excel
+     * 查询房屋类别列表HouseType
      */
     @ApiOperation(tags = "HouseType", value = "findHouseType", httpMethod = "POST",
             notes = "查询房屋类别列表HouseType")

@@ -2,8 +2,7 @@ package com.demo.asd.dao.house.forSale;
 
 import com.demo.asd.base.hierarchies.CrudDao;
 import com.demo.asd.support.model.po.house.forSale.*;
-import com.demo.asd.support.model.po.house.report.HouseSourceApproveBean;
-import com.demo.asd.support.model.po.house.report.HouseSourceApproveCriteria;
+import com.demo.asd.support.model.po.house.report.HouseSaleSourceApproveBean;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -23,5 +22,5 @@ public interface HouseSaleDao extends CrudDao<Long, HouseSaleWithOwnerClientBean
     public List<HouseSaleWithOwnerClientBean> findHouseForSale(@Param("criteria") HouseSaleWithOwnerClientCriteria criteria);
 
     //报备新房源
-    public Integer reportNewSource(@Param("bean") HouseSourceApproveBean bean);
+    public Integer reportNewSource(@Param("bean") HouseSaleSourceApproveBean bean);
 }

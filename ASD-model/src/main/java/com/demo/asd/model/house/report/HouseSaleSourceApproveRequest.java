@@ -1,10 +1,14 @@
-package com.demo.asd.support.model.po.house.report;
+package com.demo.asd.model.house.report;
 
-import com.demo.asd.base.entity.BaseCriteria;
 
+import com.demo.asd.base.entity.BaseRequest;
 import java.time.LocalDateTime;
 
-public class HouseSourceApproveCriteria extends BaseCriteria
+/**
+ * 报备新房源
+ * create by chenCy at 2020/06/22
+ */
+public class HouseSaleSourceApproveRequest extends BaseRequest
 {
     public Long Id;
     public Long staffId;

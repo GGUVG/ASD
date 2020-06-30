@@ -12,11 +12,11 @@ import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientRequest;
 import com.demo.asd.model.house.forSale.HouseSaleWithOwnerClientResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
-import com.demo.asd.model.house.report.HouseSourceApproveRequest;
+import com.demo.asd.model.house.report.HouseSaleSourceApproveRequest;
 import com.demo.asd.pagination.*;
 import com.demo.asd.service.services.house.forSale.HouseSaleService;
 import com.demo.asd.support.model.po.house.forSale.*;
-import com.demo.asd.support.model.po.house.report.HouseSourceApproveBean;
+import com.demo.asd.support.model.po.house.report.HouseSaleSourceApproveBean;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -105,8 +105,8 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
     }
 
     @Transactional
-    public Integer reportNewSource(HouseSourceApproveRequest request, HttpServletRequest hReq) throws IOException {
-        HouseSourceApproveBean bean=BeanUtils.copy(request,HouseSourceApproveBean.class);
+    public Integer reportNewSource(HouseSaleSourceApproveRequest request, HttpServletRequest hReq) throws IOException {
+        HouseSaleSourceApproveBean bean=BeanUtils.copy(request, HouseSaleSourceApproveBean.class);
         Cookie[] cookies=hReq.getCookies();
         for(Cookie cookie:cookies)
         {
