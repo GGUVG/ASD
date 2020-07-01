@@ -69,7 +69,8 @@ public class HouseSaleController {
             notes = "报备新房源信息")
     @PostMapping("/reportNewSource")
     public DataResult<Integer> reportNewSource(
-            @RequestBody HouseSaleSourceApproveRequest request, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, IOException {
+            @RequestBody HouseSaleSourceApproveRequest request, HttpServletRequest hReq) throws IOException
+    {
         return DataResults.ok(houseSaleBiz.reportNewSource(request,hReq));
     }
 
@@ -79,6 +80,7 @@ public class HouseSaleController {
     public String uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile,
     @RequestParam("houseEstateId")Long houseEstateId,
     @RequestParam("houseName")String houseName,
+    @RequestParam("materialTypeTxt")String materialTypeTxt,
     @RequestParam("houseLocationProvince")String houseLocationProvince,
     @RequestParam("houseLocationCity")String houseLocationCity,
     @RequestParam("houseLocationDistrict")String houseLocationDistrict,
@@ -86,7 +88,7 @@ public class HouseSaleController {
     @RequestParam("staffId")Long staffId,
     @RequestParam("staffUserName")String staffUserName) throws IOException
     {
-        return houseSaleBiz.uploadHouseSaleFile(newFile,houseEstateId,houseName,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
+        return houseSaleBiz.uploadHouseSaleFile(newFile,houseEstateId,houseName,materialTypeTxt,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
     }
 
     @ApiOperation(tags = "delHouseSaleFile", value = "reportNewSource", httpMethod = "POST",

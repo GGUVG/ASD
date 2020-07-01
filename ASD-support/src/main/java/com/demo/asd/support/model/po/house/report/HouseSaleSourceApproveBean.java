@@ -24,6 +24,14 @@ public class HouseSaleSourceApproveBean extends BaseBean
     public LocalDateTime permitTime;
     public Integer permitState;
 
+    public String getMandate() {
+        return mandate;
+    }
+
+    public void setMandate(String mandate) {
+        this.mandate = mandate;
+    }
+
     public String getHangTypeTxt() {
         return hangTypeTxt;
     }

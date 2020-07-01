@@ -7,6 +7,7 @@
       <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +214,7 @@
       <workItem from="1593477956242" duration="378000" />
       <workItem from="1593483313376" duration="14260000" />
       <workItem from="1593564234265" duration="1251000" />
-      <workItem from="1593572435210" duration="8921000" />
+      <workItem from="1593572435210" duration="11483000" />
     </task>
     <servers />
   </component>

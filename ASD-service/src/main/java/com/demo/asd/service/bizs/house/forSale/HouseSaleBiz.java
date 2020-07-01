@@ -118,9 +118,10 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
                 StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
                 bean.setStaffId(staffCriteria.getStaffId());
                 bean.setHangTypeTxt("出售");
+
             }
         }
-
+        bean.setMandate(request.getHouseLocationProvince()+request.getHouseLocationCity()+request.getHouseLocationDistrict()+request.getHouseLocationStreet()+request.getEstateId()+request.getHouseName());
         return(houseSaleService.reportNewSource(bean));
     }
 
@@ -130,17 +131,18 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
      * @return
      * @throws IOException
      */
-    public String uploadHouseSaleFile(MultipartFile multipartFile,Long houseEstateId,String houseName,String houseLocationProvince,
+    public String uploadHouseSaleFile(MultipartFile multipartFile,Long houseEstateId,String houseName,String materialTypeTxt,String houseLocationProvince,
     String houseLocationCity,String houseLocationDistrict,String houseLocationStreet,Long staffId,String staffUsername) throws IOException
     {
         int lastIndexOf = houseLocationProvince.lastIndexOf("/");
+        String addPathMaterialTypeTxt = materialTypeTxt.substring(lastIndexOf + 1, materialTypeTxt.length());
         String addPathProvince = houseLocationProvince.substring(lastIndexOf + 1, houseLocationProvince.length());
         String addPathCity = houseLocationCity.substring(lastIndexOf + 1, houseLocationCity.length());
         String addPathDistrict = houseLocationDistrict.substring(lastIndexOf + 1, houseLocationDistrict.length());
         String addPathStreet = houseLocationStreet.substring(lastIndexOf + 1, houseLocationStreet.length());
         String addPathHouseEstateId = houseEstateId.toString().substring(lastIndexOf + 1,houseEstateId.toString().length());
         String addPathHouseName = houseName.substring(lastIndexOf + 1,houseName.length());
-        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet + "/" + addPathHouseEstateId + "/" +addPathHouseName;
+        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + addPathMaterialTypeTxt + "/" + addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet + "/" + addPathHouseEstateId + "/" +addPathHouseName;
         String filename = multipartFile.getOriginalFilename();
         String fileExtension = StringUtils.substringAfter(multipartFile.getOriginalFilename() , ".");//文件原始扩展名
         int unixSep = filename.lastIndexOf('/');
@@ -153,7 +155,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         if (!filepath.getParentFile().exists())
         {filepath.getParentFile().mkdirs();}
         multipartFile.transferTo(new File(path + File.separator + filename));
-        return filename;
+            return "success";
     }
 
     /**
