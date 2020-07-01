@@ -130,7 +130,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
      * @return
      * @throws IOException
      */
-    public String uploadHouseSaleFile(MultipartFile multipartFile,String houseLocationProvince,
+    public String uploadHouseSaleFile(MultipartFile multipartFile,Long houseEstateId,String houseName,String houseLocationProvince,
     String houseLocationCity,String houseLocationDistrict,String houseLocationStreet,Long staffId,String staffUsername) throws IOException
     {
         int lastIndexOf = houseLocationProvince.lastIndexOf("/");
@@ -138,7 +138,9 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         String addPathCity = houseLocationCity.substring(lastIndexOf + 1, houseLocationCity.length());
         String addPathDistrict = houseLocationDistrict.substring(lastIndexOf + 1, houseLocationDistrict.length());
         String addPathStreet = houseLocationStreet.substring(lastIndexOf + 1, houseLocationStreet.length());
-        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/"+ addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet;
+        String addPathHouseEstateId = houseEstateId.toString().substring(lastIndexOf + 1,houseEstateId.toString().length());
+        String addPathHouseName = houseName.substring(lastIndexOf + 1,houseName.length());
+        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet + "/" + addPathHouseEstateId + "/" +addPathHouseName;
         String filename = multipartFile.getOriginalFilename();
         String fileExtension = StringUtils.substringAfter(multipartFile.getOriginalFilename() , ".");//文件原始扩展名
         int unixSep = filename.lastIndexOf('/');
@@ -151,7 +153,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         if (!filepath.getParentFile().exists())
         {filepath.getParentFile().mkdirs();}
         multipartFile.transferTo(new File(path + File.separator + filename));
-        return "success";
+        return filename;
     }
 
     /**

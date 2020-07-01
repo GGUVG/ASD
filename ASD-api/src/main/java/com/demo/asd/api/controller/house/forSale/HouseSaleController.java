@@ -77,6 +77,8 @@ public class HouseSaleController {
             notes = "上传新房源文件")
     @PostMapping("/uploadHouseSaleFile")
     public String uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile,
+    @RequestParam("houseEstateId")Long houseEstateId,
+    @RequestParam("houseName")String houseName,
     @RequestParam("houseLocationProvince")String houseLocationProvince,
     @RequestParam("houseLocationCity")String houseLocationCity,
     @RequestParam("houseLocationDistrict")String houseLocationDistrict,
@@ -84,7 +86,7 @@ public class HouseSaleController {
     @RequestParam("staffId")Long staffId,
     @RequestParam("staffUserName")String staffUserName) throws IOException
     {
-        return houseSaleBiz.uploadHouseSaleFile(newFile,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
+        return houseSaleBiz.uploadHouseSaleFile(newFile,houseEstateId,houseName,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
     }
 
     @ApiOperation(tags = "delHouseSaleFile", value = "reportNewSource", httpMethod = "POST",
