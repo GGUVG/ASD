@@ -4,6 +4,7 @@ import com.demo.asd.base.hierarchies.CrudDao;
 import com.demo.asd.pagination.Pagination;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExBean;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExCriteria;
+import com.demo.asd.support.model.po.house.report.HouseRentSourceApproveBean;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -22,4 +23,7 @@ public interface HouseRentDao extends CrudDao<Long, HouseRentExBean, HouseRentEx
 
     //查询当前登录员工下所属租赁房源不分页
     public List<HouseRentExBean> findHouseForRent(@Param("criteria") HouseRentExCriteria criteria);
+
+    //报备新租赁房源
+    public Integer reportNewSource(@Param("bean") HouseRentSourceApproveBean bean);
 }

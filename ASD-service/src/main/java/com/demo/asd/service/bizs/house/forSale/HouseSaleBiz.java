@@ -118,10 +118,11 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
                 StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
                 bean.setStaffId(staffCriteria.getStaffId());
                 bean.setHangTypeTxt("出售");
+                //bean.setMandate(staffCriteria.getStaffId().toString()+staffCriteria.getStaffUsername());
 
             }
         }
-        bean.setMandate(request.getHouseLocationProvince()+request.getHouseLocationCity()+request.getHouseLocationDistrict()+request.getHouseLocationStreet()+request.getEstateId()+request.getHouseName());
+        bean.setPermitState(0);
         return(houseSaleService.reportNewSource(bean));
     }
 
@@ -142,7 +143,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
         String addPathStreet = houseLocationStreet.substring(lastIndexOf + 1, houseLocationStreet.length());
         String addPathHouseEstateId = houseEstateId.toString().substring(lastIndexOf + 1,houseEstateId.toString().length());
         String addPathHouseName = houseName.substring(lastIndexOf + 1,houseName.length());
-        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + addPathMaterialTypeTxt + "/" + addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet + "/" + addPathHouseEstateId + "/" +addPathHouseName;
+        String path = "E:/Work/SoftWare/IntelliJ IDEA 2019.2.3/WorkSpace/ASD/ASD-upload/house/forSale/" + addPathProvince + "/" + addPathCity + "/" + addPathDistrict + "/" + addPathStreet + "/" + addPathHouseEstateId + "/" +addPathHouseName + "/" + addPathMaterialTypeTxt;
         String filename = multipartFile.getOriginalFilename();
         String fileExtension = StringUtils.substringAfter(multipartFile.getOriginalFilename() , ".");//文件原始扩展名
         int unixSep = filename.lastIndexOf('/');

@@ -8,6 +8,7 @@ import com.demo.asd.model.house.forRent.HouseRentExRequest;
 import com.demo.asd.pagination.Pagination;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExBean;
 import com.demo.asd.support.model.po.house.forRent.HouseRentExCriteria;
+import com.demo.asd.support.model.po.house.report.HouseRentSourceApproveBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +39,11 @@ public class HouseRentService extends BaseService<Long, HouseRentExBean, HouseRe
     {
         HouseRentExCriteria criteria= BeanUtils.copy(request, HouseRentExCriteria.class);
         return houseRentDao.findHouseForRent(criteria);
+    }
+
+    public Integer reportNewSource(HouseRentSourceApproveBean bean)
+    {
+        return houseRentDao.reportNewSource(bean);
     }
 
     @Override

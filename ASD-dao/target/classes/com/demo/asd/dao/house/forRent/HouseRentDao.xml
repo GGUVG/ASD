@@ -84,6 +84,47 @@
         IF(ISNULL(ABS(t_hr.LAST_END-NOW())),1,0),ABS(t_hr.LAST_END-NOW())
     </select>
 
+    <!-- 报备新租赁房源信息-->
+    <insert id="reportNewSource" parameterType="com.demo.asd.support.model.po.house.report.HouseRentSourceApproveBean" useGeneratedKeys="true">
+        insert into t_house_rent_approve
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bean.staffId != null">STAFF_ID,</if>
+            <if test="bean.houseType != null">HOUSE_TYPE,</if>
+            <if test="bean.hangTypeTxt != null">HANG_TYPE_TXT,</if>
+            <if test="bean.estateId != null">HOUSE_ESTATE_ID,</if>
+            <if test="bean.houseName != null">HOUSE_NAME,</if>
+            <if test="bean.houseLocationProvince != null">HOUSE_LOCATION_PROVINCE,</if>
+            <if test="bean.houseLocationCity != null">HOUSE_LOCATION_CITY,</if>
+            <if test="bean.houseLocationDistrict != null">HOUSE_LOCATION_DISTRICT,</if>
+            <if test="bean.houseLocationStreet != null">HOUSE_LOCATION_STREET,</if>
+            <if test="bean.housePrice != null">HOUSE_PRICE,</if>
+            <if test="bean.houseSquare != null">HOUSE_SQUARE,</if>
+            <if test="bean.completeTime != null">COMPLETE_TIME,</if>
+            <if test="bean.houseClientId != null">HOUSE_CLIENT_ID,</if>
+            <if test="bean.mandate != null">MANDATE,</if>
+            <if test="bean.permitTime != null">PERMIT_TIME,</if>
+            <if test="bean.permitState != null">PERMIT_STATE,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bean.staffId != null">#{bean.staffId,jdbcType=BIGINT},</if>
+            <if test="bean.houseType != null">#{bean.houseType,jdbcType=INTEGER},</if>
+            <if test="bean.hangTypeTxt != null">#{bean.hangTypeTxt,jdbcType=VARCHAR},</if>
+            <if test="bean.estateId != null">#{bean.estateId,jdbcType=BIGINT},</if>
+            <if test="bean.houseName != null">#{bean.houseName,jdbcType=VARCHAR},</if>
+            <if test="bean.houseLocationProvince != null">#{bean.houseLocationProvince,jdbcType=VARCHAR},</if>
+            <if test="bean.houseLocationCity != null">#{bean.houseLocationCity,jdbcType=VARCHAR},</if>
+            <if test="bean.houseLocationDistrict != null">#{bean.houseLocationDistrict,jdbcType=VARCHAR},</if>
+            <if test="bean.houseLocationStreet != null">#{bean.houseLocationStreet,jdbcType=VARCHAR},</if>
+            <if test="bean.housePrice != null">#{bean.housePrice,jdbcType=INTEGER},</if>
+            <if test="bean.houseSquare != null">#{bean.houseSquare,jdbcType=INTEGER},</if>
+            <if test="bean.completeTime != null">#{bean.completeTime,jdbcType=VARCHAR},</if>
+            <if test="bean.houseClientId != null">#{bean.houseClientId,jdbcType=BIGINT},</if>
+            <if test="bean.mandate != null">#{bean.mandate,jdbcType=VARCHAR},</if>
+            <if test="bean.permitTime != null">#{bean.permitTime,jdbcType=TIMESTAMP},</if>
+            <if test="bean.permitState != null">#{bean.permitState,jdbcType=INTEGER},</if>
+        </trim>
+    </insert>
+
     <sql id="HouseRentExColumnList">
         t_hr.HOUSE_ID,t_hr.HOUSE_NAME,t_hr.HOUSE_ESTATE_ID,t_hr.HOUSE_ESTATE_ID,
         t_hr.HOUSE_LOCATION_PROVINCE,t_hr.HOUSE_LOCATION_CITY,t_hr.HOUSE_LOCATION_DISTRICT,

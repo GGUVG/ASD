@@ -2,15 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.asd.dao.house.forSale.HouseSaleDao">
 
-    <sql id="HouseSaleBaseColumnList">
-        HOUSE_ID,HOUSE_NAME,HOUSE_ESTATE,HOUSE_LOCATION_PROVINCE,HOUSE_LOCATION_CITY,HOUSE_LOCATION_DISTRICT,
-        HOUSE_LOCATION_STREET,HOUSE_PRICE,HOUSE_SQUARE,HOUSE_STATE,HOUSE_CLIENT_ID,COMPLETE_TIME,
-        DEAL_TIME,HOUSE_PURCHASER_ID,STATUS
-    </sql>
-
-    <sql id="UndefinedColumn">
-
-    </sql>
     <!-- 查询该员工所属房源 -->
     <select id="findPageHouseForSale" resultMap="ResultMap1" parameterType="com.demo.asd.support.model.po.house.forSale.HouseSaleWithOwnerClientCriteria">
         select
@@ -82,7 +73,7 @@
 
     <!-- 报备新房源信息-->
     <insert id="reportNewSource" parameterType="com.demo.asd.support.model.po.house.report.HouseSaleSourceApproveBean" useGeneratedKeys="true">
-        insert into t_house_approve
+        insert into t_house_sale_approve
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="bean.staffId != null">STAFF_ID,</if>
             <if test="bean.houseType != null">HOUSE_TYPE,</if>
@@ -120,6 +111,12 @@
             <if test="bean.permitState != null">#{bean.permitState,jdbcType=INTEGER},</if>
         </trim>
     </insert>
+
+    <sql id="HouseSaleBaseColumnList">
+        HOUSE_ID,HOUSE_NAME,HOUSE_ESTATE,HOUSE_LOCATION_PROVINCE,HOUSE_LOCATION_CITY,HOUSE_LOCATION_DISTRICT,
+        HOUSE_LOCATION_STREET,HOUSE_PRICE,HOUSE_SQUARE,HOUSE_STATE,HOUSE_CLIENT_ID,COMPLETE_TIME,
+        DEAL_TIME,HOUSE_PURCHASER_ID,STATUS
+    </sql>
 
     <sql id="HouseSaleExColumnList">
         t_hs.HOUSE_ID,t_hs.HOUSE_NAME,t_hs.HOUSE_ESTATE_ID,t_he.ESTATE_NAME,t_hs.HOUSE_LOCATION_PROVINCE,

@@ -65,7 +65,7 @@ public class HouseSaleController {
         houseSaleBiz.exportFindPageHouseForSale(hRep,hReq,condition);
     }
 
-    @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
+    @ApiOperation(tags = "HouseRentSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
             notes = "报备新房源信息")
     @PostMapping("/reportNewSource")
     public DataResult<Integer> reportNewSource(
@@ -74,19 +74,19 @@ public class HouseSaleController {
         return DataResults.ok(houseSaleBiz.reportNewSource(request,hReq));
     }
 
-    @ApiOperation(tags = "HouseSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
+    @ApiOperation(tags = "HouseRentSourceApproveBean", value = "reportNewSource", httpMethod = "POST",
             notes = "上传新房源文件")
     @PostMapping("/uploadHouseSaleFile")
     public String uploadHouseSaleFile(@RequestParam("newFile1") MultipartFile newFile,
-    @RequestParam("houseEstateId")Long houseEstateId,
-    @RequestParam("houseName")String houseName,
-    @RequestParam("materialTypeTxt")String materialTypeTxt,
-    @RequestParam("houseLocationProvince")String houseLocationProvince,
-    @RequestParam("houseLocationCity")String houseLocationCity,
-    @RequestParam("houseLocationDistrict")String houseLocationDistrict,
-    @RequestParam("houseLocationStreet")String houseLocationStreet,
-    @RequestParam("staffId")Long staffId,
-    @RequestParam("staffUserName")String staffUserName) throws IOException
+                                      @RequestParam("houseEstateId")Long houseEstateId,
+                                      @RequestParam("houseName")String houseName,
+                                      @RequestParam("materialTypeTxt")String materialTypeTxt,
+                                      @RequestParam("houseLocationProvince")String houseLocationProvince,
+                                      @RequestParam("houseLocationCity")String houseLocationCity,
+                                      @RequestParam("houseLocationDistrict")String houseLocationDistrict,
+                                      @RequestParam("houseLocationStreet")String houseLocationStreet,
+                                      @RequestParam("staffId")Long staffId,
+                                      @RequestParam("staffUserName")String staffUserName) throws IOException
     {
         return houseSaleBiz.uploadHouseSaleFile(newFile,houseEstateId,houseName,materialTypeTxt,houseLocationProvince,houseLocationCity,houseLocationDistrict,houseLocationStreet,staffId,staffUserName);
     }

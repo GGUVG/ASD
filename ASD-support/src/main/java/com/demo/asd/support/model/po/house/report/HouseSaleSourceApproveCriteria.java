@@ -6,23 +6,32 @@ import java.time.LocalDateTime;
 
 public class HouseSaleSourceApproveCriteria extends BaseCriteria
 {
-    public Long Id;
-    public Long staffId;
-    public Integer houseType;
-    public String hangTypeTxt;
-    public Long estateId;
-    public String houseName;
-    public String houseLocationProvince;
-    public String houseLocationCity;
-    public String houseLocationDistrict;
-    public String houseLocationStreet;
-    public Integer housePrice;
-    public Integer houseSquare;
-    public String completeTime;
-    public Long houseClientId;
-    public String mandate;
-    public LocalDateTime permitTime;
-    public Integer permitState;
+    public Long Id;//审批单号流水
+    public Long staffId;//报备者工号ID
+    public Integer houseType;//报备房屋类型-住宅/公寓/商铺/写字楼/...——参考码表
+    public String hangTypeTxt;//挂出类型,这里默认传'出售',在biz层进行赋值
+    public Long estateId;//房源所在小区ID
+    public String houseName;//房源门牌号
+    public String houseLocationProvince;//位置省
+    public String houseLocationCity;//位置市
+    public String houseLocationDistrict;//位置区
+    public String houseLocationStreet;//位置街道
+    public Integer housePrice;//价格/平
+    public Integer houseSquare;//房源面积
+    public String completeTime;//房源建成时间
+    public Long houseClientId;//原业主（客户ID）
+    public String mandate;//委托材料,在数据库中存放文件名
+    public LocalDateTime permitTime;//审批时间
+    public Integer permitState;//审批状态,0待审1过审-1驳回
+    public String permitRemark;//审批批注
+
+    public String getPermitRemark() {
+        return permitRemark;
+    }
+
+    public void setPermitRemark(String permitRemark) {
+        this.permitRemark = permitRemark;
+    }
 
     public String getMandate() {
         return mandate;
