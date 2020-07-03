@@ -4,32 +4,33 @@
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forRent/HouseRentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forRent/HouseRentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/house/forSale/HouseSaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forRent/HouseRentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forRent/HouseRentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/house/forSale/HouseSaleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/house/forRent/HouseRentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/house/forRent/HouseRentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forRent/HouseRentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forRent/HouseRentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forRent/HouseRentDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/house/forSale/HouseSaleDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSaleSourceApproveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSaleSourceApproveRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSaleSourceApproveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/house/report/HouseSaleSourceApproveResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/house/forRent/HouseRentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/house/forRent/HouseRentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forRent/HouseRentBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/house/forRent/HouseRentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/house/forRent/HouseRentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/estate/EstateDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/estate/EstateDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forRent/ClientRentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forRent/ClientRentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forRent/ClientRentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forRent/ClientRentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forSale/ClientSaleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forSale/ClientSaleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forSale/ClientSaleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/forSale/ClientSaleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forRent/ClientRentRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forRent/ClientRentRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forRent/ClientRentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forRent/ClientRentResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forSale/ClientSaleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forSale/ClientSaleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forSale/ClientSaleResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/client/forSale/ClientSaleResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseRentSourceApproveRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseRentSourceApproveRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseRentSourceApproveResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseRentSourceApproveResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSaleSourceApproveRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSaleSourceApproveRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSaleSourceApproveResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/house/report/HouseSaleSourceApproveResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forRent/ClientRentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forRent/ClientRentBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forRent/ClientRentCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forRent/ClientRentCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSalePkBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/forSale/ClientSalePkBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forRent/ClientRentBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forRent/ClientRentBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forRent/ClientRentCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forRent/ClientRentCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSaleBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSaleCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSalePkBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/forSale/ClientSalePkBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-upload/house/forSale/委托书材料,委托书材料/广东省,广东省/广州市,广州市/花都区,花都区/花城,花城/1/1,1/1松果儿,松果儿.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseRentSourceApproveCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/house/report/HouseSaleSourceApproveCriteria.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/exJAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/estate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/client/wantRent" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -112,25 +113,25 @@
       <recent name="com.demo.asd.dao.staff" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\estate" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\house\report" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\sys" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forRent" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-api\src\main\resources" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\wantRent" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\wantBuy" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\client\wantRent" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\client\wantBuy" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.dao.client" />
+      <recent name="com.demo.asd.service.bizs.client" />
+      <recent name="com.demo.asd.api.controller.client" />
       <recent name="com.demo.asd.model.house.report" />
       <recent name="com.demo.asd.support.model.po.house.report" />
-      <recent name="com.demo.asd.api.controller.estate" />
-      <recent name="com.demo.asd.support.model.po.house.forSale" />
-      <recent name="com.demo.asd.api.controller.house.forRent" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\target\classes\com\demo\asd\dao\client" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -237,7 +238,8 @@
       <workItem from="1593483313376" duration="14260000" />
       <workItem from="1593564234265" duration="1251000" />
       <workItem from="1593572435210" duration="13823000" />
-      <workItem from="1593650809485" duration="11933000" />
+      <workItem from="1593650809485" duration="13208000" />
+      <workItem from="1593737612604" duration="14573000" />
     </task>
     <servers />
   </component>

@@ -5,25 +5,15 @@ import com.demo.asd.base.entity.BaseRequest;
 public class ClientRentRequest extends BaseRequest
 {
     public Long clientId;//客户ID
-
     public String clientName;//客户名
-
     public String clientSex;//客户性别
-
     public String clientAddressProvince;//省地址
-
     public String clientAddressCity;//市地址
-
     public String clientAddressDistrict;//区地址
-
     public String clientAddressStreet;//街地址
-
     public String clientPhone;//客户电话
-
     public String clientRemark;//客户备注
-
     public Long clientStaffId;//客户所属员工ID
-
     public Integer status;//0停用1启用
 
     public Long getClientId() {
@@ -112,22 +102,5 @@ public class ClientRentRequest extends BaseRequest
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "ClientRentBean{" +
-                "clientId=" + clientId +
-                ", clientName='" + clientName + '\'' +
-                ", clientSex='" + clientSex + '\'' +
-                ", clientAddressProvince='" + clientAddressProvince + '\'' +
-                ", clientAddressCity='" + clientAddressCity + '\'' +
-                ", clientAddressDistrict='" + clientAddressDistrict + '\'' +
-                ", clientAddressStreet='" + clientAddressStreet + '\'' +
-                ", clientPhone='" + clientPhone + '\'' +
-                ", clientRemark='" + clientRemark + '\'' +
-                ", clientStaffId=" + clientStaffId +
-                ", status=" + status +
-                '}';
     }
 }
