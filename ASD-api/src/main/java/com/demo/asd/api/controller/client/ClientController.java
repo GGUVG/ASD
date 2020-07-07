@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
@@ -52,5 +53,27 @@ public class ClientController {
     public DataResult<PagingResponse<ClientRentResponse>> findPageClientRent(@RequestBody PagingRequest<ClientRentRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
     {
         return DataResults.ok(cLientForRentBiz.findPageClientRent(req,hReq));
+    }
+
+    /**
+     *出售房源客户列表导出excel
+     */
+    @ApiOperation(tags = "ClientRentExcelBean", value = "exportFindCLientSale", httpMethod = "POST",
+            notes = "出售房源客户列表导出excel")
+    @PostMapping("/exportFindCLientSale")
+    public void exportFindCLientSale(HttpServletResponse hRep, HttpServletRequest hReq, @RequestBody ClientSaleRequest condition) throws UnsupportedEncodingException
+    {
+        cLientForSaleBiz.exportFindCLientSale(hRep,hReq,condition);
+    }
+
+    /**
+     *出租房源客户列表导出excel
+     */
+    @ApiOperation(tags = "ClientRentExcelBean", value = "exportFindCLientRent", httpMethod = "POST",
+            notes = "出租房源客户列表导出excel")
+    @PostMapping("/exportFindCLientRent")
+    public void exportFindCLientRent(HttpServletResponse hRep, HttpServletRequest hReq, @RequestBody ClientRentRequest condition) throws UnsupportedEncodingException
+    {
+        cLientForRentBiz.exportFindCLientRent(hRep,hReq,condition);
     }
 }

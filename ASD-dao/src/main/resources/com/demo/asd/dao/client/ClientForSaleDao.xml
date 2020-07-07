@@ -3,7 +3,7 @@
 <mapper namespace="com.demo.asd.dao.client.ClientForSaleDao">
 
     <!-- 分页查询出售房源的客户 -->
-    <select id="findClientSale" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.client.forSale.ClientSaleCriteria">
+    <select id="findClientSaleByPage" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.client.forSale.ClientSaleCriteria">
         select
         <include refid="BaseColumnList"/>
         from t_client_sale t_cs
@@ -19,6 +19,18 @@
     <select id="countFindClientSale" parameterType="com.demo.asd.support.model.po.client.forSale.ClientSaleCriteria" resultType="java.lang.Long">
         select
         COUNT(1)
+        from t_client_sale t_cs
+        where
+        1=1
+        and t_cs.STATUS =1
+        and t_cs.CLIENT_STAFF_ID=#{criteria.clientStaffId}
+        <include refid="WhereClauseColumnBase"/>
+    </select>
+
+    <!-- 不分页查询出售房源的客户 -->
+    <select id="findClientSale" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.client.forSale.ClientSaleCriteria">
+        select
+        <include refid="BaseColumnList"/>
         from t_client_sale t_cs
         where
         1=1
@@ -64,6 +76,7 @@
         <result column="CLIENT_ADDRESS_STREET" jdbcType="VARCHAR" property="clientAddressStreet" />
         <result column="CLIENT_PHONE" jdbcType="VARCHAR" property="clientPhone" />
         <result column="CLIENT_REMARK" jdbcType="VARCHAR" property="clientRemark" />
+        <result column="CLIENT_STAFF_ID" jdbcType="BIGINT" property="clientStaffId" />
         <result column="STATUS" jdbcType="VARCHAR" property="status" />
     </resultMap>
 

@@ -2,7 +2,9 @@ package com.demo.asd.service.services.client;
 
 import com.demo.asd.base.hierarchies.BaseService;
 import com.demo.asd.base.hierarchies.CrudDao;
+import com.demo.asd.beanUtils.BeanUtils;
 import com.demo.asd.dao.client.ClientForSaleDao;
+import com.demo.asd.model.client.forSale.ClientSaleRequest;
 import com.demo.asd.pagination.Pagination;
 import com.demo.asd.support.model.po.client.forSale.ClientSaleBean;
 import com.demo.asd.support.model.po.client.forSale.ClientSaleCriteria;
@@ -17,14 +19,25 @@ public class ClientForSaleService extends BaseService<Long, ClientSaleBean, Clie
     @Autowired
     public ClientForSaleDao clientForSaleDao;
 
-    public List<ClientSaleBean> findClientSale(ClientSaleCriteria criteria, Pagination pagination)
+    public List<ClientSaleBean> findClientSaleByPage(ClientSaleCriteria criteria, Pagination pagination)
     {
-        return clientForSaleDao.findClientSale(criteria,pagination);
+        return clientForSaleDao.findClientSaleByPage(criteria,pagination);
     }
 
     public Long countFindClientSale(ClientSaleCriteria criteria)
     {
         return clientForSaleDao.countFindClientSale(criteria);
+    }
+
+    public List<ClientSaleBean> findClientSale(ClientSaleCriteria criteria)
+    {
+        return clientForSaleDao.findClientSale(criteria);
+    }
+
+    public List<ClientSaleBean> findClientSaleRequest(ClientSaleRequest request)
+    {
+        ClientSaleCriteria criteria= BeanUtils.copy(request, ClientSaleCriteria.class);
+        return clientForSaleDao.findClientSale(criteria);
     }
 
     @Override

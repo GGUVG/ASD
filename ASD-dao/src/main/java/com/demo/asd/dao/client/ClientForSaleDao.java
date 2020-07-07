@@ -13,7 +13,9 @@ import java.util.List;
 @Mapper
 public interface ClientForSaleDao extends CrudDao<Long, ClientSaleBean, ClientSaleCriteria>
 {
-    public List<ClientSaleBean> findClientSale(@Param("criteria")ClientSaleCriteria criteria, @Param("pagination")Pagination pagination);
+    public List<ClientSaleBean> findClientSaleByPage(@Param("criteria")ClientSaleCriteria criteria, @Param("pagination")Pagination pagination);
 
     public Long countFindClientSale(@Param("criteria")ClientSaleCriteria criteria);
+
+    public List<ClientSaleBean> findClientSale(@Param("criteria")ClientSaleCriteria criteria);
 }
