@@ -74,11 +74,10 @@ public class CLientForSaleBiz extends BaseBiz<Long, ClientSaleBean, ClientSaleCr
                 condition.setClientStaffId(staffCriteria.getStaffId());
             }
         }
-        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         List<ClientSaleBean> beans=clientForSaleService.findClientSaleRequest(condition);
         List<ClientSaleExcelBean> reportBeans=BeanUtils.copyList(beans, ClientSaleExcelBean.class);
         Map<String, List<? extends BaseRowModel>> map = new HashMap<>();
-        map.put("HouseRentEx", reportBeans);
+        map.put("ClientForSale", reportBeans);
         String fileName = new String(("放售房源客户信息" + new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())).getBytes(), "UTF-8");
         EasyExcelUtils.createExcelStreamMutilByEaysExcel(hRep,fileName, map, ExcelTypeEnum.XLSX);
         return fileName;

@@ -6,10 +6,16 @@ import com.demo.asd.model.client.forRent.ClientRentRequest;
 import com.demo.asd.model.client.forRent.ClientRentResponse;
 import com.demo.asd.model.client.forSale.ClientSaleRequest;
 import com.demo.asd.model.client.forSale.ClientSaleResponse;
+import com.demo.asd.model.client.wantBuy.ClientWantBuyExRequest;
+import com.demo.asd.model.client.wantBuy.ClientWantBuyExResponse;
+import com.demo.asd.model.client.wantRent.ClientWantRentExRequest;
+import com.demo.asd.model.client.wantRent.ClientWantRentExResponse;
 import com.demo.asd.pagination.PagingRequest;
 import com.demo.asd.pagination.PagingResponse;
 import com.demo.asd.service.bizs.client.CLientForRentBiz;
 import com.demo.asd.service.bizs.client.CLientForSaleBiz;
+import com.demo.asd.service.bizs.client.ClientWantBuyBiz;
+import com.demo.asd.service.bizs.client.ClientWantRentBiz;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -33,6 +39,12 @@ public class ClientController {
     @Autowired
     public CLientForRentBiz cLientForRentBiz;
 
+    @Autowired
+    public ClientWantBuyBiz clientWantBuyBiz;
+
+    @Autowired
+    public ClientWantRentBiz clientWantRentBiz;
+
     /**
      * 获取出售房源客户列表
      */
@@ -42,17 +54,6 @@ public class ClientController {
     public DataResult<PagingResponse<ClientSaleResponse>> findPageClientSale(@RequestBody PagingRequest<ClientSaleRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
     {
         return DataResults.ok(cLientForSaleBiz.findPageClientSale(req,hReq));
-    }
-
-    /**
-     * 获取出租房源客户列表
-     */
-    @ApiOperation(tags = "ClientForRent", value = "findPageClientRent", httpMethod = "POST",
-            notes = "获取出租房源客户列表")
-    @PostMapping("/findPageClientRent")
-    public DataResult<PagingResponse<ClientRentResponse>> findPageClientRent(@RequestBody PagingRequest<ClientRentRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
-    {
-        return DataResults.ok(cLientForRentBiz.findPageClientRent(req,hReq));
     }
 
     /**
@@ -67,6 +68,17 @@ public class ClientController {
     }
 
     /**
+     * 获取出租房源客户列表
+     */
+    @ApiOperation(tags = "ClientForRent", value = "findPageClientRent", httpMethod = "POST",
+            notes = "获取出租房源客户列表")
+    @PostMapping("/findPageClientRent")
+    public DataResult<PagingResponse<ClientRentResponse>> findPageClientRent(@RequestBody PagingRequest<ClientRentRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
+    {
+        return DataResults.ok(cLientForRentBiz.findPageClientRent(req,hReq));
+    }
+
+    /**
      *出租房源客户列表导出excel
      */
     @ApiOperation(tags = "ClientRentExcelBean", value = "exportFindCLientRent", httpMethod = "POST",
@@ -75,5 +87,49 @@ public class ClientController {
     public void exportFindCLientRent(HttpServletResponse hRep, HttpServletRequest hReq, @RequestBody ClientRentRequest condition) throws UnsupportedEncodingException
     {
         cLientForRentBiz.exportFindCLientRent(hRep,hReq,condition);
+    }
+
+    /**
+     * 获取意向买房客户列表
+     */
+    @ApiOperation(tags = "ClientWantBuyEx", value = "findPageClientWantBuy", httpMethod = "POST",
+            notes = "获取意向买房客户列表")
+    @PostMapping("/findPageClientWantBuy")
+    public DataResult<PagingResponse<ClientWantBuyExResponse>> findPageClientWantBuy(@RequestBody PagingRequest<ClientWantBuyExRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
+    {
+        return DataResults.ok(clientWantBuyBiz.findPageClientWantBuy(req,hReq));
+    }
+
+    /**
+     *意向买房客户列表导出excel
+     */
+    @ApiOperation(tags = "ClientWantBuyExcelExBean", value = "exportFindCLientWantBuy", httpMethod = "POST",
+            notes = "意向买房客户列表导出excel")
+    @PostMapping("/exportFindCLientWantBuy")
+    public void exportFindCLientWantBuy(HttpServletResponse hRep, HttpServletRequest hReq, @RequestBody ClientWantBuyExRequest condition) throws UnsupportedEncodingException
+    {
+        clientWantBuyBiz.exportFindCLientWantBuy(hRep,hReq,condition);
+    }
+
+    /**
+     * 获取意向租房客户列表
+     */
+    @ApiOperation(tags = "ClientWantBuyEx", value = "findPageClientWantRent", httpMethod = "POST",
+            notes = "获取意向租房客户列表")
+    @PostMapping("/findPageClientWantRent")
+    public DataResult<PagingResponse<ClientWantRentExResponse>> findPageClientWantRent(@RequestBody PagingRequest<ClientWantRentExRequest> req, HttpServletRequest hReq) throws IllegalAccessException, UnsupportedEncodingException, InstantiationException
+    {
+        return DataResults.ok(clientWantRentBiz.findPageClientWantRent(req,hReq));
+    }
+
+    /**
+     *意向租房客户列表导出excel
+     */
+    @ApiOperation(tags = "ClientWantRentExcelExBean", value = "exportFindCLientWantRent", httpMethod = "POST",
+            notes = "意向租房客户列表导出excel")
+    @PostMapping("/exportFindCLientWantRent")
+    public void exportFindCLientWantRent(HttpServletResponse hRep, HttpServletRequest hReq, @RequestBody ClientWantRentExRequest condition) throws UnsupportedEncodingException
+    {
+        clientWantRentBiz.exportFindCLientWantRent(hRep,hReq,condition);
     }
 }

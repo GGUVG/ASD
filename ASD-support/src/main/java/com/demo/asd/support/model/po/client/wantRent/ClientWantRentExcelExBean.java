@@ -1,25 +1,60 @@
 package com.demo.asd.support.model.po.client.wantRent;
 
-import com.demo.asd.base.entity.BaseBean;
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.metadata.BaseRowModel;
 
-public class ClientWantRentBean extends BaseBean {
-    public Long clientId;//客户ID
-    public String clientName;//客户名
-    public String clientSex;//客户性别
-    public String clientAddressProvince;//客户位置省
-    public String clientAddressCity;//客户位置市
-    public String clientAddressDistrict;//客户位置区
-    public String clientAddressStreet;//客户位置街
-    public String clientPhone;//客户电话
-    public String clientExpectPlaceProvince;//客户期待位置省
-    public String clientExpectPlaceCity;//客户期待位置市
-    public String clientExpectPlaceDistrict;//客户期待位置区
-    public String clientExpectPlaceStreet;//客户期待位置街
-    public Integer clientExpectPrice;//客户期待价格
-    public Integer clientExpectSquare;//客户期待面积
-    public String clientRemark;//客户备注信息
-    public Long clientStaffId;//客源所属员工ID
-    public Integer status;//状态0停用1启用
+public class ClientWantRentExcelExBean extends BaseRowModel
+{
+    @ExcelProperty(value = "客户ID", index = 0)
+    public Long clientId;
+
+    @ExcelProperty(value = "客户名", index = 1)
+    public String clientName;
+
+    @ExcelProperty(value = "客户性别", index = 2)
+    public String clientSex;
+
+    @ExcelProperty(value = "客户位置省", index = 3)
+    public String clientAddressProvince;
+
+    @ExcelProperty(value = "客户位置市", index = 4)
+    public String clientAddressCity;
+
+    @ExcelProperty(value = "客户位置区", index = 5)
+    public String clientAddressDistrict;
+
+    @ExcelProperty(value = "客户位置街", index = 6)
+    public String clientAddressStreet;
+
+    @ExcelProperty(value = "客户电话", index = 7)
+    public String clientPhone;
+
+    @ExcelProperty(value = "客户期待位置省", index = 8)
+    public String clientExpectPlaceProvince;
+
+    @ExcelProperty(value = "客户期待位置市", index = 9)
+    public String clientExpectPlaceCity;
+
+    @ExcelProperty(value = "客户期待位置区", index = 10)
+    public String clientExpectPlaceDistrict;
+
+    @ExcelProperty(value = "客户期待位置街", index = 11)
+    public String clientExpectPlaceStreet;
+
+    @ExcelProperty(value = "客户期待租价/月", index = 12)
+    public Integer clientExpectPrice;
+
+    @ExcelProperty(value = "客户期待面积/平", index = 13)
+    public Integer clientExpectSquare;
+
+    @ExcelProperty(value = "客户备注信息", index = 14)
+    public String clientRemark;
+
+    @ExcelProperty(value = "客源所属员工ID", index = 15)
+    public Long clientStaffId;
+
+    @ExcelProperty(value = "状态", index = 16)
+    public Integer status;
 
     public Long getClientId() {
         return clientId;

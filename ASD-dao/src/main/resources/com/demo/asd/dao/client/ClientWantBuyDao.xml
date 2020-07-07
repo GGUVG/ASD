@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.asd.dao.client.ClientWantBuyDao">
+    <!-- 分页查询意向买房客户 -->
+    <select id="findClientWantBuyByPage" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.client.wantBuy.ClientWantBuyExCriteria">
+        select
+        <include refid="BaseColumnList"/>
+        from t_client_want_buy t_cwb
+        where
+        1=1
+        and t_cwb.STATUS =1
+        and t_cwb.CLIENT_STAFF_ID=#{criteria.clientStaffId}
+        <include refid="WhereClauseColumnBase"/>
+        limit #{pagination.offset}, #{pagination.limit}
+    </select>
+
+    <!-- 分页查询意向买房客户计数用作分页 -->
+    <select id="countFindClientWantBuyByPage" parameterType="com.demo.asd.support.model.po.client.wantBuy.ClientWantBuyExCriteria" resultType="java.lang.Long">
+        select
+        COUNT(1)
+        from t_client_want_buy t_cwb
+        where
+        1=1
+        and t_cwb.STATUS =1
+        and t_cwb.CLIENT_STAFF_ID=#{criteria.clientStaffId}
+        <include refid="WhereClauseColumnBase"/>
+    </select>
+
+    <!-- 不分页查询意向买房客户 -->
+    <select id="findClientWantBuy" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.client.wantBuy.ClientWantBuyExCriteria">
+        select
+        <include refid="BaseColumnList"/>
+        from t_client_want_buy t_cwb
+        where
+        1=1
+        and t_cwb.STATUS =1
+        and t_cwb.CLIENT_STAFF_ID=#{criteria.clientStaffId}
+        <include refid="WhereClauseColumnBase"/>
+    </select>
+
+    <sql id="BaseColumnList">
+        t_cwb.CLIENT_ID,t_cwb.CLIENT_NAME,t_cwb.CLIENT_SEX,t_cwb.CLIENT_ADDRESS_PROVINCE,t_cwb.CLIENT_ADDRESS_CITY,
+        t_cwb.CLIENT_ADDRESS_DISTRICT,t_cwb.CLIENT_ADDRESS_STREET,t_cwb.CLIENT_PHONE,t_cwb.CLIENT_EXPECT_PLACE_PROVINCE,
+        t_cwb.CLIENT_EXPECT_PLACE_CITY,t_cwb.CLIENT_EXPECT_PLACE_DISTRICT,t_cwb.CLIENT_EXPECT_PLACE_STREET,
+        t_cwb.CLIENT_EXPECT_PRICE,t_cwb.CLIENT_EXPECT_SQUARE,t_cwb.CLIENT_REMARK,t_cwb.CLIENT_STAFF_ID,t_cwb.STATUS
+    </sql>
+
+    <sql id="WhereClauseColumnBase">
+        <if test="criteria.clientId != null and criteria.clientId !=''">and t_cwb.CLIENT_ID = #{criteria.clientId,jdbcType=BIGINT}</if>
+        <if test="criteria.clientName != null">
+            <bind name="clientName" value="'%' + criteria.clientName + '%'"/>
+            and t_cwb.CLIENT_NAME like #{clientName}
+        </if>
+        <if test="criteria.clientSex != null">and t_cwb.CLIENT_SEX = #{criteria.clientSex,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientAddressProvince != null">and t_cwb.CLIENT_ADDRESS_PROVINCE = #{criteria.clientAddressProvince,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientAddressCity != null">and t_cwb.CLIENT_ADDRESS_CITY = #{criteria.clientAddressCity,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientAddressDistrict != null">and t_cwb.CLIENT_ADDRESS_DISTRICT = #{criteria.clientAddressDistrict,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientAddressStreet != null">and t_cwb.CLIENT_ADDRESS_STREET = #{criteria.clientAddressStreet,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientPhone != null">
+            <bind name="clientPhone" value="'%' + criteria.clientPhone + '%'"/>
+            and t_cwb.CLIENT_PHONE like #{clientPhone}
+        </if>
+        <if test="criteria.clientSex != null">and t_cwb.CLIENT_SEX = #{criteria.clientSex,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientExpectPlaceProvince != null">and t_cwb.CLIENT_EXPECT_PLACE_PROVINCE = #{criteria.clientExpectPlaceProvince,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientExpectPlaceCity != null">and t_cwb.CLIENT_EXPECT_PLACE_CITY = #{criteria.clientExpectPlaceCity,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientExpectPlaceDistrict != null">and t_cwb.CLIENT_EXPECT_PLACE_DISTRICT = #{criteria.clientExpectPlaceDistrict,jdbcType=VARCHAR}</if>
+        <if test="criteria.clientExpectPlaceStreet != null">and t_cwb.CLIENT_EXPECT_PLACE_STREET = #{criteria.clientExpectPlaceStreet,jdbcType=VARCHAR}</if>
+        <if test="criteria.startClientExpectPrice != null and criteria.startClientExpectPrice !='' and criteria.endClientExpectPrice != null and criteria.endClientExpectPrice != '' ">
+            and t_cwb.CLIENT_EXPECT_PRICE between #{criteria.startClientExpectPrice,jdbcType=INTEGER} and #{criteria.endClientExpectPrice,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.startClientExpectSquare != null and criteria.startClientExpectSquare !='' and criteria.endClientExpectSquare != null and criteria.endClientExpectSquare != '' ">
+            and t_cwb.CLIENT_EXPECT_SQUARE between #{criteria.startClientExpectSquare,jdbcType=INTEGER} and #{criteria.endClientExpectPrice,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.clientRemark != null">
+            <bind name="clientRemark" value="'%' + criteria.clientRemark + '%'"/>
+            and t_cwb.CLIENT_REMARK = #{clientRemark}
+        </if>
+    </sql>
+
+    <resultMap id="BaseResultMap" type="com.demo.asd.support.model.po.client.wantBuy.ClientWantBuyExBean">
+        <id column="CLIENT_ID" jdbcType="BIGINT" property="clientId" />
+        <result column="CLIENT_NAME" jdbcType="VARCHAR" property="clientName" />
+        <result column="CLIENT_SEX" jdbcType="VARCHAR" property="clientSex" />
+        <result column="CLIENT_ADDRESS_PROVINCE" jdbcType="VARCHAR" property="clientAddressProvince" />
+        <result column="CLIENT_ADDRESS_CITY" jdbcType="VARCHAR" property="clientAddressCity" />
+        <result column="CLIENT_ADDRESS_DISTRICT" jdbcType="VARCHAR" property="clientAddressDistrict" />
+        <result column="CLIENT_ADDRESS_STREET" jdbcType="VARCHAR" property="clientAddressStreet" />
+        <result column="CLIENT_PHONE" jdbcType="VARCHAR" property="clientPhone" />
+        <result column="CLIENT_EXPECT_PLACE_PROVINCE" jdbcType="VARCHAR" property="clientExpectPlaceProvince" />
+        <result column="CLIENT_EXPECT_PLACE_CITY" jdbcType="VARCHAR" property="clientExpectPlaceCity" />
+        <result column="CLIENT_EXPECT_PLACE_DISTRICT" jdbcType="VARCHAR" property="clientExpectPlaceDistrict" />
+        <result column="CLIENT_EXPECT_PLACE_STREET" jdbcType="VARCHAR" property="clientExpectPlaceStreet" />
+        <result column="CLIENT_EXPECT_PRICE" jdbcType="INTEGER" property="clientExpectPrice" />
+        <result column="CLIENT_EXPECT_SQUARE" jdbcType="INTEGER" property="clientExpectSquare" />
+        <result column="CLIENT_REMARK" jdbcType="VARCHAR" property="clientRemark" />
+        <result column="CLIENT_STAFF_ID" jdbcType="BIGINT" property="clientStaffId" />
+        <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    </resultMap>
+
+</mapper>
