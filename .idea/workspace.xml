@@ -4,21 +4,11 @@
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/client/ClientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientWantBuyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientWantBuyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientWantRentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientWantRentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/client/ClientWantBuyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/client/ClientWantBuyDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/client/ClientWantRentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/client/ClientWantRentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForRentBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForRentBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientForSaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientForSaleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/client/ClientForSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/client/ClientForSaleDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForRentBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForRentBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForSaleBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantRent/ClientWantRentBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/client/wantRent/ClientWantRentBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantBuy/ClientWantBuyCriteria.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantRent/ClientWantRentBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/client/wantRent/ClientWantRentBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/client/ClientForSaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/client/ClientForSaleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sh.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/sh.exe.stackdump" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +219,33 @@
       <workItem from="1593650809485" duration="13208000" />
       <workItem from="1593737612604" duration="15010000" />
       <workItem from="1594009134387" duration="6475000" />
-      <workItem from="1594083349407" duration="12364000" />
+      <workItem from="1594083349407" duration="13844000" />
+      <workItem from="1594104505568" duration="60000" />
+      <workItem from="1594278673618" duration="237000" />
+      <workItem from="1594282744440" duration="711000" />
+      <workItem from="1594286045394" duration="1405000" />
+      <workItem from="1594341903180" duration="3198000" />
+      <workItem from="1594362086323" duration="2105000" />
+      <workItem from="1594601137365" duration="6438000" />
+      <workItem from="1594629604387" duration="14000" />
+      <workItem from="1594631813642" duration="154000" />
+      <workItem from="1594632021403" duration="369000" />
+      <workItem from="1594632634364" duration="17000" />
+      <workItem from="1594690450292" duration="800000" />
+      <workItem from="1594696290559" duration="83000" />
+      <workItem from="1594713316608" duration="1005000" />
+      <workItem from="1594715298072" duration="260000" />
+      <workItem from="1594718740961" duration="157000" />
+      <workItem from="1594784670750" duration="113000" />
+      <workItem from="1594792586431" duration="627000" />
+      <workItem from="1594794697380" duration="401000" />
+      <workItem from="1594796119075" duration="426000" />
+      <workItem from="1594796718564" duration="390000" />
+      <workItem from="1594971299467" duration="88000" />
+      <workItem from="1595236990445" duration="11000" />
+      <workItem from="1595406383630" duration="510000" />
+      <workItem from="1595407472041" duration="181000" />
+      <workItem from="1595559130458" duration="919000" />
     </task>
     <servers />
   </component>
@@ -250,6 +266,20 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="map" />

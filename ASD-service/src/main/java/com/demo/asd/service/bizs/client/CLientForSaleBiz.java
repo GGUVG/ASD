@@ -21,6 +21,8 @@ import com.demo.asd.support.model.po.client.forSale.ClientSaleExcelBean;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -81,6 +83,18 @@ public class CLientForSaleBiz extends BaseBiz<Long, ClientSaleBean, ClientSaleCr
         String fileName = new String(("放售房源客户信息" + new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date())).getBytes(), "UTF-8");
         EasyExcelUtils.createExcelStreamMutilByEaysExcel(hRep,fileName, map, ExcelTypeEnum.XLSX);
         return fileName;
+    }
+
+    /**
+     * 更新clientForSale
+     * @param request
+     * @return
+     */
+    @Transactional(value = "masterTx")
+    public Integer editClientForSale(ClientSaleRequest request)
+    {
+        ClientSaleBean bean=BeanUtils.copy(request, ClientSaleBean.class);
+        return clientForSaleService.editClientForSale(bean);
     }
 
     @Override

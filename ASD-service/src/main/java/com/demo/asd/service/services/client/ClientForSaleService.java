@@ -40,6 +40,11 @@ public class ClientForSaleService extends BaseService<Long, ClientSaleBean, Clie
         return clientForSaleDao.findClientSale(criteria);
     }
 
+    public Integer editClientForSale(ClientSaleBean bean)
+    {
+        return clientForSaleDao.editClientForSale(bean);
+    }
+
     @Override
     protected CrudDao<Long, ClientSaleBean, ClientSaleCriteria> getCrudDao()
     {

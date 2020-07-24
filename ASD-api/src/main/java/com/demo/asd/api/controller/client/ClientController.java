@@ -132,4 +132,11 @@ public class ClientController {
     {
         clientWantRentBiz.exportFindCLientWantRent(hRep,hReq,condition);
     }
+
+    @ApiOperation(tags = "ClientForSale", value = "editClientForSale", httpMethod = "POST",
+            notes = "出售房源客户修改")
+    @PostMapping("/editClientForSale")
+    public DataResult<Integer> editClientForSale(@RequestBody ClientSaleRequest request) {
+        return DataResults.ok(cLientForSaleBiz.editClientForSale(request));
+    }
 }

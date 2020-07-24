@@ -39,6 +39,36 @@
         <include refid="WhereClauseColumnBase"/>
     </select>
 
+    <!-- 根据clientId查找客户-->
+    <select id="getById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select <include refid="BaseColumnList" />
+        from t_client_sale t_cs
+        where
+        (
+        t_cs.CLIENT_ID = #{clientId,jdbcType=BIGINT}
+        )
+    </select>
+
+    <!--更新编辑客户信息-->
+    <update id="editClientForSale" parameterType="com.demo.asd.support.model.po.client.forSale.ClientSaleBean">
+        update t_client_sale t_cs
+        <set>
+        <if test="bean.clientName != null">t_cs.CLIENT_NAME = #{bean.clientName,jdbcType=VARCHAR},</if>
+        <if test="bean.clientSex != null">t_cs.CLIENT_SEX = #{bean.clientSex,jdbcType=VARCHAR},</if>
+        <if test="bean.clientAddressProvince != null">t_cs.CLIENT_ADDRESS_PROVINCE = #{bean.clientAddressProvince,jdbcType=VARCHAR},</if>
+        <if test="bean.clientAddressCity != null">t_cs.CLIENT_ADDRESS_CITY = #{bean.clientAddressCity,jdbcType=VARCHAR},</if>
+        <if test="bean.clientAddressDistrict != null">t_cs.CLIENT_ADDRESS_DISTRICT = #{bean.clientAddressDistrict,jdbcType=VARCHAR},</if>
+        <if test="bean.clientAddressStreet != null">t_cs.CLIENT_ADDRESS_STREET = #{bean.clientAddressStreet,jdbcType=VARCHAR},</if>
+        <if test="bean.clientPhone != null">t_cs.CLIENT_PHONE = #{bean.clientPhone,jdbcType=VARCHAR},</if>
+        <if test="bean.clientRemark != null">t_cs.CLIENT_REMARK = #{bean.clientRemark,jdbcType=VARCHAR},</if>
+        <if test="bean.status != null">t_cs.STATUS = #{bean.status,jdbcType=VARCHAR},</if>
+        </set>
+        where
+        (
+        t_cs.CLIENT_ID = #{bean.clientId,jdbcType=BIGINT}
+        )
+    </update>
+
     <sql id="BaseColumnList">
         t_cs.CLIENT_ID,t_cs.CLIENT_NAME,t_cs.CLIENT_SEX,t_cs.CLIENT_ADDRESS_PROVINCE,t_cs.CLIENT_ADDRESS_CITY,
         t_cs.CLIENT_ADDRESS_DISTRICT,t_cs.CLIENT_ADDRESS_STREET,t_cs.CLIENT_PHONE,t_cs.CLIENT_REMARK,
