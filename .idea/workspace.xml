@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientForSaleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/client/ClientForSaleDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/client/ClientForSaleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/client/ClientForSaleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/client/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/client/ClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/client/ClientForSaleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/client/ClientForSaleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sh.exe.stackdump" beforeDir="false" afterPath="$PROJECT_DIR$/sh.exe.stackdump" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/client/CLientForSaleBiz.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +242,15 @@
       <workItem from="1595236990445" duration="11000" />
       <workItem from="1595406383630" duration="510000" />
       <workItem from="1595407472041" duration="181000" />
-      <workItem from="1595559130458" duration="919000" />
+      <workItem from="1595559130458" duration="6541000" />
+      <workItem from="1595813576363" duration="844000" />
+      <workItem from="1595903266185" duration="50000" />
+      <workItem from="1596076184139" duration="450000" />
+      <workItem from="1596076861539" duration="455000" />
+      <workItem from="1596099480083" duration="180000" />
+      <workItem from="1596100411899" duration="214000" />
+      <workItem from="1596420128510" duration="149000" />
+      <workItem from="1596424463025" duration="61000" />
     </task>
     <servers />
   </component>
@@ -266,20 +271,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/client/CLientForSaleBiz.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="map" />

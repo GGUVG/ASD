@@ -90,7 +90,7 @@ public class CLientForSaleBiz extends BaseBiz<Long, ClientSaleBean, ClientSaleCr
      * @param request
      * @return
      */
-    @Transactional(value = "masterTx")
+    @Transactional(rollbackFor=Exception.class)
     public Integer editClientForSale(ClientSaleRequest request)
     {
         ClientSaleBean bean=BeanUtils.copy(request, ClientSaleBean.class);
