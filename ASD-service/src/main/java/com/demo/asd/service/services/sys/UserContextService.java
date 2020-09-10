@@ -2,6 +2,7 @@ package com.demo.asd.service.services.sys;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
+import com.demo.asd.exception.BizAssert;
 import com.demo.asd.model.staff.StaffResponse;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,7 @@ public class UserContextService
     public StaffResponse getCurrentUserService(HttpServletRequest hReq) throws UnsupportedEncodingException {
         Cookie[] cookies=hReq.getCookies();
         StaffResponse staffResponse=new StaffResponse();
+        BizAssert.isTrue(cookies!=null, "未获取到cookie!");
         for(Cookie cookie:cookies)
         {
             String checkStr="backStaffCookie";
@@ -26,6 +28,9 @@ public class UserContextService
                 JSONObject jsonObject = JSONObject.parseObject(str1);
                 StaffCriteria staffCriteria=JSONObject.parseObject(jsonObject.toJSONString(),new TypeReference<StaffCriteria>() {});
                 staffResponse.setStaffId(staffCriteria.getStaffId());
+                staffResponse.setStaffUsername(staffCriteria.getStaffUsername());
+                staffResponse.setStaffLevel(staffCriteria.getStaffLevel());
+                staffResponse.setStaffBranchId(staffCriteria.getStaffBranchId());
             }
         }
         return staffResponse;
