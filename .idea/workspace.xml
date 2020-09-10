@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/UserContextService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/UserContextService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/exJAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ASD-properties/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -103,11 +99,11 @@
       <recent name="com.demo.asd.service.services.client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-properties\src\main\resources" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\client" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\wantRent" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\client\wantBuy" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\client\wantRent" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\client\wantBuy" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +249,7 @@
       <workItem from="1596420128510" duration="149000" />
       <workItem from="1596424463025" duration="61000" />
       <workItem from="1599612929392" duration="5212000" />
-      <workItem from="1599698722713" duration="2904000" />
+      <workItem from="1599698722713" duration="4437000" />
     </task>
     <servers />
   </component>
