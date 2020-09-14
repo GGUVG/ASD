@@ -18,7 +18,7 @@ public class ArticleCodeTranslateService
             return "国内";
         }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_ASIAN)
         {
-            return "20亚裔";
+            return "亚裔";
         }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_WESTERN)
         {
             return "欧美";

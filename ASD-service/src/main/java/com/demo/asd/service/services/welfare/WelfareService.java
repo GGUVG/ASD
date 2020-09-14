@@ -17,9 +17,9 @@ public class WelfareService extends BaseService<Long, WelfareImgExBean, WelfareI
     @Autowired
     public WelfareDao welfareDao;
 
-    public List<WelfareImgExBean> findByPage(WelfareImgExCriteria criteria, Pagination pagination)
+    public List<WelfareImgExBean> findImgByPage(WelfareImgExCriteria criteria, Pagination pagination)
     {
-        return welfareDao.findByPage(criteria, pagination);
+        return welfareDao.findImgByPage(criteria, pagination);
     }
 
     public Long countFindByPage(WelfareImgExCriteria criteria)

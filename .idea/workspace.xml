@@ -2,12 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/UserContextService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/UserContextService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/house/forSale/HouseSaleBiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/sys/UserContextService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/welfare/WelfareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/welfare/WelfareDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/WelfareBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/ArticleCodeTranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/ArticleCodeTranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/WelfarePhotoCodeTranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/WelfarePhotoCodeTranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/WelfareBiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/ArticleBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/ArticleCriteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/ArticleBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/ArticleCriteria.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -263,7 +276,7 @@
       <workItem from="1599812014169" duration="171000" />
       <workItem from="1599814157843" duration="130000" />
       <workItem from="1599905656299" duration="286000" />
-      <workItem from="1600044119905" duration="14285000" />
+      <workItem from="1600044119905" duration="22380000" />
     </task>
     <servers />
   </component>

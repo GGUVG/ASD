@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class WelfarePhotoCodeTranslateService
 {
+    //根据图片出版商/代言,转译文本描述
     public String getDescribeByWelfareImgPublish(Integer welfareImg)
     {
         if(welfareImg== CodeItemKeys.WELFARE_IMG_TUIGIRL)
@@ -49,6 +50,33 @@ public class WelfarePhotoCodeTranslateService
             return "网络红人";
         }else {
             return CodeItemKeys.WELFARE_IMG_UNDEFINED;
+        }
+    }
+
+    //根据图片一级分类,转译一级分类描述
+    public String getDescribeByWelfareImgPrimary(Integer primaryCategory)
+    {
+        if(primaryCategory== CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_DOMESTIC)
+        {
+            return "国内";
+        }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_ASIAN)
+        {
+            return "亚裔";
+        }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_WESTERN)
+        {
+            return "欧美";
+        }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_AFRICAN)
+        {
+            return "非裔";
+        }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_ANIMATION2D)
+        {
+            return "动漫2D";
+        }else if(primaryCategory==CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_ANIMATION3D)
+        {
+            return "动漫3D";
+        }
+        else {
+            return CodeItemKeys.ARTICLE_PRIMARY_CATEGORY_UNDEFINED;
         }
     }
 

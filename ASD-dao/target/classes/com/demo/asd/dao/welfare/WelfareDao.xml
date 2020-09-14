@@ -89,7 +89,7 @@
         <result column="STATUS" jdbcType="INTEGER" property="status" />
     </resultMap>
 
-    <select id="findByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
+    <select id="findImgByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
         select
         <include refid="BaseColumnList"/>
         from t_welfare_photo w
