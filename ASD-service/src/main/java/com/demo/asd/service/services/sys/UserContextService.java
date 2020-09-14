@@ -6,11 +6,11 @@ import com.demo.asd.exception.BizAssert;
 import com.demo.asd.model.staff.StaffResponse;
 import com.demo.asd.support.model.po.staff.StaffCriteria;
 import org.springframework.stereotype.Service;
-
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import com.demo.asd.collectionUtils.ObjectAttributeMethods;
 
 @Service
 public class UserContextService
@@ -18,6 +18,11 @@ public class UserContextService
     public StaffResponse getCurrentUserService(HttpServletRequest hReq) throws UnsupportedEncodingException {
         Cookie[] cookies=hReq.getCookies();
         StaffResponse staffResponse=new StaffResponse();
+        if(cookies==null)
+        {
+            ObjectAttributeMethods.SetObjAttrNull(staffResponse);
+            return staffResponse;
+        }
         BizAssert.isTrue(cookies!=null, "未获取到cookie!");
         for(Cookie cookie:cookies)
         {

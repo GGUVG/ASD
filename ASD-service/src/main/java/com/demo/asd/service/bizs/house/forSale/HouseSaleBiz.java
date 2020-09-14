@@ -48,7 +48,7 @@ public class HouseSaleBiz extends BaseBiz<Long, HouseSaleWithOwnerClientBean, Ho
     public HouseSaleService houseSaleService;
 
     public PagingResponse<HouseSaleWithOwnerClientResponse> findPageHouseForSale(PagingRequest<HouseSaleWithOwnerClientRequest> pag, HttpServletRequest hReq) throws IllegalAccessException, InstantiationException, UnsupportedEncodingException {
-        HouseSaleWithOwnerClientCriteria criteria=BeanUtils.copy(pag.getCriteria(), this.criteriaClass);
+        HouseSaleWithOwnerClientCriteria criteria=BeanUtils.copy(pag.getCriteria(), HouseSaleWithOwnerClientCriteria.class);
         Cookie[] cookies=hReq.getCookies();
         for(Cookie cookie:cookies)
         {

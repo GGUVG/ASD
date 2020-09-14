@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.asd.dao.welfare.WelfareDao">
+
+    <sql id="BaseColumnList">
+        ID,ORIGINAL_NAME,PHOTO_NAME,PHOTO_DESCRIBE,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,
+        SECONDARY_CATEGORY_TXT,THIRD_CATEGORY,THIRD_CATEGORY_TXT,IDX_STATUS,IDX,TAG1,TAG2,TAG3,TAG4,PHOTO_TIME,
+        PHOTO_TYPE,STATUS
+    </sql>
+
+    <sql id="WhereClauseColumn">
+        <if test="criteria.id != null and criteria.id !=''">and w.ID = #{criteria.id,jdbcType=BIGINT}</if>
+        <if test="criteria.articleId != null and criteria.articleId !=''">and w.ARTICLE_ID = #{criteria.articleId,jdbcType=BIGINT}</if>
+        <if test="criteria.originalName != null and criteria.originalName != ''">
+            <bind name="originalName" value="'%' + criteria.originalName + '%'"/>
+            and w.ORIGINAL_NAME like #{originalName}
+        </if>
+        <if test="criteria.modelName != null and criteria.modelName != ''">
+            <bind name="modelName" value="'%' + criteria.modelName + '%'"/>
+            and w.ORIGINAL_NAME like #{modelName}
+        </if>
+        <if test="criteria.photoName != null and criteria.photoName != ''">
+            <bind name="photoName" value="'%' + criteria.photoName + '%'"/>
+            and w.PHOTO_NAME like #{photoName}
+        </if>
+        <if test="criteria.photoDescribe != null and criteria.photoDescribe != ''">
+            <bind name="photoDescribe" value="'%' + criteria.photoDescribe + '%'"/>
+            and w.PHOTO_DESCRIBE like #{photoDescribe}
+        </if>
+        <if test="criteria.primaryCategory != null and criteria.primaryCategory != ''">
+            and w.PRIMARY_CATEGORY = #{criteria.primaryCategory,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.secondaryCategory != null and criteria.secondaryCategory != ''">
+            and w.SECONDARY_CATEGORY = #{criteria.secondaryCategory,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.thirdCategory != null and criteria.thirdCategory != ''">
+            and w.THIRD_CATEGORY = #{thirdCategory,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.idxStatus != null and criteria.idxStatus != ''">
+            and w.IDX_STATUS = #{criteria.idxStatus,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.idx != null and criteria.idx != ''">
+            and w.IDX = #{criteria.idx,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.tag1 != null and criteria.tag1 != ''">
+            and w.TAG1 = #{criteria.tag1,jdbcType=VARCHAR}
+        </if>
+        <if test="criteria.tag2 != null and criteria.tag2 != ''">
+            and w.TAG2 = #{criteria.tag2,jdbcType=VARCHAR}
+        </if>
+        <if test="criteria.tag3 != null and criteria.tag3 != ''">
+            and w.TAG3 = #{criteria.tag3,jdbcType=VARCHAR}
+        </if>
+        <if test="criteria.tag4 != null and criteria.tag4 != ''">
+            and w.TAG4 = #{criteria.tag4,jdbcType=VARCHAR}
+        </if>
+        <if test="criteria.startPhotoTime != null and criteria.endPhotoTime != null">
+            and w.PHOTO_TIME between #{criteria.startPhotoTime,jdbcType=TIMESTAMP} and #{criteria.endPhotoTime,jdbcType=TIMESTAMP}
+        </if>
+        <if test="criteria.photoType != null and criteria.photoType != ''">
+            and w.PHOTO_TYPE = #{criteria.photoType,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.status != null and criteria.status != ''">
+            and w.STATUS = #{criteria.status,jdbcType=INTEGER}
+        </if>
+    </sql>
+
+    <resultMap id="WelfareImgExMap" type="com.demo.asd.support.model.po.welfare.WelfareImgExBean">
+        <id column="ID" jdbcType="BIGINT" property="id" />
+        <result column="ARTICLE_ID" jdbcType="BIGINT" property="articleId" />
+        <result column="ORIGINAL_NAME" jdbcType="VARCHAR" property="originalName" />
+        <result column="MODEL_NAME" jdbcType="VARCHAR" property="modelName" />
+        <result column="PHOTO_NAME" jdbcType="VARCHAR" property="photoName" />
+        <result column="PHOTO_DESCRIBE" jdbcType="VARCHAR" property="photoDescribe" />
+        <result column="PRIMARY_CATEGORY" jdbcType="INTEGER" property="primaryCategory" />
+        <result column="PRIMARY_CATEGORY_TXT" jdbcType="VARCHAR" property="primaryCategoryTxt" />
+        <result column="SECONDARY_CATEGORY" jdbcType="INTEGER" property="secondaryCategory" />
+        <result column="SECONDARY_CATEGORY_TXT" jdbcType="VARCHAR" property="secondaryCategoryTxt" />
+        <result column="THIRD_CATEGORY" jdbcType="INTEGER" property="thirdCategory" />
+        <result column="THIRD_CATEGORY_TXT" jdbcType="VARCHAR" property="thirdCategoryTxt" />
+        <result column="IDX_STATUS" jdbcType="INTEGER" property="idxStatus" />
+        <result column="IDX" jdbcType="INTEGER" property="idx" />
+        <result column="TAG1" jdbcType="VARCHAR" property="tag1" />
+        <result column="TAG2" jdbcType="VARCHAR" property="tag2" />
+        <result column="TAG3" jdbcType="VARCHAR" property="tag3" />
+        <result column="TAG4" jdbcType="VARCHAR" property="tag4" />
+        <result column="PHOTO_TIME" jdbcType="TIMESTAMP" property="photoTime" />
+        <result column="PHOTO_TYPE" jdbcType="INTEGER" property="photoType" />
+        <result column="STATUS" jdbcType="INTEGER" property="status" />
+    </resultMap>
+
+    <select id="findByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
+        select
+        <include refid="BaseColumnList"/>
+        from t_welfare_photo w
+        where
+        1=1
+        <include refid="WhereClauseColumn"/>
+        ORDER BY w.PHOTO_TIME desc
+        limit #{pagination.offset}, #{pagination.limit}
+    </select>
+
+    <select id="countFindByPage" resultType="java.lang.Long" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria">
+        select COUNT(1)
+        from t_welfare_photo w
+        where
+        1=1
+        <include refid="WhereClauseColumn"/>
+    </select>
+
+    <select id="findNoPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
+        select
+        <include refid="BaseColumnList"/>
+        from t_welfare_photo w
+        where
+        1=1
+        <include refid="WhereClauseColumn"/>
+        ORDER BY w.PHOTO_TIME desc
+    </select>
+</mapper>

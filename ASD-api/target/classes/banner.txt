@@ -1,0 +1,21 @@
+${AnsiColor.BRIGHT_BLUE}                       .::::.
+${AnsiColor.BRIGHT_BLUE}                     .::::::::.
+${AnsiColor.BRIGHT_BLUE}                   :::::::::::
+${AnsiColor.BRIGHT_BLUE}                 ..:::::::::::'
+${AnsiColor.BRIGHT_BLUE}              '::::::::::::'
+${AnsiColor.BRIGHT_BLUE}                .::::::::::
+${AnsiColor.BRIGHT_BLUE}           '::::::::::::::..
+${AnsiColor.BRIGHT_BLUE}                ..::::::::::::.
+${AnsiColor.BRIGHT_BLUE}              ``::::::::::::::::
+${AnsiColor.BRIGHT_BLUE}               ::::``:::::::::'        .:::.
+${AnsiColor.BRIGHT_BLUE}              ::::'   ':::::'       .::::::::.
+${AnsiColor.BRIGHT_BLUE}            .::::'      ::::     .:::::::'::::.
+${AnsiColor.BRIGHT_BLUE}           .:::'       :::::  .:::::::::' ':::::.
+${AnsiColor.BRIGHT_BLUE}          .::'        :::::.:::::::::'      ':::::.
+${AnsiColor.BRIGHT_BLUE}         .::'         ::::::::::::::'         ``::::.
+${AnsiColor.BRIGHT_BLUE}     ...:::           ::::::::::::'              ``::.
+${AnsiColor.BRIGHT_BLUE}    ```` ':.          ':::::::::'                  ::::..
+${AnsiColor.BRIGHT_BLUE}                       '.:::::'                    ':'````..
+${AnsiColor.BRIGHT_MAGENTA} backEnd:https://github.com/GGUVG/asd.git
+${AnsiColor.BRIGHT_MAGENTA} frontEnd:https://github.com/GGUVG/asd-web.git
+${AnsiColor.BRIGHT_CYAN}Spring Boot Version: ${spring-boot.version}
