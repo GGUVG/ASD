@@ -2,13 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.asd.dao.welfare.WelfareDao">
 
-    <sql id="BaseColumnList">
+    <sql id="ImgBaseColumnList">
         ID,ORIGINAL_NAME,PHOTO_NAME,PHOTO_DESCRIBE,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,
         SECONDARY_CATEGORY_TXT,THIRD_CATEGORY,THIRD_CATEGORY_TXT,IDX_STATUS,IDX,TAG1,TAG2,TAG3,TAG4,PHOTO_TIME,
         PHOTO_TYPE,STATUS
     </sql>
 
-    <sql id="WhereClauseColumn">
+    <sql id="ArticleBaseColumnList">
+        ID,TITLE,SECONDARY_TITLE,CONTENT,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,SECONDARY_CATEGORY_TXT,
+        THIRD_CATEGORY,THIRD_CATEGORY_TXT,PUBLISH_TIME,HOT_VALUE,KEYWORD1,KEYWORD2,KEYWORD3,KEYWORD4,STATUS
+    </sql>
+
+    <sql id="ImgWhereClauseColumn">
         <if test="criteria.id != null and criteria.id !=''">and w.ID = #{criteria.id,jdbcType=BIGINT}</if>
         <if test="criteria.articleId != null and criteria.articleId !=''">and w.ARTICLE_ID = #{criteria.articleId,jdbcType=BIGINT}</if>
         <if test="criteria.originalName != null and criteria.originalName != ''">
@@ -65,6 +70,52 @@
         </if>
     </sql>
 
+    <sql id="ArticleWhereClauseColumn">
+    <if test="criteria.id != null and criteria.id !=''">and a.ID = #{criteria.id,jdbcType=BIGINT}</if>
+    <if test="criteria.title != null and criteria.title != ''">
+        <bind name="title" value="'%' + criteria.title + '%'"/>
+        and a.TITLE like #{title}
+    </if>
+    <if test="criteria.secondaryTitle != null and criteria.secondaryTitle != ''">
+        <bind name="secondaryTitle" value="'%' + criteria.secondaryTitle + '%'"/>
+        and a.SECONDARY_TITLE like #{secondaryTitle}
+    </if>
+    <if test="criteria.content != null and criteria.content != ''">
+        <bind name="content" value="'%' + criteria.content + '%'"/>
+        and a.CONTENT like #{content}
+    </if>
+    <if test="criteria.primaryCategory != null and criteria.primaryCategory != ''">
+        and a.PRIMARY_CATEGORY = #{criteria.primaryCategory,jdbcType=INTEGER}
+    </if>
+    <if test="criteria.secondaryCategory != null and criteria.secondaryCategory != ''">
+        and a.SECONDARY_CATEGORY = #{criteria.secondaryCategory,jdbcType=INTEGER}
+    </if>
+    <if test="criteria.thirdCategory != null and criteria.thirdCategory != ''">
+        and a.THIRD_CATEGORY = #{thirdCategory,jdbcType=INTEGER}
+    </if>
+    <if test="criteria.startPublishTime != null and criteria.endPublishTime != null">
+        and a.PUBLISH_TIME between #{criteria.startPublishTime,jdbcType=TIMESTAMP} and #{criteria.endPublishTime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="criteria.hotValue != null and criteria.hotValue !=''">
+        and a.HOT_VALUE = #{criteria.hotValue,jdbcType=INTEGER}
+    </if>
+    <if test="criteria.keyWord1 != null and criteria.keyWord1 != ''">
+        and a.KEYWORD1 = #{criteria.keyWord1,jdbcType=VARCHAR}
+    </if>
+    <if test="criteria.keyWord2 != null and criteria.keyWord2 != ''">
+        and a.KEYWORD2 = #{criteria.keyWord2,jdbcType=VARCHAR}
+    </if>
+    <if test="criteria.keyWord3 != null and criteria.keyWord3 != ''">
+        and a.KEYWORD3 = #{criteria.keyWord3,jdbcType=VARCHAR}
+    </if>
+    <if test="criteria.keyWord4 != null and criteria.keyWord4 != ''">
+        and a.KEYWORD4 = #{criteria.tag4,jdbcType=VARCHAR}
+    </if>
+    <if test="criteria.status != null and criteria.status != ''">
+        and a.STATUS = #{criteria.status,jdbcType=INTEGER}
+    </if>
+    </sql>
+
     <resultMap id="WelfareImgExMap" type="com.demo.asd.support.model.po.welfare.WelfareImgExBean">
         <id column="ID" jdbcType="BIGINT" property="id" />
         <result column="ARTICLE_ID" jdbcType="BIGINT" property="articleId" />
@@ -89,32 +140,80 @@
         <result column="STATUS" jdbcType="INTEGER" property="status" />
     </resultMap>
 
+    <resultMap id="WelfareArticleMap" type="com.demo.asd.support.model.po.welfare.WelfareArticleExBean">
+        <id column="ID" jdbcType="BIGINT" property="id" />
+        <result column="TITLE" jdbcType="VARCHAR" property="title" />
+        <result column="SECONDARY_TITLE" jdbcType="VARCHAR" property="secondaryTitle" />
+        <result column="CONTENT" jdbcType="VARCHAR" property="content" />
+        <result column="PRIMARY_CATEGORY" jdbcType="VARCHAR" property="primaryCategory" />
+        <result column="PRIMARY_CATEGORY_TXT" jdbcType="VARCHAR" property="primaryCategoryTxt" />
+        <result column="SECONDARY_CATEGORY" jdbcType="VARCHAR" property="secondaryCategory" />
+        <result column="SECONDARY_CATEGORY_TXT" jdbcType="VARCHAR" property="secondaryCategoryTxt" />
+        <result column="THIRD_CATEGORY" jdbcType="VARCHAR" property="thirdCategory" />
+        <result column="THIRD_CATEGORY_TXT" jdbcType="VARCHAR" property="thirdCategoryTxt" />
+        <result column="PUBLISH_TIME" jdbcType="TIMESTAMP" property="publishTime" />
+        <result column="HOT_VALUE" jdbcType="VARCHAR" property="thirdCategory" />
+        <result column="KEYWORD1" jdbcType="VARCHAR" property="keyWord1" />
+        <result column="KEYWORD2" jdbcType="VARCHAR" property="keyWord2" />
+        <result column="KEYWORD3" jdbcType="VARCHAR" property="keyWord3" />
+        <result column="KEYWORD4" jdbcType="VARCHAR" property="keyWord4" />
+        <result column="BG_IMG" jdbcType="BIGINT" property="bgImg" />
+        <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    </resultMap>
+
     <select id="findImgByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
         select
-        <include refid="BaseColumnList"/>
+        <include refid="ImgBaseColumnList"/>
         from t_welfare_photo w
         where
         1=1
-        <include refid="WhereClauseColumn"/>
-        ORDER BY w.PHOTO_TIME desc
+        <include refid="ImgWhereClauseColumn"/>
         limit #{pagination.offset}, #{pagination.limit}
     </select>
 
-    <select id="countFindByPage" resultType="java.lang.Long" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria">
+    <select id="countFindImgByPage" resultType="java.lang.Long" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria">
         select COUNT(1)
         from t_welfare_photo w
         where
         1=1
-        <include refid="WhereClauseColumn"/>
+        <include refid="ImgWhereClauseColumn"/>
     </select>
 
-    <select id="findNoPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
+    <select id="findImgNoPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExCriteria" resultMap="WelfareImgExMap">
         select
-        <include refid="BaseColumnList"/>
+        <include refid="ImgBaseColumnList"/>
         from t_welfare_photo w
         where
         1=1
-        <include refid="WhereClauseColumn"/>
-        ORDER BY w.PHOTO_TIME desc
+        <include refid="ImgWhereClauseColumn"/>
     </select>
+
+    <select id="findArticleByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareArticleExCriteria" resultMap="WelfareArticleMap">
+        select
+        <include refid="ArticleBaseColumnList"/>
+        from t_welfare_article a
+        where 1=1
+        <include refid="ArticleWhereClauseColumn"/>
+        ORDER BY a.PUBLISH_TIME desc
+        limit #{pagination.offset}, #{pagination.limit}
+    </select>
+
+    <select id="countFindArticleByPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareArticleExCriteria" resultType="java.lang.Long">
+        select
+        COUNT(1)
+        from t_welfare_article a
+        where 1=1
+        <include refid="ArticleWhereClauseColumn"/>
+        ORDER BY a.PUBLISH_TIME desc
+    </select>
+
+    <select id="findArticleNoPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareArticleExCriteria" resultMap="WelfareArticleMap">
+        select
+        <include refid="ArticleBaseColumnList"/>
+        from t_welfare_article a
+        where 1=1
+        <include refid="ArticleWhereClauseColumn"/>
+        ORDER BY a.PUBLISH_TIME desc
+    </select>
+
 </mapper>

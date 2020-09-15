@@ -94,7 +94,7 @@
         and a.THIRD_CATEGORY = #{thirdCategory,jdbcType=INTEGER}
     </if>
     <if test="criteria.startPublishTime != null and criteria.endPublishTime != null">
-        and w.PUBLISH_TIME between #{criteria.startPublishTime,jdbcType=TIMESTAMP} and #{criteria.endPublishTime,jdbcType=TIMESTAMP}
+        and a.PUBLISH_TIME between #{criteria.startPublishTime,jdbcType=TIMESTAMP} and #{criteria.endPublishTime,jdbcType=TIMESTAMP}
     </if>
     <if test="criteria.hotValue != null and criteria.hotValue !=''">
         and a.HOT_VALUE = #{criteria.hotValue,jdbcType=INTEGER}
@@ -194,7 +194,7 @@
         from t_welfare_article a
         where 1=1
         <include refid="ArticleWhereClauseColumn"/>
-        ORDER BY a.PUBLISH_TIME
+        ORDER BY a.PUBLISH_TIME desc
         limit #{pagination.offset}, #{pagination.limit}
     </select>
 
@@ -204,7 +204,7 @@
         from t_welfare_article a
         where 1=1
         <include refid="ArticleWhereClauseColumn"/>
-        ORDER BY a.PUBLISH_TIME
+        ORDER BY a.PUBLISH_TIME desc
     </select>
 
     <select id="findArticleNoPage" parameterType="com.demo.asd.support.model.po.welfare.WelfareArticleExCriteria" resultMap="WelfareArticleMap">
@@ -213,7 +213,7 @@
         from t_welfare_article a
         where 1=1
         <include refid="ArticleWhereClauseColumn"/>
-        ORDER BY a.PUBLISH_TIME
+        ORDER BY a.PUBLISH_TIME desc
     </select>
 
 </mapper>

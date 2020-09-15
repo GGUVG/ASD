@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" afterDir="false" />
@@ -11,16 +10,10 @@
       <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/WelfareBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/ArticleCodeTranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/ArticleCodeTranslateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/WelfarePhotoCodeTranslateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/sys/codeTranslate/WelfarePhotoCodeTranslateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/WelfareBiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/welfare/WelfareBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/welfare/WelfareBiz.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/ArticleBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/ArticleCriteria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/ArticleBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/ArticleCriteria.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,10 +91,24 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\target\classes\com\demo\asd\dao\client" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.demo.asd.dao.house.forSale" />
       <recent name="com.demo.asd.dao.test" />
       <recent name="com.demo.asd.dao.staff" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.model.welfare" />
+      <recent name="com.demo.asd.service.services.sys.codeTranslate" />
+      <recent name="com.demo.asd.support.model.po.welfare" />
+      <recent name="com.demo.asd.exception" />
+      <recent name="com.demo.asd" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\resources\Img\welfare" />
@@ -109,20 +116,6 @@
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\welfare" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\common" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-properties\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.demo.asd.service.services.sys.codeTranslate" />
-      <recent name="com.demo.asd.support.model.po.welfare" />
-      <recent name="com.demo.asd.exception" />
-      <recent name="com.demo.asd" />
-      <recent name="com.demo.asd.service.bizs.client" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\target\classes\com\demo\asd\dao\client" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +269,8 @@
       <workItem from="1599812014169" duration="171000" />
       <workItem from="1599814157843" duration="130000" />
       <workItem from="1599905656299" duration="286000" />
-      <workItem from="1600044119905" duration="22380000" />
+      <workItem from="1600044119905" duration="22430000" />
+      <workItem from="1600130593071" duration="5643000" />
     </task>
     <servers />
   </component>

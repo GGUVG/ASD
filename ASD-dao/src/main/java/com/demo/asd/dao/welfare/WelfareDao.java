@@ -28,9 +28,9 @@ public interface WelfareDao extends CrudDao<Long, WelfareImgExBean, WelfareImgEx
     //文章分页查询
     public List<WelfareArticleExBean> findArticleByPage(@Param("criteria")WelfareArticleExCriteria criteria,@Param("pagination")Pagination pagination);
 
-    //图片分页查询计数
+    //文章分页查询计数
     public Long countFindArticleByPage(@Param("criteria")WelfareArticleExCriteria criteria);
 
-    //图片不分页查询
+    //文章不分页查询
     public List<WelfareImgExBean> findArticleNoPage(@Param("criteria")WelfareArticleExCriteria criteria);
 }

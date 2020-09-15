@@ -2,6 +2,8 @@ package com.demo.asd.api.controller.welfare;
 
 import com.demo.asd.dataResult.DataResult;
 import com.demo.asd.dataResult.DataResults;
+import com.demo.asd.model.welfare.WelfareArticleExRequest;
+import com.demo.asd.model.welfare.WelfareArticleExResponse;
 import com.demo.asd.model.welfare.WelfareImgExRequest;
 import com.demo.asd.model.welfare.WelfareImgExResponse;
 import com.demo.asd.pagination.PagingRequest;
@@ -26,11 +28,22 @@ public class WelfareController
     /**
      * 在文章里分页显示图片
      */
-    @ApiOperation(tags = "Welfare", value = "findPage", httpMethod = "POST",
+    @ApiOperation(tags = "Welfare", value = "findWelfareImgByPage", httpMethod = "POST",
             notes = "在文章里分页显示图片")
     @PostMapping("/findWelfareImgByPage")
     public DataResult<PagingResponse<WelfareImgExResponse>> findWelfareImgByPage(@RequestBody PagingRequest<WelfareImgExRequest> req) throws IllegalAccessException, InstantiationException
     {
         return DataResults.ok(welfareBiz.findImgByPage(req));
+    }
+
+    /**
+     * 在文章里分页显示图片
+     */
+    @ApiOperation(tags = "Welfare", value = "findArticleByPage", httpMethod = "POST",
+            notes = "查询文章列表")
+    @PostMapping("/findArticleByPage")
+    public DataResult<PagingResponse<WelfareArticleExResponse>> findArticleByPage(@RequestBody PagingRequest<WelfareArticleExRequest> req) throws IllegalAccessException, InstantiationException
+    {
+        return DataResults.ok(welfareBiz.findArticleByPage(req));
     }
 }
