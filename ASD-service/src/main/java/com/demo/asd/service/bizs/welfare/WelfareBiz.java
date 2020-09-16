@@ -24,6 +24,7 @@ import com.demo.asd.support.model.po.welfare.WelfareImgExCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.List;
+import com.demo.asd.dataUtils.ChineseUtils;
 
 @Component
 public class WelfareBiz extends BaseBiz<Long, WelfareImgExBean, WelfareImgExCriteria, WelfareImgExRequest, WelfareImgExResponse>
