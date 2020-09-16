@@ -64,7 +64,7 @@ public class WelfareArticleRequest extends BaseRequest
     public String keyWord4;
 
     @ApiModelProperty("文章列表时显示的缩略封面图")
-    public Long bgImg;
+    public String bgImg;
 
     @ApiModelProperty("状态")
     public Integer status;

@@ -10,7 +10,7 @@
 
     <sql id="ArticleBaseColumnList">
         ID,TITLE,SECONDARY_TITLE,CONTENT,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,SECONDARY_CATEGORY_TXT,
-        THIRD_CATEGORY,THIRD_CATEGORY_TXT,PUBLISH_TIME,HOT_VALUE,KEYWORD1,KEYWORD2,KEYWORD3,KEYWORD4,STATUS
+        THIRD_CATEGORY,THIRD_CATEGORY_TXT,PUBLISH_TIME,HOT_VALUE,KEYWORD1,KEYWORD2,KEYWORD3,KEYWORD4,BG_IMG,STATUS
     </sql>
 
     <sql id="ImgWhereClauseColumn">
@@ -157,7 +157,7 @@
         <result column="KEYWORD2" jdbcType="VARCHAR" property="keyWord2" />
         <result column="KEYWORD3" jdbcType="VARCHAR" property="keyWord3" />
         <result column="KEYWORD4" jdbcType="VARCHAR" property="keyWord4" />
-        <result column="BG_IMG" jdbcType="BIGINT" property="bgImg" />
+        <result column="BG_IMG" jdbcType="VARCHAR" property="bgImg" />
         <result column="STATUS" jdbcType="VARCHAR" property="status" />
     </resultMap>
 

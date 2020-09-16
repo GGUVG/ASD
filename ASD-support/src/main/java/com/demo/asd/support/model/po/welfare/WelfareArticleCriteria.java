@@ -44,7 +44,7 @@ public class WelfareArticleCriteria extends BaseCriteria
 
     public String keyWord4;//关键词4
 
-    public Long bgImg;//文章列表时显示的缩略封面图
+    public String bgImg;//文章列表时显示的缩略封面图
 
     public Integer status;//状态
 }

@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/abcd2345.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/abcdtest1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +265,7 @@
       <workItem from="1599905656299" duration="286000" />
       <workItem from="1600044119905" duration="22430000" />
       <workItem from="1600130593071" duration="6380000" />
-      <workItem from="1600217006479" duration="4653000" />
+      <workItem from="1600217006479" duration="6925000" />
     </task>
     <servers />
   </component>
