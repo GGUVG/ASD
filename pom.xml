@@ -23,6 +23,7 @@
         <version>2.0.0.RELEASE</version>
         <relativePath/>
     </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -208,12 +209,6 @@
             <version>0.2.4</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.util.log</groupId>
-            <artifactId>LogUtil</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-
         <!--阿里json工具 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -273,5 +268,25 @@
             <artifactId>pinyin4j</artifactId>
             <version>2.5.1</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.apache.cocoon</groupId>
+            <artifactId>cocoon-core</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kabeja</groupId>
+            <artifactId>kabeja</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kabeja</groupId>
+            <artifactId>svg</artifactId>
+            <version>0.4</version>
+        </dependency>
+
     </dependencies>
 </project>
