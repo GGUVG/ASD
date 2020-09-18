@@ -37,7 +37,7 @@ public class WelfareController
     }
 
     /**
-     * 在文章里分页显示图片
+     * 查询文章列表
      */
     @ApiOperation(tags = "Welfare", value = "findArticleByPage", httpMethod = "POST",
             notes = "查询文章列表")

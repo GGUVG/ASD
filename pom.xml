@@ -276,17 +276,23 @@
             <version>2.2.0</version>
         </dependency>
 
+        <!--操作.dwg图形文件 -->
         <dependency>
             <groupId>com.kabeja</groupId>
             <artifactId>kabeja</artifactId>
             <version>0.4</version>
         </dependency>
 
+        <!-- 操作.svg图形文件-->
         <dependency>
             <groupId>com.kabeja</groupId>
             <artifactId>svg</artifactId>
             <version>0.4</version>
         </dependency>
-
+        <dependency>
+            <groupId>batik</groupId>
+            <artifactId>batik-transcoder</artifactId>
+            <version>1.6</version>
+        </dependency>
     </dependencies>
 </project>

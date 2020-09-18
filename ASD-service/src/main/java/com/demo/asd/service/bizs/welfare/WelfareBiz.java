@@ -52,6 +52,7 @@ public class WelfareBiz extends BaseBiz<Long, WelfareImgExBean, WelfareImgExCrit
         WelfareImgExCriteria criteria= BeanUtils.copy(pag.getCriteria(), WelfareImgExCriteria.class);
         Pagination pagination =BeanUtils.copy(pag.getPagination(), Pagination.class);
         criteria.setStatus(CodeItemKeys.STATUS_Enable);
+        BizAssert.isTrue(criteria.articleId!=null, "无法根据该文章获取详情!");
         List<WelfareImgExBean> beans=welfareService.findImgByPage(criteria,pagination);
         beans.forEach(bean->{
             if(bean.primaryCategory!=null)
