@@ -2,9 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="047af890-72fe-4339-80fb-1c2f26ad48b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/ChangWeiQianChaoDeJian-0000002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/src/main/java/com/demo/asd/api/controller/welfare/WelfareController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-api/target/classes/com/demo/asd/api/controller/welfare/WelfareController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/welfare/WelfareDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/java/com/demo/asd/dao/welfare/WelfareDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/src/main/resources/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-dao/target/classes/com/demo/asd/dao/welfare/WelfareDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare/WelfareArticleResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/welfare/WelfareArticleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/welfare/WelfareArticleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/welfare/WelfareArticleResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-model/target/classes/com/demo/asd/model/welfare/WelfareArticleResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/bizs/welfare/WelfareBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/src/main/java/com/demo/asd/service/services/welfare/WelfareService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/welfare/WelfareBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/bizs/welfare/WelfareBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-service/target/classes/com/demo/asd/service/services/welfare/WelfareService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/common/CodeItemKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/common/CodeItemKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/sys/CodeItemBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/sys/CodeItemBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareImgBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareImgBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareImgCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/java/com/demo/asd/support/model/po/welfare/WelfareImgCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/[MiiTao]MiTaoSheTiNaMeiVIPWuShengGuang-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/[MiiTao]MiTaoSheTiNaMeiVIPWuShengGuang-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/[MiiTao]MiTaoSheTiNaMeiVIPWuShengGuang-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/[MiiTao]MiTaoSheTiNaMeiVIPWuShengGuang-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/mmexport1485618039880.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/src/main/resources/Img/welfare/mmexport1485618039880.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/Img/welfare/ChangWeiQianChaoDeJian-0000002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/common/CodeItemKeys.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/common/CodeItemKeys.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareArticleBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareArticleBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareArticleCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareImgBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareImgBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareImgCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/ASD-support/target/classes/com/demo/asd/support/model/po/welfare/WelfareImgCriteria.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +99,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/exJAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ASD-model/src/main/java/com/demo/asd/model/welfare" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -82,31 +109,31 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.demo.asd.dao.house.forSale" />
-      <recent name="com.demo.asd.dao.test" />
-      <recent name="com.demo.asd.dao.staff" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\lib" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\resources\Img\welfare" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\welfare" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\welfare" />
-      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\java\com\demo\asd\support\model\po\common" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.demo.asd.model.welfare" />
-      <recent name="com.demo.asd.service.services.sys.codeTranslate" />
-      <recent name="com.demo.asd.support.model.po.welfare" />
-      <recent name="com.demo.asd.exception" />
-      <recent name="com.demo.asd" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\target\classes\com\demo\asd\dao\client" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\house\forSale" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\staff" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\mapper\test" />
       <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\mapper\staff" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.dao.house.forSale" />
+      <recent name="com.demo.asd.dao.test" />
+      <recent name="com.demo.asd.dao.staff" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.demo.asd.support.model.po.welfare" />
+      <recent name="com.demo.asd.model.welfare" />
+      <recent name="com.demo.asd.service.services.sys.codeTranslate" />
+      <recent name="com.demo.asd.exception" />
+      <recent name="com.demo.asd" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-model\src\main\java\com\demo\asd\model\welfare" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\sys" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\lib" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-support\src\main\resources\Img\welfare" />
+      <recent name="E:\Work\SoftWare\IntelliJ IDEA 2019.2.3\WorkSpace\ASD\ASD-dao\src\main\resources\com\demo\asd\dao\welfare" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,7 +294,13 @@
       <workItem from="1600333318887" duration="601000" />
       <workItem from="1600389732315" duration="8394000" />
       <workItem from="1600422489916" duration="424000" />
-      <workItem from="1600482766355" duration="4752000" />
+      <workItem from="1600482766355" duration="5364000" />
+      <workItem from="1600504738750" duration="34000" />
+      <workItem from="1600658441254" duration="490000" />
+      <workItem from="1600698509730" duration="535000" />
+      <workItem from="1600746028505" duration="6748000" />
+      <workItem from="1600821803974" duration="7299000" />
+      <workItem from="1600908432791" duration="11443000" />
     </task>
     <servers />
   </component>

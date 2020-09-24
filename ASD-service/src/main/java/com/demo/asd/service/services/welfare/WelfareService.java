@@ -49,6 +49,16 @@ public class WelfareService extends BaseService<Long, WelfareImgExBean, WelfareI
         return welfareDao.findArticleNoPage(criteria);
     }
 
+    public Integer submitNewArticle(WelfareArticleExBean bean)
+    {
+        return welfareDao.submitNewArticle(bean);
+    }
+
+    public Integer submitNewImg(WelfareImgExBean bean)
+    {
+        return  welfareDao.submitNewImg(bean);
+    }
+
     @Override
     protected CrudDao<Long, WelfareImgExBean, WelfareImgExCriteria> getCrudDao()
     {

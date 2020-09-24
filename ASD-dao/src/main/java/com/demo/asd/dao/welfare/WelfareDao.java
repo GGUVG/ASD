@@ -33,4 +33,10 @@ public interface WelfareDao extends CrudDao<Long, WelfareImgExBean, WelfareImgEx
 
     //文章不分页查询
     public List<WelfareImgExBean> findArticleNoPage(@Param("criteria")WelfareArticleExCriteria criteria);
+
+    //新增文章
+    public Integer submitNewArticle(@Param("bean")WelfareArticleExBean bean);
+
+    //新增图片
+    public Integer submitNewImg(@Param("bean")WelfareImgExBean bean);
 }

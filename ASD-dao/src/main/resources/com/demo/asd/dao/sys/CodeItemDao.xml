@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.asd.dao.sys.CodeItemDao">
+
+    <sql id="BaseColumnList">
+        TYPE_CODE,ITEM_CODE,ITEM_NAME
+    </sql>
+
+    <sql id="WhereClauseColumn">
+        <if test="criteria.typeCode != null and criteria.typeCode !=''">
+            and i.TYPE_CODE = #{criteria.typeCode,jdbcType=VARCHAR}
+        </if>
+        <if test="criteria.itemCode != null">
+            <bind name="itemCode" value="'%' + criteria.itemCode + '%'"/>
+            and i.ITEM_CODE = #{criteria.itemCOde,jdbcType=INTEGER}
+        </if>
+        <if test="criteria.itemName != null">
+            <bind name="itemName" value="'%' + criteria.itemName + '%'"/>
+            and i.ITEM_NAME like #{itemName}
+        </if>
+    </sql>
+
+    <resultMap id="BaseResultMap" type="com.demo.asd.support.model.po.sys.CodeItemBean">
+        <id column="TYPE_CODE" jdbcType="VARCHAR" property="typeCode"/>
+        <id column="ITEM_CODE" jdbcType="INTEGER" property="itemCode" />
+        <result column="ITEM_NAME" jdbcType="VARCHAR" property="itemName" />
+    </resultMap>
+
+    <!-- 根据TYPE_CODE,ITEM_CODE获取关联码表-->
+    <select id="getCodeItemList" resultMap="BaseResultMap" parameterType="com.demo.asd.support.model.po.sys.CodeItemCriteria">
+        select
+        <include refid="BaseColumnList"/>
+        from t_sys_code_item i
+        where 1=1
+        <include refid="WhereClauseColumn"/>
+    </select>
+
+
+
+
+</mapper>

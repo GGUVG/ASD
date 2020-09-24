@@ -1,8 +1,11 @@
 package com.demo.asd.support.model.po.sys;
 
+import com.demo.asd.base.entity.BaseBean;
+
 import java.time.LocalDateTime;
 
-public class CodeItemBean {
+public class CodeItemBean extends BaseBean
+{
     public String typeCode;//子表所属码表编码
     public Integer itemCode;//子表编码
     public String itemName;//子表名

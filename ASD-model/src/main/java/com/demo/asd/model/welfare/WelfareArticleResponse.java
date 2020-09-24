@@ -24,6 +24,9 @@ public class WelfareArticleResponse extends BaseResponse
     @ApiModelProperty("二级标题")
     public String secondaryTitle;
 
+    @ApiModelProperty("模特名")
+    public String modelName;
+
     @ApiModelProperty("内容")
     public String content;
 

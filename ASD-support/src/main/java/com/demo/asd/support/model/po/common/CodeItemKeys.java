@@ -13,6 +13,18 @@ public interface CodeItemKeys {
     Integer STATUS_DISABLE=0;//停用
 
     /**
+     * 反馈
+     */
+    Integer SUCCESS=1;
+    Integer FAILURE=0;
+
+    /**
+     * 修改反馈信息
+     */
+    String MODIFY_SUCCESS="修改成功";
+    String MODIFY_FAILURE="修改失败";
+
+    /**
      * 福利文章一级类目
      * 10国内,20亚裔,30欧美,40非裔,50动漫2D,60动漫3D
      */

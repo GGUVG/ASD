@@ -21,6 +21,8 @@ public class WelfareArticleBean extends BaseBean
 
     public String secondaryTitle;//二级标题
 
+    public String modelName;//模特名
+    
     public String content;//内容
 
     public Integer primaryCategory;//一级分类

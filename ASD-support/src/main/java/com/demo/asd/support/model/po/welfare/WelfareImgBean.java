@@ -22,6 +22,8 @@ public class WelfareImgBean extends BaseBean
 
     public String photoName;//图片名
 
+    public String subPhotoName;//图片副名
+
     public String photoDescribe;//图片描述
 
     public Integer primaryCategory;//一级分类

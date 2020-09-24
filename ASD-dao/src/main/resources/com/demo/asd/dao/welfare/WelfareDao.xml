@@ -9,7 +9,7 @@
     </sql>
 
     <sql id="ArticleBaseColumnList">
-        ID,TITLE,SECONDARY_TITLE,CONTENT,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,SECONDARY_CATEGORY_TXT,
+        ID,TITLE,SECONDARY_TITLE,MODEL_NAME,CONTENT,PRIMARY_CATEGORY,PRIMARY_CATEGORY_TXT,SECONDARY_CATEGORY,SECONDARY_CATEGORY_TXT,
         THIRD_CATEGORY,THIRD_CATEGORY_TXT,PUBLISH_TIME,HOT_VALUE,KEYWORD1,KEYWORD2,KEYWORD3,KEYWORD4,BG_IMG,STATUS
     </sql>
 
@@ -80,6 +80,10 @@
         <bind name="secondaryTitle" value="'%' + criteria.secondaryTitle + '%'"/>
         and a.SECONDARY_TITLE like #{secondaryTitle}
     </if>
+        <if test="criteria.modelName != null and criteria.modelName != ''">
+            <bind name="modelName" value="'%' + criteria.modelName + '%'"/>
+            and a.MODEL_NAME like #{modelName}
+        </if>
     <if test="criteria.content != null and criteria.content != ''">
         <bind name="content" value="'%' + criteria.content + '%'"/>
         and a.CONTENT like #{content}
@@ -227,5 +231,87 @@
         <include refid="ArticleWhereClauseColumn"/>
         ORDER BY a.PUBLISH_TIME desc
     </select>
+
+    <insert id="submitNewArticle" parameterType="com.demo.asd.support.model.po.welfare.WelfareArticleExBean" useGeneratedKeys="true">
+        insert into t_welfare_article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bean.title != null">TITLE,</if>
+            <if test="bean.secondaryTitle != null">SECONDARY_TITLE,</if>
+            <if test="bean.modelName != null">MODEL_NAME,</if>
+            <if test="bean.content != null">CONTENT,</if>
+            <if test="bean.primaryCategory != null">PRIMARY_CATEGORY,</if>
+            <if test="bean.secondaryCategory != null">SECONDARY_CATEGORY,</if>
+            <if test="bean.thirdCategory != null">THIRD_CATEGORY,</if>
+            <if test="bean.publishTime != null">PUBLISH_TIME,</if>
+            <if test="bean.hotValue != null">HOT_VALUE,</if>
+            <if test="bean.keyWord1 != null">KEYWORD1,</if>
+            <if test="bean.keyWord2 != null">KEYWORD2,</if>
+            <if test="bean.keyWord3 != null">KEYWORD3,</if>
+            <if test="bean.keyWord4 != null">KEYWORD4,</if>
+            <if test="bean.bgImg != null">BG_IMG,</if>
+            <if test="bean.status != null">STATUS,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bean.title != null">#{bean.title,jdbcType=VARCHAR},</if>
+            <if test="bean.secondaryTitle != null">#{bean.secondaryTitle,jdbcType=VARCHAR},</if>
+            <if test="bean.modelName != null">#{bean.modelName,jdbcType=VARCHAR},</if>
+            <if test="bean.content != null">#{bean.content,jdbcType=VARCHAR},</if>
+            <if test="bean.primaryCategory != null">#{bean.primaryCategory,jdbcType=INTEGER},</if>
+            <if test="bean.secondaryCategory != null">#{bean.secondaryCategory,jdbcType=INTEGER},</if>
+            <if test="bean.thirdCategory != null">#{bean.thirdCategory,jdbcType=INTEGER},</if>
+            <if test="bean.publishTime != null">#{bean.publishTime,jdbcType=TIMESTAMP},</if>
+            <if test="bean.hotValue != null">#{bean.hotValue,jdbcType=INTEGER},</if>
+            <if test="bean.keyWord1 != null">#{bean.keyWord1,jdbcType=VARCHAR},</if>
+            <if test="bean.keyWord2 != null">#{bean.keyWord2,jdbcType=INTEGER},</if>
+            <if test="bean.keyWord3 != null">#{bean.keyWord3,jdbcType=INTEGER},</if>
+            <if test="bean.keyWord4 != null">#{bean.keyWord4,jdbcType=VARCHAR},</if>
+            <if test="bean.bgImg != null">#{bean.bgImg,jdbcType=VARCHAR},</if>
+            <if test="bean.status != null">#{bean.status,jdbcType=INTEGER},</if>
+        </trim>
+    </insert>
+
+    <insert id="submitNewImg" parameterType="com.demo.asd.support.model.po.welfare.WelfareImgExBean" useGeneratedKeys="true">
+        insert into t_welfare_photo p
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bean.articleId != null">ARTICLE_ID,</if>
+            <if test="bean.originalName != null">ORIGINAL_NAME,</if>
+            <if test="bean.modelName != null">MODEL_NAME,</if>
+            <if test="bean.photoName != null">PHOTO_NAME,</if>
+            <if test="bean.subPhotoName != null">PHOTO_SUB_NAME,</if>
+            <if test="bean.photoDescribe != null">PHOTO_DESCRIBE,</if>
+            <if test="bean.primaryCategory != null">PRIMARY_CATEGORY,</if>
+            <if test="bean.secondaryCategory != null">SECONDARY_CATEGORY,</if>
+            <if test="bean.thirdCategory != null">THIRD_CATEGORY,</if>
+            <if test="bean.idxStatus != null">IDX_STATUS,</if>
+            <if test="bean.idx != null">IDX,</if>
+            <if test="bean.tag1 != null">TAG1,</if>
+            <if test="bean.tag2 != null">TAG2,</if>
+            <if test="bean.tag3 != null">TAG3,</if>
+            <if test="bean.tag4 != null">TAG4,</if>
+            <if test="bean.photoTime != null">PHOTO_TIME,</if>
+            <if test="bean.photoType != null">PHOTO_TYPE,</if>
+            <if test="bean.status != null">STATUS</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bean.articleId != null">#{bean.articleId,jdbcType=BIGINT},</if>
+            <if test="bean.originalName != null">#{bean.originalName,jdbcType=VARCHAR},</if>
+            <if test="bean.modelName != null">#{bean.modelName,jdbcType=VARCHAR},</if>
+            <if test="bean.photoName != null">#{bean.photoName,jdbcType=VARCHAR},</if>
+            <if test="bean.subPhotoName != null">#{bean.subPhotoName,jdbcType=VARCHAR},</if>
+            <if test="bean.photoDescribe != null">#{bean.photoDescribe,jdbcType=VARCHAR},</if>
+            <if test="bean.primaryCategory != null">#{bean.primaryCategory,jdbcType=INTEGER},</if>
+            <if test="bean.secondaryCategory != null">#{bean.secondaryCategory,jdbcType=INTEGER},</if>
+            <if test="bean.thirdCategory != null">#{bean.thirdCategory,jdbcType=INTEGER},</if>
+            <if test="bean.idxStatus != null">#{bean.idxStatus,jdbcType=INTEGER},</if>
+            <if test="bean.idx != null">#{bean.idx,jdbcType=INTEGER},</if>
+            <if test="bean.tag1 != null">#{bean.tag1,jdbcType=VARCHAR},</if>
+            <if test="bean.tag2 != null">#{bean.tag2,jdbcType=VARCHAR},</if>
+            <if test="bean.tag3 != null">#{bean.tag3,jdbcType=VARCHAR},</if>
+            <if test="bean.tag4 != null">#{bean.tag4,jdbcType=VARCHAR},</if>
+            <if test="bean.photoTime != null">#{bean.photoTime,jdbcType=TIMESTAMP},</if>
+            <if test="bean.photoType != null">#{bean.photoType,jdbcType=INTEGER},</if>
+            <if test="bean.status != null">#{bean.status,jdbcType=INTEGER},</if>
+        </trim>
+    </insert>
 
 </mapper>
